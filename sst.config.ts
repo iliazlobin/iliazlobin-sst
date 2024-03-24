@@ -9,7 +9,7 @@ import { SSTConfig } from 'sst'
 export default {
   config(_input) {
     return {
-      name: 'iliazlobin-standalone',
+      name: 'iliazlobin',
       region: 'us-east-1',
     }
   },
@@ -17,7 +17,7 @@ export default {
     // app.stack(API)
     app.stack(ConfigStack)
     app.stack(DataStack)
-    app.stack(ApiStack)
+    // app.stack(ApiStack)
     app.stack(SiteStack)
   },
 } satisfies SSTConfig

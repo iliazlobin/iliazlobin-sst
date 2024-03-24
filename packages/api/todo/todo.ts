@@ -1,8 +1,8 @@
-import { Todo } from '@iliazlobin-standalone/core/todo'
+// import { Todo } from '@iliazlobin/core/todo/todo'
 import { ApiHandler } from 'sst/node/api'
 
 export const create = ApiHandler(async _evt => {
-  await Todo.create()
+  // await Todo.create()
 
   return {
     statusCode: 200,
@@ -11,8 +11,8 @@ export const create = ApiHandler(async _evt => {
 })
 
 export const list = ApiHandler(async _evt => {
-  return {
-    statusCode: 200,
-    body: JSON.stringify(Todo.list()),
-  }
+  // return {
+  //   statusCode: 200,
+  //   body: JSON.stringify(Todo.list()),
+  // }
 })

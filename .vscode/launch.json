@@ -2,11 +2,25 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "pnpm dev",
+      "name": "core: pnpm test",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "pnpm test",
+      "cwd": "${workspaceFolder}/packages/core",
+    },
+    {
+      "name": "web: pnpm dev",
       "type": "node-terminal",
       "request": "launch",
       "command": "pnpm dev",
       "cwd": "${workspaceFolder}/packages/web",
+    },
+    {
+      "name": "api: pnpm test",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "pnpm test",
+      "cwd": "${workspaceFolder}/packages/api",
     },
   ]
 }

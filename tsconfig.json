@@ -5,8 +5,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/stacks/*": ["./stacks/*"]
+      "@/*": ["./*"],
     }
   }
 }

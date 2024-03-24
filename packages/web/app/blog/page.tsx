@@ -1,11 +1,9 @@
-// import BlogLis from '@/components/BlogList'
+import BlogLis from '@/components/BlogList'
+import { getWebPosts } from '@/service/post'
 import '@/styles/mdx.css'
 
-export default function PostsPage() {
-  // const posts = allPosts.sort(
-  //   (a, b) => Number(new Date(b.date)) - Number(new Date(a.date)),
-  // )
+export default async function PostsPage() {
+  const posts = await getWebPosts()
 
-  // return <BlogList posts={posts} />
-  return <></>
+  return <BlogList posts={posts} />
 }

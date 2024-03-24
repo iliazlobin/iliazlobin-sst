@@ -1,6 +1,6 @@
 {
-  "name": "@iliazlobin/standalone",
-  "version": "0.0.0",
+  "name": "@iliazlobin/sst",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "workspaces": [
@@ -8,14 +8,15 @@
   ],
   "scripts": {
     "build": "sst build",
-    "console": "sst console",
-    "deploy": "sst deploy",
+    "deploy": "sst deploy --stage prod",
+    "dev": "sst dev",
     "eslint": "eslint \"**/*.+(ts|tsx)\"",
     "eslint:fix": "eslint --fix \"**/*.+(ts|tsx)\"",
     "prettier": "prettier --check \"**/*.+(ts|tsx|json|yml|yaml|md|css)\"",
     "prettier:fix": "prettier --write \"**/*.+(ts|tsx|json|yml|yaml|md|css)\"",
     "remove": "sst remove",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "types": "sst types"
   },
   "dependencies": {
     "eslint-plugin-prettier": "^5.1.3"

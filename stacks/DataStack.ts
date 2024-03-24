@@ -1,10 +1,9 @@
 import { S3Origin } from 'aws-cdk-lib/aws-cloudfront-origins'
 import {
   Bucket,
-  Config,
   Distribution,
   StackContext,
-  Table,
+  Table
 } from 'sst/constructs'
 
 // // import { Bucket } from 'sst/constructs'
@@ -13,12 +12,13 @@ import {
 // import { Bucket } from 'sst/constructs/Bucket'
 
 export function DataStack({ stack }: StackContext) {
-  const notionPagesTable = new Table(stack, 'NotionPagesTable', {
+  const notionPagesTable = new Table(stack, 'NotionPages', {
     fields: {
       pageId: 'string',
-      pageTitle: 'string',
+      // pageTitle: 'string',
     },
-    primaryIndex: { partitionKey: 'pageId', sortKey: 'pageTitle' },
+    // primaryIndex: { partitionKey: 'pageId', sortKey: 'pageTitle' },
+    primaryIndex: { partitionKey: 'pageId' },
   })
 
   const notionBucket = new Bucket(stack, 'NotionBucket')
