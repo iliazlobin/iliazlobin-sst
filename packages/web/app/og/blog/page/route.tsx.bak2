@@ -1,0 +1,107 @@
+import { ImageResponse } from 'next/og'
+
+import { allPosts } from '@/.contentlayer/generated'
+
+export const runtime = 'edge'
+
+const arrayBufferToDataURL = (buffer: ArrayBuffer, type: string) => {
+  let binary = ''
+  const bytes = new Uint8Array(buffer)
+  const len = bytes.byteLength
+  for (let i = 0; i < len; i++) {
+    const byte = bytes[i]
+    if (byte !== undefined) {
+      binary += String.fromCharCode(byte)
+    }
+  }
+  return `data:${type};base64,${window.btoa(binary)}`
+}
+
+export async function GET(request: Request) {
+  try {
+    const { searchParams, host, protocol } = new URL(request.url)
+    const slug = searchParams.get('slug')
+    const post = allPosts.find(post => post.slug === slug)
+    const title = post?.title || ''
+
+    // const imageData = await fetch(
+    //   new URL(
+    //     '@/public/static/blog/langchain-on-step-functions/Cover.jpg',
+    //     import.meta.url,
+    //   ),
+    // ).then(res => res.arrayBuffer())
+
+    // const imagePath = post?.coverImage.path || ''
+    // const localPath = `@/public${imagePath}`
+    // const imageData = await fetch(new URL(localPath, import.meta.url)).then(
+    //   res => res.arrayBuffer(),
+    // )
+
+    return new ImageResponse(
+      (
+        <div
+          style={{
+            backgroundColor: 'black',
+            backgroundSize: '150px 150px',
+            height: '100%',
+            width: '100%',
+            display: 'flex',
+            textAlign: 'center',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column',
+            flexWrap: 'nowrap',
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              justifyItems: 'center',
+            }}
+          >
+            {/* <img
+              alt="Cover"
+              height={350}
+              src={imageData}
+              style={{ margin: '0 3px', objectFit: 'cover' }}
+              width={1100}
+            /> */}
+            {/* <img alt="Cover" width="256" height="256" src={imageData} /> */}
+            <img
+              alt="Vercel"
+              height={200}
+              src="data:image/svg+xml,%3Csvg width='116' height='100' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M57.5 0L115 100H0L57.5 0z' /%3E%3C/svg%3E"
+              style={{ margin: '0 30px' }}
+              width={232}
+            />
+          </div>
+          <div
+            style={{
+              fontSize: 60,
+              fontStyle: 'normal',
+              letterSpacing: '-0.025em',
+              color: 'white',
+              marginTop: 30,
+              padding: '0 120px',
+              lineHeight: 1.4,
+              whiteSpace: 'pre-wrap',
+            }}
+          >
+            {title}
+          </div>
+        </div>
+      ),
+      {
+        width: 1200,
+        height: 630,
+      },
+    )
+  } catch (e: any) {
+    console.log(`${e.message}`)
+    return new Response(`Failed to generate the image`, {
+      status: 500,
+    })
+  }
+}
