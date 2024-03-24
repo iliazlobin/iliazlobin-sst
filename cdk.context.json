@@ -1,0 +1,10 @@
+{
+  "hosted-zone:account=643713846674:domainName=static.iliazlobin.com:region=us-east-1": {
+    "Id": "/hostedzone/Z10382172TXAPKOMZ7TY9",
+    "Name": "static.iliazlobin.com."
+  },
+  "hosted-zone:account=643713846674:domainName=dev.iliazlobin.com:region=us-east-1": {
+    "Id": "/hostedzone/Z03685513TCMZHE0626Y5",
+    "Name": "dev.iliazlobin.com."
+  }
+}
