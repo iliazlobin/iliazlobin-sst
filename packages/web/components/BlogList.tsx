@@ -1,10 +1,9 @@
 import Image from 'next/image'
 
-import { WebPost } from '@/app/blog/page'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import { siteConfig } from '@/config/site'
-
+import { WebPost } from '@/service/post'
 
 const MAX_DISPLAY = 5
 

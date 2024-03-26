@@ -11,7 +11,7 @@ export async function getWebPosts(): Promise<WebPost[]> {
   const posts = await listPosts()
   const webPosts = posts.map(post => ({
     ...post,
-    slug: post.title.toLowerCase().replace(/ /g, '-'),
+    slug: encodeURIComponent(post.title.toLowerCase().replace(/ /g, '-')),
     summary: '',
     tags: [],
     contentMd: '', // Add the missing property

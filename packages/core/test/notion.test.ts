@@ -8,10 +8,14 @@ import { listPosts, retrievePost } from '@/notion/service'
 import fs from 'fs'
 import { expect, it } from 'vitest'
 
-it('export notion page to S3', async () => {
+it.only('export notion page to S3', async () => {
+  // await exportMarkdownPage({
+  //   pageId: '5d488cacdf6d411295dcb93f0d4080ec',
+  // })
   await exportMarkdownPage({
-    pageId: '5d488cacdf6d411295dcb93f0d4080ec',
+    pageId: '965854d95e80436cb6bc631965eb0fc2',
   })
+  console.log('done')
 })
 
 it('list posts', async () => {

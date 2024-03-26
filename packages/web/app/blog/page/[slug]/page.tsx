@@ -14,87 +14,20 @@ import { getWebPosts, retrieveWebPost } from '@/service/post'
 import '@/styles/mdx.css'
 
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import BlogPost from "@/components/blog-post-mdx"
 
-// property og:site_name Notion
-// property og:type website
-// property og:url https://www.notion.so
-// property og:title Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.
-// property og:description A new tool that blends your everyday work apps into one. It's the all-in-one workspace for you and your team
-// property og:image https://www.notion.so/images/meta/default.png
-// property og:locale en_US
-// export async function generateMetadata(
-//   { params, searchParams }: Props,
-//   parent: ResolvingMetadata
-// ): Promise<Metadata> {
-//   // read route params
-//   const id = params.id
-//   // fetch data
-//   const product = await fetch(`https://.../${id}`).then((res) => res.json())
-//   // optionally access and extend (rather than replace) parent metadata
-//   const previousImages = (await parent).openGraph?.images || []
-//   return {
-//     title: product.title,
-//     openGraph: {
-//       images: ['/some-specific-page-image.jpg', ...previousImages],
-//     },
-//   }
-// }
-// export async function generateStaticParams(): Promise<Props['params'][]> {
-//   return allPosts.map(post => ({
-//     slug: post.slug.split('/'),
-//     // slug: post.slug,
-//   }))
-// }
-// import { listPages } from '@iliazlobin/storage/notion/dynamodb'
-// import { Table } from 'sst/node/table'
-
-// export interface Params {
-//   slug: string[]
+interface Params {
+  slug: string
+}
 
 interface Props {
-  params: {
-    slug: string[]
-  }
+  params: Params
   // searchParams: { [key: string]: string | string[] | undefined }
 }
 
-async function getPostFromParams({ params }: Props) {
-  const slug = params.slug?.join('/') || ''
-  // const slug = params.slug
-  // const post = allPosts.find(post => post.slug === slug)
-  // const post = new Post({ slug: slug })
-  return null
-
-  // if (!post) {
-  //   return null
-
-  // return post
-}
-
-// export async function generateImageMetadata() {
-//   return [
-//     <>
-//       <div
-//         style={{
-//           fontSize: 128,
-//           background: 'white',
-//           width: '100%',
-//           height: '100%',
-//           display: 'flex',
-//           textAlign: 'center',
-//           alignItems: 'center',
-//           justifyContent: 'center',
-//         }}
-//       >
-//         Hello world!
-//       </div>
-//     </>,
-//   ]
-// }
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const posts = await getWebPosts()
-  const post = posts.find(post => post.slug === params.slug.join('/'))
+  const post = posts.find(post => post.slug === params.slug)
 
   if (!post) {
     notFound()
@@ -128,15 +61,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           height: 630,
         },
       ],
-      creator: '@shadcn',
+      creator: '@iliazlobin',
     },
   }
 }
 
-export default async function BlogPage({ params }: Props) {
-  const slug = params.slug.join('/')
-  const post = await retrieveWebPost({ slug })
+export async function generateStaticParams(): Promise<Params[]> {
+  const posts = await getWebPosts()
+  const params = posts.map(post => ({ slug: post.slug }))
+  return params
+}
 
+export default async function BlogPage({ params }: Props) {
+  const post = await retrieveWebPost({ slug: params.slug })
   if (!post || !post.contentMd) {
     notFound()
   }
@@ -216,7 +153,7 @@ export default async function BlogPage({ params }: Props) {
             />
           )}
         </div>
-        <MDXRemote source={content} />
+        <BlogPost source={content} />
       </div>
       <div className="hidden xl:block shrink-0 p-4">
         <div className="sticky top-20 text-sm">
