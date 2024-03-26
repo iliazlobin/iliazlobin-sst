@@ -12,6 +12,7 @@ export type PageDetails = {
 
 export type BlockImage = {
   name: string
+  ext: string
   url: string
 }
 

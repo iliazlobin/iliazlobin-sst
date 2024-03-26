@@ -14,14 +14,12 @@ export type Page = {
   lastEditedTime: string
 }
 
-export type PostHeader = {
+export type Post = {
   id: string
   title: string
   createdTime: string
   lastEditedTime: string
-}
-
-export type Post = PostHeader & {
-  contentMd: string
-  images: { name: string; url: string; width: number; height: number }[]
+  contentMd?: string
+  coverImage?: { url: string; width: number; height: number }
+  images?: { url: string; width: number; height: number }[]
 }

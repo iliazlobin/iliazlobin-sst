@@ -24,6 +24,9 @@ export async function exportMarkdownPage({ pageId }: { pageId: string }) {
     {
       bucketKey: string
       url: string
+      alt: string
+      name: string
+      ext: string
       width: number
       height: number
     }
@@ -35,23 +38,31 @@ export async function exportMarkdownPage({ pageId }: { pageId: string }) {
     })
     const coverImageSize = sizeOf(imageBuffer.data)
 
-    const coverImageBucketKey = `${pageBucketKeyPrefix}/cover.png`
+    const w = coverImageSize.width || 0
+    const h = coverImageSize.height || 0
+    const a = 'cover'
+    const n = `cover-${w}x${h}`
+    const e = 'png'
+
+    const coverImageBucketKey = `${pageBucketKeyPrefix}/${n}.${e}`
     await uploadBufferToS3({
       bucketKey: coverImageBucketKey,
       buffer: imageBuffer.data,
     })
-
     const coverImageUrl = `https://${staticDomain}/${coverImageBucketKey}`
 
-    imagesMap.set('cover', {
+    imagesMap.set(a, {
       bucketKey: coverImageBucketKey,
       url: coverImageUrl,
-      width: coverImageSize.width || 0,
-      height: coverImageSize.height || 0,
+      alt: a,
+      name: n,
+      ext: e,
+      width: w,
+      height: h,
     })
   }
 
-  for (const { name, url } of traverseImages({
+  for (const { count, alt, url } of traverseImages({
     blocks: pageDetails.blocks,
     imagePrefix: 'image',
   })) {
@@ -60,28 +71,40 @@ export async function exportMarkdownPage({ pageId }: { pageId: string }) {
     })
     const imageSize = sizeOf(imageBuffer.data)
 
-    const imageBucketKey = `${pageBucketKeyPrefix}/${name}`
+    const w = imageSize.width || 0
+    const h = imageSize.height || 0
+    const a = `image${count}`
+    const n = `image${count}-${w}x${h}`
+    const e = 'png'
+
+    const imageBucketKey = `${pageBucketKeyPrefix}/${n}.${e}`
     await uploadBufferToS3({
       bucketKey: imageBucketKey,
       buffer: imageBuffer.data,
     })
-
     const imageUrl = `https://${staticDomain}/${imageBucketKey}`
 
-    imagesMap.set(name, {
+    imagesMap.set(a, {
       bucketKey: imageBucketKey,
       url: imageUrl,
-      width: imageSize.width || 0,
-      height: imageSize.height || 0,
+      alt: a,
+      name: n,
+      ext: e,
+      width: w,
+      height: h,
     })
   }
 
   const markdownDocument = generateMarkdownFromPageBlocks({
     pageBlocks: pageDetails.blocks,
-    urlRewriter: ({ imageCount }) => {
-      const imageName = `image${imageCount.toString()}.png`
-      const imageUrl = `https://${staticDomain}/pages/${pageDetails.id}/${imageName}`
-      return imageUrl
+    urlRewriter: ({ count: imageCount }) => {
+      const imageAlt = `image${imageCount}`
+      // const width = imagesMap.get(imageAlt)?.width
+      // const height = imagesMap.get(imageAlt)?.height
+      const name = imagesMap.get(imageAlt)?.name
+      const ext = imagesMap.get(imageAlt)?.ext
+      const imageUrl = `https://${staticDomain}/pages/${pageDetails.id}/${name}.${ext}`
+      return { imageAlt, imageUrl }
     },
   })
 

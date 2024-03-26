@@ -1,11 +1,10 @@
 import Image from 'next/image'
 
+import { WebPost } from '@/app/blog/page'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import { siteConfig } from '@/config/site'
-import { WebPost } from '@/domain/post'
 
-import { Post } from '@iliazlobin/core/domain/post'
 
 const MAX_DISPLAY = 5
 
@@ -45,15 +44,15 @@ const BlogList = ({ tag, posts }: Props) => {
       <ul className="divide-y divide-gray-200 dark:divide-gray-700">
         {!posts.length && 'No posts found.'}
         {posts.slice(0, MAX_DISPLAY).map(post => {
-          const { slug, date, title, summary, tags } = post
+          const { slug, createdTime, title, summary, tags } = post
           return (
             <li key={slug} className="py-12">
               <article>
                 <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                   <div className="flex flex-col">
                     <div className="mb-4">
-                      <time dateTime={date}>
-                        {formatDate(date, siteConfig.locale)}
+                      <time dateTime={createdTime}>
+                        {formatDate(createdTime, siteConfig.locale)}
                       </time>
                     </div>
                     <div>
@@ -77,12 +76,14 @@ const BlogList = ({ tag, posts }: Props) => {
                         </h2>
                         <div className="flex justify-center my-4">
                           <Link href={`/blog/page/${slug}`}>
-                            <Image
-                              src={post.coverImage.path}
-                              alt={post.title}
-                              width={post.coverImage.height}
-                              height={post.coverImage.width}
-                            />
+                            {post.coverImage && (
+                              <Image
+                                src={post.coverImage.url || ''}
+                                alt={post.title}
+                                width={post.coverImage.height}
+                                height={post.coverImage.width}
+                              />
+                            )}
                           </Link>{' '}
                         </div>
                       </div>

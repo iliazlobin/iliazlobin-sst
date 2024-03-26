@@ -1,4 +1,4 @@
-import BlogLis from '@/components/BlogList'
+import BlogList from '@/components/BlogList'
 import { getWebPosts } from '@/service/post'
 import '@/styles/mdx.css'
 

@@ -1,10 +1,5 @@
 import { S3Origin } from 'aws-cdk-lib/aws-cloudfront-origins'
-import {
-  Bucket,
-  Distribution,
-  StackContext,
-  Table
-} from 'sst/constructs'
+import { Bucket, Distribution, StackContext, Table } from 'sst/constructs'
 
 // // import { Bucket } from 'sst/constructs'
 // import { StackContext, Table } from 'sst/constructs'

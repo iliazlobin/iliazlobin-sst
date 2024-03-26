@@ -1,11 +1,14 @@
 import { exportMarkdownPage } from '@/notion/controller'
-import { exportPageToLocalDisk, getRootPageRecursively as retrievePageTreeRecursively } from '@/notion/notion-client/client'
+import {
+  exportPageToLocalDisk,
+  getRootPageRecursively as retrievePageTreeRecursively,
+} from '@/notion/notion-client/client'
 import { listPosts, retrievePost } from '@/notion/service'
 
 import fs from 'fs'
 import { expect, it } from 'vitest'
 
-it.skip('export notion page to S3', async () => {
+it('export notion page to S3', async () => {
   await exportMarkdownPage({
     pageId: '5d488cacdf6d411295dcb93f0d4080ec',
   })

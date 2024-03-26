@@ -1,6 +1,5 @@
 import { RootPage } from '@/notion/types'
 
-import { BlockImage, PageDetails } from './types'
 import { Client } from '@notionhq/client'
 import {
   BlockObjectResponse,
@@ -15,6 +14,7 @@ import { NotionToMarkdown } from 'notion-to-md'
 import { MdBlock } from 'notion-to-md/build/types'
 import path from 'path'
 import { Config } from 'sst/node/config'
+import { PageDetails } from './types'
 
 const notion = new Client({
   auth: Config.NOTION_TOKEN,
@@ -111,20 +111,27 @@ export function* traverseImages({
 }: {
   blocks: MdBlock[]
   imagePrefix?: string
-}): Generator<BlockImage> {
+}): Generator<{
+  count: number
+  alt: string
+  url: string
+}> {
   let imageCount = 0
   for (const block of blocks) {
     if (block.type === 'image') {
-      const urlMatch = block.parent.match(/\((.*?)\)/)
-      if (urlMatch) {
-        const imageUrl = urlMatch[1]
-        if (imageUrl) {
-          yield {
-            name: `${imagePrefix}${imageCount.toString().padStart(2, '0')}.png`,
-            url: imageUrl,
-          }
-          imageCount++
+      const allMatch = block.parent.match(/^!\[(.*?)\]\((.*?)\)/)
+      if (allMatch) {
+        const altMatch = allMatch[1]
+        const urlMatch = allMatch[2]
+        if (!altMatch || !urlMatch) {
+          continue
         }
+        yield {
+          count: imageCount,
+          alt: altMatch,
+          url: urlMatch,
+        }
+        imageCount++
       }
     }
   }
@@ -136,24 +143,31 @@ export function generateMarkdownFromPageBlocks({
 }: {
   pageBlocks: MdBlock[]
   urlRewriter: ({
-    imageCount,
-    imageUrl,
+    count,
+    alt,
+    url,
   }: {
-    imageCount: number
-    imageUrl: string
-  }) => string
+    count: number
+    alt: string
+    url: string
+  }) => { imageAlt: string; imageUrl: string }
 }): string {
   let imageCount = 0
   for (const block of pageBlocks) {
     if (block.type === 'image') {
-      const urlMatch = block.parent.match(/\((.*?)\)/)
-      if (urlMatch) {
-        const imageUrl = urlMatch[1]
-        if (!imageUrl) {
+      const allMatch = block.parent.match(/^!\[(.*?)\]\((.*?)\)/)
+      if (allMatch) {
+        const altMatch = allMatch[1]
+        const urlMatch = allMatch[2]
+        if (!altMatch || !urlMatch) {
           continue
         }
-        const newUrl = urlRewriter({ imageCount, imageUrl })
-        block.parent = block.parent.replace(imageUrl, newUrl)
+        const { imageAlt, imageUrl } = urlRewriter({
+          count: imageCount,
+          alt: altMatch,
+          url: urlMatch,
+        })
+        block.parent = `![${imageAlt}](${imageUrl})`
         imageCount++
       }
     }

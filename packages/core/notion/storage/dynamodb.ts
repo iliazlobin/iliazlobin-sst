@@ -1,4 +1,4 @@
-import { Page, PostHeader } from '@/notion/types'
+import { Page, Post } from '@/notion/types'
 
 import {
   DynamoDBClient,
@@ -113,7 +113,7 @@ export async function getPage({ pageId }: { pageId: string }): Promise<Page> {
   return page
 }
 
-export async function listPages(): Promise<PostHeader[]> {
+export async function listPages(): Promise<Post[]> {
   const input = {
     // ExpressionAttributeNames: {
     //   '#AT': 'AlbumTitle',
@@ -153,10 +153,21 @@ export async function listPages(): Promise<PostHeader[]> {
     throw new Error(`Validation failed`)
   }
 
-  return items.map(item => ({
-    id: item?.pageId?.S || '',
-    title: item?.pageTitle?.S || '',
-    createdTime: item?.createdTime?.S || '',
-    lastEditedTime: item?.lastEditedTime?.S || '',
-  }))
+  return items.map(item => {
+    const coverImage = item.images?.L?.filter(
+      image => image?.M?.name?.S == 'cover',
+    )?.[0]?.M
+
+    return {
+      id: item?.pageId?.S || '',
+      title: item?.pageTitle?.S || '',
+      createdTime: item?.createdTime?.S || '',
+      lastEditedTime: item?.lastEditedTime?.S || '',
+      coverImage: {
+        url: coverImage?.url?.S || '',
+        width: parseInt(coverImage?.width?.N || '0'),
+        height: parseInt(coverImage?.height?.N || '0'),
+      },
+    }
+  })
 }

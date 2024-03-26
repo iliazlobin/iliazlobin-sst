@@ -2,25 +2,35 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "ts-node",
+      "type": "node",
+      "request": "launch",
+      "args": ["${file}"],
+      "runtimeExecutable": "ts-node",
+      "runtimeArgs": ["--esm", "-r", "tsconfig-paths/register"],
+      "cwd": "/home/izlobin/ws/voicematch/voicematch-backend",
+      "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
       "name": "core: pnpm test",
       "type": "node-terminal",
       "request": "launch",
       "command": "pnpm test",
-      "cwd": "${workspaceFolder}/packages/core",
+      "cwd": "${workspaceFolder}/packages/core"
     },
     {
       "name": "web: pnpm dev",
       "type": "node-terminal",
       "request": "launch",
       "command": "pnpm dev",
-      "cwd": "${workspaceFolder}/packages/web",
+      "cwd": "${workspaceFolder}/packages/web"
     },
     {
       "name": "api: pnpm test",
       "type": "node-terminal",
       "request": "launch",
       "command": "pnpm test",
-      "cwd": "${workspaceFolder}/packages/api",
-    },
+      "cwd": "${workspaceFolder}/packages/api"
+    }
   ]
 }
