@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "test": "sst bind vitest",
+    "test": "sst bind 'vitest'",
+    "test:prod": "sst bind --stage prod 'vitest'",
     "typecheck": "tsc -noEmit"
   },
   "dependencies": {

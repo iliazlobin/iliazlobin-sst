@@ -1,6 +1,6 @@
 import { getPage, listPages } from './storage/dynamodb'
 import { downloadFromS3 } from './storage/s3'
-import { Post } from './types'
+import { PageImage, Post } from './types'
 
 export async function retrievePost({
   pageId,
@@ -22,7 +22,7 @@ export async function retrievePost({
     createdTime: page.createdTime,
     lastEditedTime: page.lastEditedTime,
     contentMd,
-    images: page.images.map(image => ({
+    images: page.images.map((image: PageImage) => ({
       url: image.url || '',
       width: image.width || 0,
       height: image.height || 0,

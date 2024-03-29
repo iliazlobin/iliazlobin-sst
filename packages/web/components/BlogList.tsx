@@ -1,9 +1,9 @@
 import Image from 'next/image'
 
-import Link from '@/components/Link'
-import Tag from '@/components/Tag'
-import { siteConfig } from '@/config/site'
-import { WebPost } from '@/service/post'
+import Link from '@iliazlobin/web/components/Link'
+import Tag from '@iliazlobin/web/components/Tag'
+import { siteConfig } from '@iliazlobin/web/config/site'
+import { WebPost } from '@iliazlobin/web/service/post'
 
 const MAX_DISPLAY = 5
 

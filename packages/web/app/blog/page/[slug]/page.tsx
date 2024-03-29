@@ -2,19 +2,26 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
-import Tag from '@/components/Tag'
-import { DashboardTableOfContents } from '@/components/toc'
-import TocButton from '@/components/toc-button'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { siteConfig } from '@/config/site'
-import { getTableOfContents } from '@/lib/toc'
-import { getWebPosts, retrieveWebPost } from '@/service/post'
-import '@/styles/mdx.css'
-
-import { MDXRemote } from 'next-mdx-remote/rsc'
-import BlogPost from "@/components/blog-post-mdx"
+import Tag from '@iliazlobin/web/components/Tag'
+import BlogPost from '@iliazlobin/web/components/blog-post-mdx'
+import { DashboardTableOfContents } from '@iliazlobin/web/components/toc'
+import TocButton from '@iliazlobin/web/components/toc-button'
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from '@iliazlobin/web/components/ui/avatar'
+import { Button } from '@iliazlobin/web/components/ui/button'
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from '@iliazlobin/web/components/ui/card'
+import { siteConfig } from '@iliazlobin/web/config/site'
+import { getTableOfContents } from '@iliazlobin/web/lib/toc'
+import { getWebPosts, retrieveWebPost } from '@iliazlobin/web/service/post'
+import '@iliazlobin/web/styles/mdx.css'
 
 interface Params {
   slug: string
@@ -68,13 +75,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export async function generateStaticParams(): Promise<Params[]> {
   const posts = await getWebPosts()
+  console.debug('[DEBUG] length of posts:', posts.length)
   const params = posts.map(post => ({ slug: post.slug }))
   return params
 }
 
 export default async function BlogPage({ params }: Props) {
-  const post = await retrieveWebPost({ slug: params.slug })
-  if (!post || !post.contentMd) {
+  let post
+  try {
+    post = await retrieveWebPost({ slug: params.slug })
+  } catch (error) {
+    console.error('Error retrieving web post:', error)
     notFound()
   }
 

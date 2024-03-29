@@ -1,5 +1,4 @@
-import { RootPage } from '@/notion/types'
-
+import { RootPage } from '@iliazlobin/web/notion/types'
 import { Client } from '@notionhq/client'
 import {
   BlockObjectResponse,
@@ -7,6 +6,8 @@ import {
   PageObjectResponse,
   PartialBlockObjectResponse,
 } from '@notionhq/client/build/src/api-endpoints'
+
+import { PageDetails } from './types'
 import axios from 'axios'
 import { assert } from 'console'
 import fs from 'fs'
@@ -14,7 +15,6 @@ import { NotionToMarkdown } from 'notion-to-md'
 import { MdBlock } from 'notion-to-md/build/types'
 import path from 'path'
 import { Config } from 'sst/node/config'
-import { PageDetails } from './types'
 
 const notion = new Client({
   auth: Config.NOTION_TOKEN,

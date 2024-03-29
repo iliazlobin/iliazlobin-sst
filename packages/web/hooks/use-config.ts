@@ -1,5 +1,5 @@
-import { Style } from '@/components/styles'
-import { Theme } from '@/components/themes'
+import { Style } from '@iliazlobin/web/components/styles'
+import { Theme } from '@iliazlobin/web/components/themes'
 
 import { useAtom } from 'jotai'
 import { atomWithStorage } from 'jotai/utils'

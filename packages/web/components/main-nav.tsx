@@ -3,10 +3,10 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-import { Icons } from '@/components/icons'
-import { Badge } from '@/components/ui/badge'
-import { siteConfig } from '@/config/site'
-import { cn } from '@/lib/utils'
+import { Icons } from '@iliazlobin/web/components/icons'
+import { Badge } from '@iliazlobin/web/components/ui/badge'
+import { siteConfig } from '@iliazlobin/web/config/site'
+import { cn } from '@iliazlobin/web/lib/utils'
 
 import * as React from 'react'
 

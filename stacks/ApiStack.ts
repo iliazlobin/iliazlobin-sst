@@ -1,5 +1,5 @@
-import { ConfigStack } from '@/stacks/ConfigStack'
-import { DataStack } from '@/stacks/DataStack'
+import { ConfigStack } from '@iliazlobin/web/stacks/ConfigStack'
+import { DataStack } from '@iliazlobin/web/stacks/DataStack'
 
 import { Api, EventBus, StackContext, use } from 'sst/constructs'
 

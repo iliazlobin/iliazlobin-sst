@@ -1,19 +1,19 @@
-import { exportMarkdownPage } from '@/notion/controller'
+import { exportMarkdownPage } from '@iliazlobin/core/notion/controller'
 import {
   exportPageToLocalDisk,
   getRootPageRecursively as retrievePageTreeRecursively,
-} from '@/notion/notion-client/client'
-import { listPosts, retrievePost } from '@/notion/service'
+} from '@iliazlobin/core/notion/notion-client/client'
+import { listPosts, retrievePost } from '@iliazlobin/core/notion/service'
 
 import fs from 'fs'
 import { expect, it } from 'vitest'
 
-it.only('export notion page to S3', async () => {
+it('export notion page to S3', async () => {
   // await exportMarkdownPage({
   //   pageId: '5d488cacdf6d411295dcb93f0d4080ec',
   // })
   await exportMarkdownPage({
-    pageId: '965854d95e80436cb6bc631965eb0fc2',
+    pageId: 'eb22bf1655ab4ad7ba36597915f67c66',
   })
   console.log('done')
 })

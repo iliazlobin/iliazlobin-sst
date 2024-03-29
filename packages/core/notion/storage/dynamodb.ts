@@ -1,11 +1,11 @@
-import { Page, Post } from '@/notion/types'
-
 import {
   DynamoDBClient,
   GetItemCommand,
   PutItemCommand,
   ScanCommand,
 } from '@aws-sdk/client-dynamodb'
+
+import { Page, Post } from '../types'
 import { Bucket } from 'sst/node/bucket'
 import { Table } from 'sst/node/table'
 
@@ -163,6 +163,7 @@ export async function listPages(): Promise<Post[]> {
       title: item?.pageTitle?.S || '',
       createdTime: item?.createdTime?.S || '',
       lastEditedTime: item?.lastEditedTime?.S || '',
+      contentMd: '',
       coverImage: {
         url: coverImage?.url?.S || '',
         width: parseInt(coverImage?.width?.N || '0'),

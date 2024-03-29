@@ -11,8 +11,8 @@
     "inlineSources": false,
     "isolatedModules": true,
     "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
@@ -26,7 +26,7 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
+      "@iliazlobin/core/*": ["./*"]
     },
     "plugins": [{ "name": "next" }]
   },
@@ -35,7 +35,7 @@
     "sst-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts", "../../vitest.config.ts",
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }

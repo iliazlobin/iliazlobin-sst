@@ -1,6 +1,8 @@
 import { listPosts, retrievePost } from '@iliazlobin/core/notion/service'
 import { Post } from '@iliazlobin/core/notion/types'
 
+import { slug } from 'github-slugger'
+
 export type WebPost = Post & {
   slug: string
   summary: string
@@ -9,13 +11,14 @@ export type WebPost = Post & {
 
 export async function getWebPosts(): Promise<WebPost[]> {
   const posts = await listPosts()
+  console.debug(`[DEBUG] getWebPosts: length of posts: ${posts.length}`)
   const webPosts = posts.map(post => ({
     ...post,
-    slug: encodeURIComponent(post.title.toLowerCase().replace(/ /g, '-')),
+    slug: slug(post.title),
     summary: '',
     tags: [],
-    contentMd: '', // Add the missing property
-    images: [], // Add the missing property
+    contentMd: '',
+    images: [],
   }))
   return webPosts
 }
@@ -25,8 +28,17 @@ export async function retrieveWebPost({
 }: {
   slug: string
 }): Promise<WebPost> {
-  const webPosts = await getWebPosts()
-  const webPost = webPosts.find(post => post.slug === slug)
+  const posts = await getWebPosts()
+  // console.debug(
+  //   `[DEBUG] retrieveWebPost: length of posts: ${posts.length}, slug: ${slug}`,
+  // )
+  // posts.forEach(post => {
+  //   console.debug(`[DEBUG] post.slug: ${post.slug}, slug: ${slug}`)
+  //   if (post.slug === slug) {
+  //     console.debug(`[DEBUG] post.title: ${post.title}`)
+  //   }
+  // })
+  const webPost = posts.find(post => post.slug === slug)
   if (!webPost) {
     throw new Error('Post not found')
   }

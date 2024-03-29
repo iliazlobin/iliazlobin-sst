@@ -1,8 +1,8 @@
 'use client'
 
-import { useMounted } from '@/hooks/use-mounted'
-import { TableOfContents } from '@/lib/toc'
-import { cn } from '@/lib/utils'
+import { useMounted } from '@iliazlobin/web/hooks/use-mounted'
+import { TableOfContents } from '@iliazlobin/web/lib/toc'
+import { cn } from '@iliazlobin/web/lib/utils'
 
 import * as React from 'react'
 

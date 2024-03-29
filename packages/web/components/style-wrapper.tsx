@@ -1,7 +1,7 @@
 'use client'
 
-import { Style } from '@/components/styles'
-import { useConfig } from '@/hooks/use-config'
+import { Style } from '@iliazlobin/web/components/styles'
+import { useConfig } from '@iliazlobin/web/hooks/use-config'
 
 import * as React from 'react'
 

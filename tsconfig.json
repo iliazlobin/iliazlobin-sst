@@ -3,9 +3,6 @@
   "exclude": ["packages"],
   "compilerOptions": {
     "module": "esnext",
-    "moduleResolution": "node",
-    "paths": {
-      "@/*": ["./*"],
-    }
+    "moduleResolution": "node"
   }
 }

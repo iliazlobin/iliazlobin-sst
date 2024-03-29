@@ -2,7 +2,7 @@
 
 import { useSelectedLayoutSegment } from 'next/navigation'
 
-import { useConfig } from '@/hooks/use-config'
+import { useConfig } from '@iliazlobin/web/hooks/use-config'
 
 import * as React from 'react'
 

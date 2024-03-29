@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
-import { Icons } from '@/components/icons'
-import { MainNav } from '@/components/main-nav'
-import { ModeToggle } from '@/components/mode-toggle'
-import { buttonVariants } from '@/components/ui/button'
-import { siteConfig } from '@/config/site'
-import { cn } from '@/lib/utils'
+import { Icons } from '@iliazlobin/web/components/icons'
+import { MainNav } from '@iliazlobin/web/components/main-nav'
+import { ModeToggle } from '@iliazlobin/web/components/mode-toggle'
+import { buttonVariants } from '@iliazlobin/web/components/ui/button'
+import { siteConfig } from '@iliazlobin/web/config/site'
+import { cn } from '@iliazlobin/web/lib/utils'
 
 export function SiteHeader() {
   return (

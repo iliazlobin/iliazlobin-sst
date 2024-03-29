@@ -1,13 +1,16 @@
 import Image from 'next/image'
 
-import { CodeBlockWrapper } from '@/components/code-block-wrapper'
-import { CopyButton, CopyNpmCommandButton } from '@/components/copy-button'
-import { StyleWrapper } from '@/components/style-wrapper'
-import { Style } from '@/components/styles'
-import { Event } from '@/lib/events'
-import { cn } from '@/lib/utils'
-import '@/styles/mdx.css'
-import { NpmCommands } from '@/types/unist'
+import { CodeBlockWrapper } from '@iliazlobin/web/components/code-block-wrapper'
+import {
+  CopyButton,
+  CopyNpmCommandButton,
+} from '@iliazlobin/web/components/copy-button'
+import { StyleWrapper } from '@iliazlobin/web/components/style-wrapper'
+import { Style } from '@iliazlobin/web/components/styles'
+import { Event } from '@iliazlobin/web/lib/events'
+import { cn } from '@iliazlobin/web/lib/utils'
+import '@iliazlobin/web/styles/mdx.css'
+import { NpmCommands } from '@iliazlobin/web/types/unist'
 
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import rehypeSlug from 'rehype-slug'
@@ -267,7 +270,6 @@ export default async function BlogPost({ source }: { source: string }) {
                   height,
                   ext,
                 }
-                console.debug('DEBUG')
               }
             }
           })

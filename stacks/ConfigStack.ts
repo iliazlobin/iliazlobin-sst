@@ -5,10 +5,16 @@ export function ConfigStack({ stack }: StackContext) {
     value: '1.2.0',
   })
   const siteDomain = new Config.Parameter(stack, 'siteDomain', {
-    value: 'iliazlobin.com',
+    value:
+      stack.stage === 'prod'
+        ? 'iliazlobin.com'
+        : `${stack.stage}.iliazlobin.com`,
   })
   const staticDomain = new Config.Parameter(stack, 'staticDomain', {
-    value: 'static.iliazlobin.com',
+    value:
+      stack.stage === 'prod'
+        ? 'static.iliazlobin.com'
+        : `static.${stack.stage}.iliazlobin.com`,
   })
   const notionToken = new Config.Secret(stack, 'notionToken')
 

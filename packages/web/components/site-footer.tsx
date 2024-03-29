@@ -1,4 +1,4 @@
-import { siteConfig } from '@/config/site'
+import { siteConfig } from '@iliazlobin/web/config/site'
 
 export function SiteFooter() {
   return (
@@ -12,18 +12,9 @@ export function SiteFooter() {
             rel="noreferrer"
             className="font-medium underline underline-offset-4"
           >
-            shadcn
+            Ilia Zlobin
           </a>
-          . The source code is available on{' '}
-          <a
-            href={siteConfig.links.github}
-            target="_blank"
-            rel="noreferrer"
-            className="font-medium underline underline-offset-4"
-          >
-            GitHub
-          </a>
-          .
+          . All rights reserved.
         </p>
       </div>
     </footer>

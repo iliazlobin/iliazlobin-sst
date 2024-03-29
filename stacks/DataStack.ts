@@ -1,12 +1,16 @@
+import { ConfigStack } from './ConfigStack'
 import { S3Origin } from 'aws-cdk-lib/aws-cloudfront-origins'
-import { Bucket, Distribution, StackContext, Table } from 'sst/constructs'
-
-// // import { Bucket } from 'sst/constructs'
-// import { StackContext, Table } from 'sst/constructs'
-// // import { Distribution } from 'sst/constructs/Distribution'
-// import { Bucket } from 'sst/constructs/Bucket'
+import { Bucket, Distribution, StackContext, Table, use } from 'sst/constructs'
 
 export function DataStack({ stack }: StackContext) {
+  // const originalDomainName = 'iliazlobin.com'
+  // const domainName =
+  //   stack.stage === 'prod'
+  //     ? originalDomainName
+  //     : `${stack.stage}.${originalDomainName}`
+
+  const { siteDomain, staticDomain } = use(ConfigStack)
+
   const notionPagesTable = new Table(stack, 'NotionPages', {
     fields: {
       pageId: 'string',
@@ -19,7 +23,7 @@ export function DataStack({ stack }: StackContext) {
   const notionBucket = new Bucket(stack, 'NotionBucket')
 
   const distribution = new Distribution(stack, 'NotionDistribution', {
-    customDomain: 'static.iliazlobin.com',
+    customDomain: staticDomain.value,
     cdk: {
       distribution: {
         comment: 'Static assets for a website',

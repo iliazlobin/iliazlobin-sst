@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@/lib/utils'
+import { cn } from '@iliazlobin/web/lib/utils'
 
 import * as React from 'react'
 import { Drawer as DrawerPrimitive } from 'vaul'

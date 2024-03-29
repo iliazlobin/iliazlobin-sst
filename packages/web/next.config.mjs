@@ -1,10 +1,13 @@
 import createMDX from '@next/mdx'
+
 import remarkGfm from 'remark-gfm'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  transpilePackages: ['@iliazlobin/core'],
   images: {
-    domains: ['static.iliazlobin.com'],
+    // unoptimized: true,
+    domains: ['static.iliazlobin.com', 'static.dev.iliazlobin.com'],
   },
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
 }

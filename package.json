@@ -19,6 +19,9 @@
     "types": "sst types"
   },
   "dependencies": {
+    "@aws-cdk/core": "^1.204.0",
+    "@types/node": "^20.11.30",
+    "colors": "^1.4.0",
     "eslint-plugin-prettier": "^5.1.3"
   },
   "devDependencies": {
@@ -35,7 +38,9 @@
     "prettier": "^3.2.5",
     "prettier-plugin-packagejson": "^2.4.12",
     "sst": "^2.41.4",
-    "typescript": "^5.4.3"
+    "stream": "^0.0.2",
+    "typescript": "^5.4.3",
+    "util": "^0.12.5"
   },
   "pnpm": {
     "patchedDependencies": {

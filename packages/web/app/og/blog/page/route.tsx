@@ -1,16 +1,18 @@
 import { ImageResponse } from 'next/og'
 
-export const runtime = 'edge'
+import { getWebPosts } from '@iliazlobin/web/service/post'
+
+// export const runtime = 'edge'
 
 export async function GET(request: Request) {
   try {
     const { searchParams, host, protocol } = new URL(request.url)
     const slug = searchParams.get('slug')
-    // const post = allPosts.find(post => post.slug === slug)
-    // const title = post?.title || ''
-    // const summary = post?.summary || ''
-    const title = ''
-    const summary = ''
+
+    const posts = await getWebPosts()
+    const post = posts.find(post => post.slug === slug)
+    const title = post?.title || ''
+    const summary = post?.summary || ''
 
     // const imageData = await fetch(
     //   new URL(

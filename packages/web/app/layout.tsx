@@ -1,19 +1,19 @@
 import { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 
-import { ThemeProvider } from '@/components/providers'
-import { SiteFooter } from '@/components/site-footer'
-import { SiteHeader } from '@/components/site-header'
-import { TailwindIndicator } from '@/components/tailwind-indicator'
-import { ThemeSwitcher } from '@/components/theme-switcher'
-import { Toaster as NewYorkSonner } from '@/components/ui/sonner'
+import { ThemeProvider } from '@iliazlobin/web/components/providers'
+import { SiteFooter } from '@iliazlobin/web/components/site-footer'
+import { SiteHeader } from '@iliazlobin/web/components/site-header'
+import { TailwindIndicator } from '@iliazlobin/web/components/tailwind-indicator'
+import { ThemeSwitcher } from '@iliazlobin/web/components/theme-switcher'
+import { Toaster as NewYorkSonner } from '@iliazlobin/web/components/ui/sonner'
 import {
   Toaster as DefaultToaster,
   Toaster as NewYorkToaster,
-} from '@/components/ui/toaster'
-import { siteConfig } from '@/config/site'
-import { cn } from '@/lib/utils'
-import '@/styles/globals.css'
+} from '@iliazlobin/web/components/ui/toaster'
+import { siteConfig } from '@iliazlobin/web/config/site'
+import { cn } from '@iliazlobin/web/lib/utils'
+import '@iliazlobin/web/styles/globals.css'
 
 // import mystyle from "@/styles/mystyle.module.css"
 import { GeistSans } from 'geist/font/sans'

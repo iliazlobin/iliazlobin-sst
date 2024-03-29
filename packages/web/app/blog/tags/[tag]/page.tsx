@@ -1,5 +1,5 @@
-import BlogList from '@/components/BlogList'
-import '@/styles/mdx.css'
+import BlogList from '@iliazlobin/web/components/BlogList'
+import '@iliazlobin/web/styles/mdx.css'
 
 interface TagPageProps {
   params: {

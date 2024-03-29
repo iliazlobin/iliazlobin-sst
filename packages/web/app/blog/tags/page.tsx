@@ -1,6 +1,6 @@
-import Link from '@/components/Link'
-import Tag from '@/components/Tag'
-import '@/styles/mdx.css'
+import Link from '@iliazlobin/web/components/Link'
+import Tag from '@iliazlobin/web/components/Tag'
+import '@iliazlobin/web/styles/mdx.css'
 
 const MAX_DISPLAY = 5
 

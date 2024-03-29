@@ -1,4 +1,3 @@
-
 import { MdBlock } from 'notion-to-md/build/types'
 
 export type PageDetails = {

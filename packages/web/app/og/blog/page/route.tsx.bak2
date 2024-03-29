@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og'
 
-import { allPosts } from '@/.contentlayer/generated'
+import { allPosts } from '@iliazlobin/web/.contentlayer/generated'
 
 export const runtime = 'edge'
 

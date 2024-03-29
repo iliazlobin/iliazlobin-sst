@@ -3,15 +3,23 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { CodeBlockWrapper } from '@/components/code-block-wrapper'
-import { CopyButton, CopyNpmCommandButton } from '@/components/copy-button'
-import { StyleWrapper } from '@/components/style-wrapper'
-import { Style } from '@/components/styles'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { useConfig } from '@/hooks/use-config'
-import { Event } from '@/lib/events'
-import { cn } from '@/lib/utils'
-import { NpmCommands } from '@/types/unist'
+import { CodeBlockWrapper } from '@iliazlobin/web/components/code-block-wrapper'
+import {
+  CopyButton,
+  CopyNpmCommandButton,
+} from '@iliazlobin/web/components/copy-button'
+import { StyleWrapper } from '@iliazlobin/web/components/style-wrapper'
+import { Style } from '@iliazlobin/web/components/styles'
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from '@iliazlobin/web/components/ui/tabs'
+import { useConfig } from '@iliazlobin/web/hooks/use-config'
+import { Event } from '@iliazlobin/web/lib/events'
+import { cn } from '@iliazlobin/web/lib/utils'
+import { NpmCommands } from '@iliazlobin/web/types/unist'
 
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import * as React from 'react'
