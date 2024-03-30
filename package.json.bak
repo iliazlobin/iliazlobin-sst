@@ -18,22 +18,32 @@
     "typecheck": "tsc --noEmit",
     "types": "sst types"
   },
+  "dependencies": {
+    "@types/node": "^20.12.2"
+  },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^14.1.4",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@tsconfig/node18": "^18.2.4",
-    "@types/node": "^20.12.2",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
     "aws-cdk-lib": "2.132.1",
+    "colors": "^1.4.0",
     "constructs": "10.3.0",
-    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "14.1.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5",
+    "prettier-plugin-packagejson": "^2.4.13",
     "sst": "^2.41.4",
-    "typescript": "^5.4.3"
+    "stream": "^0.0.2",
+    "typescript": "^5.4.3",
+    "util": "^0.12.5"
   },
   "pnpm": {
     "patchedDependencies": {
       "sst@2.41.4": "patches/sst@2.41.4.patch"
     }
-  },
-  "dependencies": {
-    "moment": "^2.30.1",
-    "zod-to-json-schema": "^3.22.5"
   }
 }

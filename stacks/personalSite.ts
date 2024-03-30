@@ -1,4 +1,4 @@
-import { ConfigStack } from './ConfigStack'
+import { allConfig } from './allConfig'
 import { logger } from './logger'
 import {
   CacheCookieBehavior,
@@ -15,7 +15,7 @@ import { Duration, Function } from 'sst/constructs'
 import { SsrFunction, SsrFunctionProps } from 'sst/constructs/SsrFunction'
 import { Plan } from 'sst/constructs/SsrSite'
 
-export function SiteStack({ stack }: StackContext) {
+export function personalSite({ stack }: StackContext) {
   // const originalDomainName = 'iliazlobin.com'
   // const domainName =
   //   stack.stage === 'prod'
@@ -31,7 +31,7 @@ export function SiteStack({ stack }: StackContext) {
   //   validation: acm.CertificateValidation.fromDns(zone)
   // })
 
-  const { siteDomain, staticDomain } = use(ConfigStack)
+  const { siteDomain, staticDomain } = use(allConfig)
   const lambdaInsightsLayerName =
     'arn:aws:lambda:us-east-1:580247275435:layer:LambdaInsightsExtension-Arm64:16'
   const lambdaInsightsLayer = LayerVersion.fromLayerVersionArn(

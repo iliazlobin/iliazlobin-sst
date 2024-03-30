@@ -1,15 +1,15 @@
-import { ConfigStack } from './ConfigStack'
+import { allConfig } from './allConfig'
 import { S3Origin } from 'aws-cdk-lib/aws-cloudfront-origins'
 import { Bucket, Distribution, StackContext, Table, use } from 'sst/constructs'
 
-export function DataStack({ stack }: StackContext) {
+export function siteData({ stack }: StackContext) {
   // const originalDomainName = 'iliazlobin.com'
   // const domainName =
   //   stack.stage === 'prod'
   //     ? originalDomainName
   //     : `${stack.stage}.${originalDomainName}`
 
-  const { siteDomain, staticDomain } = use(ConfigStack)
+  const { siteDomain, staticDomain } = use(allConfig)
 
   const notionPagesTable = new Table(stack, 'NotionPages', {
     fields: {

@@ -26,6 +26,13 @@
       "cwd": "${workspaceFolder}/packages/core"
     },
     {
+      "name": "functions: pnpm test",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "pnpm test",
+      "cwd": "${workspaceFolder}/packages/functions"
+    },
+    {
       "name": "web: pnpm dev",
       "type": "node-terminal",
       "request": "launch",
@@ -44,7 +51,10 @@
       "type": "node-terminal",
       "request": "launch",
       "command": "pnpm dev",
-      "cwd": "${workspaceFolder}"
+      "cwd": "${workspaceFolder}",
+      "presentation": {
+        "panel": "shared"
+      }
     },
     {
       "name": "sst: pnpm deploy",
