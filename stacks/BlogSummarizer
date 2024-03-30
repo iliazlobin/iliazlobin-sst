@@ -1,0 +1,13 @@
+import { Function, StackContext } from 'sst/constructs'
+
+export function SiteStack({ stack }: StackContext) {
+  new Function(stack, 'MyFunction', {
+    handler: 'src/lambda.handler',
+  })
+
+  // const stateDefinition = Chain.start(callYoutubeTask)
+
+  // const stateMachine = new StateMachine(stack, 'StateMachineExample', {
+  //   definition: stateDefinition,
+  // })
+}
