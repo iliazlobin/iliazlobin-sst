@@ -1,17 +1,20 @@
-import { allConfig } from './allConfig'
 import {
   Choice,
   Condition,
   DefinitionBody,
   InputType,
+  JitterType,
   JsonPath,
   Map,
   Pass,
   StateMachine,
   Succeed,
+  Timeout,
 } from 'aws-cdk-lib/aws-stepfunctions'
 import { LambdaInvoke } from 'aws-cdk-lib/aws-stepfunctions-tasks'
-import { Config, Function, StackContext, use } from 'sst/constructs'
+import { Duration } from 'aws-cdk-lib/core'
+import { Function, StackContext, use } from 'sst/constructs'
+import { allConfig } from './allConfig'
 
 export function blogWorkflow({ stack }: StackContext) {
   const {
@@ -22,12 +25,16 @@ export function blogWorkflow({ stack }: StackContext) {
     openaiModel,
   } = use(allConfig)
 
+  const summarizeDocumentTimeout = Duration.seconds(
+    // stack.stage === 'dev' ? 60 : 20,
+    stack.stage === 'dev' ? 20 : 20,
+  )
   const summarizeDocument = new LambdaInvoke(stack, 'summarizeDocument', {
     lambdaFunction: new Function(stack, 'summarizeDocumentFunction', {
       bind: [openaiApiKey, openaiModel],
       handler: 'packages/functions/blog/handlers/summarizeDocument.handler',
       memorySize: 256,
-      timeout: stack.stage === 'dev' ? 60 : 20,
+      timeout: summarizeDocumentTimeout.toSeconds(),
     }),
     // inputPath: '$',
     payload: {
@@ -43,14 +50,28 @@ export function blogWorkflow({ stack }: StackContext) {
     },
     resultPath: '$.$summarizeDocument',
     // outputPath: '$.Payload',
+    taskTimeout: Timeout.duration(summarizeDocumentTimeout),
   })
 
+  summarizeDocument.addRetry({
+    errors: ['States.Timeout'],
+    interval: Duration.seconds(5),
+    maxDelay: Duration.seconds(20),
+    jitterStrategy: JitterType.FULL,
+    maxAttempts: 3,
+    backoffRate: 2,
+  })
+
+  const saveDocumentTimeout = Duration.seconds(
+    // stack.stage === 'dev' ? 60 : 20,
+    stack.stage === 'dev' ? 20 : 20,
+  )
   const saveDocument = new LambdaInvoke(stack, 'saveDocument', {
     lambdaFunction: new Function(stack, 'saveDocumentFunction', {
       bind: [notionToken, blogSummarizerNotionDatabase],
       handler: 'packages/functions/blog/handlers/saveDocument.handler',
       memorySize: 256,
-      timeout: stack.stage === 'dev' ? 60 : 10,
+      timeout: saveDocumentTimeout.toSeconds(),
     }),
     // inputPath: '$',
     payload: {
@@ -63,8 +84,19 @@ export function blogWorkflow({ stack }: StackContext) {
     resultSelector: {
       'result.$': '$.Payload',
     },
-    resultPath: '$.$saveDocument',
+    // resultPath: '$.$saveDocument',
+    resultPath: JsonPath.DISCARD,
     // outputPath: '$.Payload',
+    taskTimeout: Timeout.duration(saveDocumentTimeout),
+  })
+
+  saveDocument.addRetry({
+    errors: ['Error'],
+    interval: Duration.seconds(5),
+    maxDelay: Duration.seconds(20),
+    jitterStrategy: JitterType.FULL,
+    maxAttempts: 3,
+    backoffRate: 2,
   })
 
   const retrieveItemText = new LambdaInvoke(stack, 'retrieveItemText', {
@@ -104,6 +136,10 @@ export function blogWorkflow({ stack }: StackContext) {
     .when(documentExistCondition, iterateItemsSuccess)
     .otherwise(documentDoesntExistRoutine)
 
+  const checkDocumentExistTimeout = Duration.seconds(
+    // stack.stage === 'dev' ? 60 : 20,
+    stack.stage === 'dev' ? 20 : 20,
+  )
   const checkDocumentExist = new LambdaInvoke(stack, 'checkDocumentExist', {
     lambdaFunction: new Function(stack, 'checkDocumentExistFunction', {
       bind: [notionToken, blogSummarizerNotionDatabase],
@@ -112,7 +148,7 @@ export function blogWorkflow({ stack }: StackContext) {
       //   // API_KEY: process.env.API_KEY ?? '',
       // },
       memorySize: 256,
-      timeout: stack.stage === 'dev' ? 60 : 10,
+      timeout: checkDocumentExistTimeout.toSeconds(),
     }),
     // inputPath: '$',
     payload: {
@@ -126,6 +162,7 @@ export function blogWorkflow({ stack }: StackContext) {
     },
     resultPath: '$.$checkDocumentExist',
     // outputPath: '$.Payload',
+    taskTimeout: Timeout.duration(checkDocumentExistTimeout),
   })
 
   const mapRoutine = checkDocumentExist.next(choiceRoutine)
@@ -135,17 +172,16 @@ export function blogWorkflow({ stack }: StackContext) {
     // itemSelector: {
     //   item: JsonPath.stringAt('$$.Map.Item.Value'),
     // },
-    resultSelector: {
-      'url.$': '$$.Map.Item.Value.url',
-      'title.$': '$$.Map.Item.Value.title',
-      'cloud.$': '$$.Map.Item.Value.cloud',
-    },
     // resultPath: '$.mapOutput',
-    maxConcurrency: 3,
+    maxConcurrency: 5,
   })
 
   iterateItemsMapRoutine.itemProcessor(mapRoutine)
 
+  const retrieveItemsTimeout = Duration.seconds(
+    // stack.stage === 'dev' ? 60 : 20,
+    stack.stage === 'dev' ? 20 : 20,
+  )
   const retrieveItems = new LambdaInvoke(stack, 'retrieveItems', {
     lambdaFunction: new Function(stack, 'retrieveItemsFunction', {
       bind: [apifyToken],
@@ -154,7 +190,7 @@ export function blogWorkflow({ stack }: StackContext) {
       //   // API_KEY: process.env.API_KEY ?? '',
       // },
       memorySize: 256,
-      timeout: stack.stage === 'dev' ? 60 : 10,
+      timeout: retrieveItemsTimeout.toSeconds(),
     }),
     // inputPath: '$',
     // payload: {
@@ -168,6 +204,7 @@ export function blogWorkflow({ stack }: StackContext) {
     },
     resultPath: '$.$retrieveItems',
     // outputPath: '$.retrieveItems',
+    taskTimeout: Timeout.duration(retrieveItemsTimeout),
   })
 
   const finish = new Pass(stack, 'Finish')
