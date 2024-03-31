@@ -1,15 +1,29 @@
 {
-	"version": "2.0.0",
-	"tasks": [
+  "version": "2.0.0",
+  "tasks": [
     {
       "label": "functions: pnpm test",
       "type": "shell",
       "command": "pnpm",
-      "args": [
-        "test"
-      ],
+      "args": ["test"],
       "options": {
         "cwd": "${workspaceFolder}/packages/functions"
+      },
+      "presentation": {
+        "reveal": "silent",
+        "revealProblems": "onProblem",
+        "focus": false,
+        "panel": "dedicated"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "sts: pnpm deploy",
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["deploy"],
+      "options": {
+        "cwd": "${workspaceFolder}"
       },
       "presentation": {
         "reveal": "silent",
@@ -23,9 +37,7 @@
       "label": "sts: pnpm types",
       "type": "shell",
       "command": "pnpm",
-      "args": [
-        "types"
-      ],
+      "args": ["types"],
       "options": {
         "cwd": "${workspaceFolder}"
       },

@@ -19,6 +19,9 @@ export function allConfig({ stack }: StackContext) {
         : `static.${stack.stage}.iliazlobin.com`,
   })
 
+  // authentication
+  const apifyBlogProcessToken = new Config.Secret(stack, 'apifyBlogProcessToken')
+
   // apify
   const apifyToken = new Config.Secret(stack, 'apifyToken')
 
@@ -44,6 +47,7 @@ export function allConfig({ stack }: StackContext) {
     apifyToken: apifyToken,
     openaiApiKey: openaiApiKey,
     openaiModel: openaiModel,
+    apifyBlogProcessToken: apifyBlogProcessToken,
     blogNotionDatabase: blogNotionDatabase,
   }
 }

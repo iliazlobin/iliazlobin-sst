@@ -12,6 +12,20 @@
       "internalConsoleOptions": "openOnSessionStart"
     },
     {
+      "name": "sst: pnpm dev",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "pnpm dev",
+      "cwd": "${workspaceFolder}",
+    },
+    {
+      "name": "sst: pnpm deploy",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "sst deploy --stage prod",
+      "cwd": "${workspaceFolder}"
+    },
+    {
       "name": "core: pnpm test",
       "type": "node-terminal",
       "request": "launch",
@@ -46,22 +60,5 @@
       "command": "pnpm test",
       "cwd": "${workspaceFolder}/packages/api"
     },
-    {
-      "name": "sst: pnpm dev",
-      "type": "node-terminal",
-      "request": "launch",
-      "command": "pnpm dev",
-      "cwd": "${workspaceFolder}",
-      "presentation": {
-        "panel": "shared"
-      }
-    },
-    {
-      "name": "sst: pnpm deploy",
-      "type": "node-terminal",
-      "request": "launch",
-      "command": "sst deploy --stage prod",
-      "cwd": "${workspaceFolder}"
-    }
   ]
 }

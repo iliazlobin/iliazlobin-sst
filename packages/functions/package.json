@@ -7,6 +7,7 @@
     "typecheck": "tsc -noEmit"
   },
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.540.0",
     "@iliazlobin/functions": "workspace:*",
     "@langchain/core": "^0.1.52",
     "@langchain/openai": "^0.0.25",

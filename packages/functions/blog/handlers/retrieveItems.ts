@@ -21,12 +21,12 @@ interface Event {
 interface Context {}
 
 export async function handler(event: Event, context: Context): Promise<Item[]> {
-  console.log(`[DEBUG] event: ${event}`)
+  console.log('[DEBUG] event: ', event)
 
   const datasetId = event.resource?.defaultDatasetId
   const exitCode = event.resource?.exitCode
-  // console.log(`[DEBUG] datasetId: ${datasetId}`);
-  // console.log(`[DEBUG] exitCode: ${exitCode}`);
+  console.log(`[DEBUG] datasetId: ${datasetId}`);
+  console.log(`[DEBUG] exitCode: ${exitCode}`);
 
   if (datasetId === undefined || exitCode !== 0) {
     return []

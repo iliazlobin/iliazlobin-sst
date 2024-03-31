@@ -11,15 +11,20 @@ pnpm dev
 Insert secrets:
 
 ```sh
-notionToken=$(cat .env | grep notionToken | cut -d'=' -f2)
-npx sst secrets set notionToken $notionToken
-# npx sst secrets set --stage prod notionToken $notionToken
-apifyToken=$(cat .env | grep apifyToken | cut -d'=' -f2)
-npx sst secrets set apifyToken $apifyToken
-# npx sst secrets set --stage prod apifyToken $apifyToken
-openaiApiKey=$(cat .env | grep openaiApiKey | cut -d'=' -f2)
-npx sst secrets set openaiApiKey $openaiApiKey
-# npx sst secrets set --stage prod openaiApiKey $openaiApiKey
+# test
+apifyBlogProcessToken=$(cat .env | grep apifyBlogProcessToken)
+npx sst secrets set apifyBlogProcessToken ${apifyBlogProcessToken#*=}
+
+# exec
+notionToken=$(cat .env | grep notionToken)
+npx sst secrets set notionToken ${notionToken#*=}
+npx sst secrets set --stage prod notionToken ${notionToken#*=}
+apifyToken=$(cat .env | grep apifyToken)
+npx sst secrets set apifyToken ${apifyToken#*=}
+npx sst secrets set --stage prod apifyToken ${apifyToken#*=}
+openaiApiKey=$(cat .env | grep openaiApiKey)
+npx sst secrets set openaiApiKey ${openaiApiKey#*=}
+npx sst secrets set --stage prod openaiApiKey ${openaiApiKey#*=}
 
 ```
 
@@ -53,6 +58,15 @@ nmap -Pn -sT -p 9222 192.168.1.27
 
 # Blog Summarizer Test
 ```sh
-curl -X POST https://g8xdcle306.execute-api.us-east-1.amazonaws.com/start-machine
+curl -X POST https://tqnqj3hg8b.execute-api.us-east-1.amazonaws.com/blog/process
+curl -X POST \
+  -H "Authorization: Bearer OPEa5z/LH6Gti8PKVcSNSeK4iRlTRZn3njQXydoBMB4=" \
+  https://tqnqj3hg8b.execute-api.us-east-1.amazonaws.com/blog/process \
+
+# prod
+curl -X POST \
+  -d "@packages/functions/blog/files/failing_aws_apify_payload.json" \
+  -H "Authorization: Bearer OPEa5z/LH6Gti8PKVcSNSeK4iRlTRZn3njQXydoBMB4=" \
+  https://cdmujzau4j.execute-api.us-east-1.amazonaws.com/blog/process \
 
 ```

@@ -211,8 +211,9 @@ export function blogWorkflow({ stack }: StackContext) {
 
   const definition = retrieveItems.next(iterateItemsMapRoutine).next(finish)
 
-  // const awsStateMachine = new StateMachine(stack, `${stack.stage}-AWSStateMachine`, {
-  const awsStateMachine = new StateMachine(stack, 'AWSStateMachine', {
+  // const awsStateMachine = new StateMachine(stack, `${stack.stage}AWSStateMachine`, {
+  const awsStateMachine = new StateMachine(stack, `${stack.stage}-AWSStateMachine`, {
+  // const awsStateMachine = new StateMachine(stack, 'AWSStateMachine', {
     definitionBody: DefinitionBody.fromChainable(definition),
   })
 

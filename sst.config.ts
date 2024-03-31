@@ -2,6 +2,7 @@ import { SSTConfig } from 'sst'
 import { allConfig } from './stacks/allConfig'
 import { blogWorkflow } from './stacks/blogWorkflow'
 import { publicHttpApi } from './stacks/publicHttpApi'
+import { authorizer } from "./stacks/authorizer"
 
 export default {
   config(_input: any) {
@@ -28,12 +29,15 @@ export default {
     })
 
     app.stack(allConfig)
+    // app.stack(TestStack)
+
     // app.stack(DataStack)
     // app.stack(SiteStack)
 
+    app.stack(authorizer)
+
     app.stack(blogWorkflow)
 
-    // app.stack(TestStack)
     app.stack(publicHttpApi)
   },
 } satisfies SSTConfig
