@@ -24,7 +24,7 @@ export function allConfig({ stack }: StackContext) {
 
   // notion
   const notionToken = new Config.Secret(stack, 'notionToken')
-  const blogSummarizerNotionDatabase = new Config.Parameter(
+  const blogNotionDatabase = new Config.Parameter(
     stack,
     'blogSummarizerNotionDatabase',
     { value: 'eee29f37ef0f4ff99b8b03fdd7538334' },
@@ -44,6 +44,6 @@ export function allConfig({ stack }: StackContext) {
     apifyToken: apifyToken,
     openaiApiKey: openaiApiKey,
     openaiModel: openaiModel,
-    blogSummarizerNotionDatabase: blogSummarizerNotionDatabase,
+    blogNotionDatabase: blogNotionDatabase,
   }
 }

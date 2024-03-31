@@ -40,7 +40,7 @@ export async function upsertDocumentIntoDatabase({
   summary: Summary
 }): Promise<any> {
   const databaseId = Config.blogSummarizerNotionDatabase
-  const cloud = Config.cloud
+  const cloud = item.cloud
 
   const takeawaysStr = summary.takeaways.join('\n')
   const categoriesDict = item.categories

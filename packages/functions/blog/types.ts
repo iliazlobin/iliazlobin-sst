@@ -4,9 +4,17 @@ export interface Item {
   categories: string[]
   date: string
   tags: string[]
-  text: string
   title: string
   url: string
+  datasetId?: string
+  cloud?: string
+  text?: string
+}
+
+export interface ActorInfo {
+  name: string
+  username: string
+  title?: string
 }
 
 export type Summary = {
@@ -15,3 +23,5 @@ export type Summary = {
   technologies: string[]
   stakeholders: string[]
 }
+
+export type Actor = {}
