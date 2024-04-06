@@ -1,3 +1,4 @@
+import { allConfig } from './allConfig'
 import {
   Choice,
   Condition,
@@ -14,7 +15,6 @@ import {
 import { LambdaInvoke } from 'aws-cdk-lib/aws-stepfunctions-tasks'
 import { Duration } from 'aws-cdk-lib/core'
 import { Function, StackContext, use } from 'sst/constructs'
-import { allConfig } from './allConfig'
 
 export function blogWorkflow({ stack }: StackContext) {
   const {
@@ -91,7 +91,7 @@ export function blogWorkflow({ stack }: StackContext) {
   })
 
   saveDocument.addRetry({
-    errors: ['Error'],
+    errors: ['Error', 'APIResponseError'],
     interval: Duration.seconds(5),
     maxDelay: Duration.seconds(20),
     jitterStrategy: JitterType.FULL,
@@ -173,7 +173,7 @@ export function blogWorkflow({ stack }: StackContext) {
     //   item: JsonPath.stringAt('$$.Map.Item.Value'),
     // },
     // resultPath: '$.mapOutput',
-    maxConcurrency: 5,
+    maxConcurrency: 3,
   })
 
   iterateItemsMapRoutine.itemProcessor(mapRoutine)
@@ -212,10 +212,14 @@ export function blogWorkflow({ stack }: StackContext) {
   const definition = retrieveItems.next(iterateItemsMapRoutine).next(finish)
 
   // const awsStateMachine = new StateMachine(stack, `${stack.stage}AWSStateMachine`, {
-  const awsStateMachine = new StateMachine(stack, `${stack.stage}-AWSStateMachine`, {
-  // const awsStateMachine = new StateMachine(stack, 'AWSStateMachine', {
-    definitionBody: DefinitionBody.fromChainable(definition),
-  })
+  const awsStateMachine = new StateMachine(
+    stack,
+    `${stack.stage}-AWSStateMachine`,
+    {
+      // const awsStateMachine = new StateMachine(stack, 'AWSStateMachine', {
+      definitionBody: DefinitionBody.fromChainable(definition),
+    },
+  )
 
   stack.addOutputs({
     awsStateMachine: awsStateMachine.toString(),

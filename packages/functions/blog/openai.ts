@@ -21,11 +21,15 @@ const SummaryZod = z.object({
     ),
   technologies: z
     .array(z.string())
+    .min(3)
+    .max(100)
     .describe(
       'the key cloud services and technologies mentioined in the blog post',
     ),
   stakeholders: z
     .array(z.string())
+    .min(3)
+    .max(100)
     .describe(
       'groups of stakeholders who would be interested in the blog post',
     ),

@@ -20,6 +20,12 @@ export async function getWebPosts(): Promise<WebPost[]> {
     contentMd: '',
     images: [],
   }))
+
+  webPosts.sort(
+    (a, b) =>
+      new Date(b.createdTime).getTime() - new Date(a.createdTime).getTime(),
+  )
+
   return webPosts
 }
 

@@ -16,10 +16,12 @@ export async function retrieveItemsWithoutText({
 
   return datasetItems.items.map((item: any) => ({
     authors: item.authors,
+    author: item.author,
     blog: item.blog,
     categories: item.categories,
     date: item.date,
     tags: item.tags,
+    tag: item.tag,
     title: item.title,
     url: item.url,
   }))

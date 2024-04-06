@@ -5,8 +5,8 @@ import {
 } from '@notionhq/client/build/src/api-endpoints'
 
 import { Item, Summary } from './types'
+import moment from 'moment'
 import { Config } from 'sst/node/config'
-import moment from "moment"
 
 const notion = new Client({
   auth: Config.notionToken,
@@ -41,6 +41,13 @@ export async function upsertDocumentIntoDatabase({
 }): Promise<any> {
   const databaseId = Config.blogSummarizerNotionDatabase
   const cloud = item.cloud
+  if (!cloud) {
+    throw new Error(`Cloud name is undefined for item: ${item.url}`)
+  }
+  const blog = item.blog || item.tag
+  if (!blog) {
+    throw new Error(`Blog name is undefined for item: ${item.url}`)
+  }
 
   const takeawaysStr = summary.takeaways.join('\n')
   const categoriesDict = item.categories
@@ -55,8 +62,17 @@ export async function upsertDocumentIntoDatabase({
   const stakeholdersDict = summary.stakeholders.map((stakeholder: string) => ({
     name: stakeholder,
   }))
-  const authorsStr = item.authors.join('\n')
-  const isoDate = moment(item.date, 'MM/DD/YYYY').format('YYYY-MM-DD');
+  const authors: string[] = []
+  if (item.author) {
+    authors.push(item.author)
+  } else if (item.authors) {
+    authors.push(...item.authors)
+  }
+  const authorsStr = authors.join('\n')
+  const isoDate = moment(item.date).format('YYYY-MM-DDTHH:mm:ssZ')
+  console.log(
+    `[DEBUG] formated: url: ${item.url}, item.date: ${item.date}, isoDate: ${isoDate}, authors: ${authors}`,
+  )
 
   const entry: CreatePageParameters = {
     parent: { database_id: databaseId },
@@ -67,7 +83,7 @@ export async function upsertDocumentIntoDatabase({
       Date: { date: { start: isoDate } },
       Summary: { rich_text: [{ text: { content: summary.summary } }] },
       Takeaways: { rich_text: [{ text: { content: takeawaysStr } }] },
-      Blog: { select: { name: item.blog } },
+      Blog: { select: { name: blog } },
       Technologies: { multi_select: technologiesDict },
       Stakeholders: { multi_select: stakeholdersDict },
       Authors: { rich_text: [{ text: { content: authorsStr } }] },

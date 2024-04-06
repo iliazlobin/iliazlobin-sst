@@ -1,8 +1,10 @@
-import { SSTConfig } from 'sst'
 import { allConfig } from './stacks/allConfig'
+import { authorizer } from './stacks/authorizer'
 import { blogWorkflow } from './stacks/blogWorkflow'
+import { personalSite } from './stacks/personalSite'
+import { personalSiteData } from './stacks/personalSiteData'
 import { publicHttpApi } from './stacks/publicHttpApi'
-import { authorizer } from "./stacks/authorizer"
+import { SSTConfig } from 'sst'
 
 export default {
   config(_input: any) {
@@ -29,15 +31,14 @@ export default {
     })
 
     app.stack(allConfig)
+
     // app.stack(TestStack)
 
-    // app.stack(DataStack)
-    // app.stack(SiteStack)
+    // app.stack(personalSiteData)
+    // app.stack(personalSite)
 
     app.stack(authorizer)
-
     app.stack(blogWorkflow)
-
     app.stack(publicHttpApi)
   },
 } satisfies SSTConfig

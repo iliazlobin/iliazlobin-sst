@@ -8,13 +8,13 @@ import { listPosts, retrievePost } from '@iliazlobin/core/notion/service'
 import fs from 'fs'
 import { expect, it } from 'vitest'
 
-it('export notion page to S3', async () => {
-  // await exportMarkdownPage({
-  //   pageId: '5d488cacdf6d411295dcb93f0d4080ec',
-  // })
+it.only('export notion page to S3', async () => {
   await exportMarkdownPage({
-    pageId: 'eb22bf1655ab4ad7ba36597915f67c66',
+    pageId: '965854d95e80436cb6bc631965eb0fc2',
   })
+  // await exportMarkdownPage({
+  //   pageId: 'eb22bf1655ab4ad7ba36597915f67c66',
+  // })
   console.log('done')
 })
 

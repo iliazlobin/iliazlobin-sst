@@ -18,10 +18,26 @@
       "problemMatcher": []
     },
     {
+      "label": "sts: pnpm dev",
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["dev"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "silent",
+        "revealProblems": "onProblem",
+        "focus": false,
+        "panel": "dedicated"
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "sts: pnpm deploy",
       "type": "shell",
       "command": "pnpm",
-      "args": ["deploy"],
+      "args": ["run", "deploy"],
       "options": {
         "cwd": "${workspaceFolder}"
       },

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "test": "sst bind --script 'vitest --run'",
+    "test": "sst bind 'vitest --run'",
     "typecheck": "tsc -noEmit"
   },
   "dependencies": {
