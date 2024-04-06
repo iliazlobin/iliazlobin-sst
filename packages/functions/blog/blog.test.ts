@@ -6,8 +6,8 @@ import { it } from 'vitest'
 it.only('process blog', async () => {
   const payload = fs.readFileSync(
     // `${__dirname}/files/aws_apify_payload.json`,
-    // `${__dirname}/files/gcp_apify_payload.json`,
-    `${__dirname}/files/azure_apify_payload.json`,
+    `${__dirname}/files/gcp_apify_payload.json`,
+    // `${__dirname}/files/azure_apify_payload.json`,
     'utf-8',
   )
   const data = JSON.parse(payload)

@@ -66,7 +66,13 @@ export async function upsertDocumentIntoDatabase({
   if (item.author) {
     authors.push(item.author)
   } else if (item.authors) {
-    authors.push(...item.authors)
+    for (const author of item.authors) {
+      if (author['name']) {
+        authors.push(author['name'])
+      } else {
+        authors.push(author)
+      }
+    }
   }
   const authorsStr = authors.join('\n')
   const isoDate = moment(item.date).format('YYYY-MM-DDTHH:mm:ssZ')
