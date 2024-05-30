@@ -1,3 +1,8 @@
+# Main Packages
+* [Web (Next.js)](https://github.com/iliazlobin/iliazlobin-sst/tree/master/packages/web)
+* [Core](https://github.com/iliazlobin/iliazlobin-sst/tree/master/packages/core)
+* [Functions](https://github.com/iliazlobin/iliazlobin-sst/tree/master/packages/functions)
+
 # Development
 
 Run deployment for dev:
@@ -5,7 +10,6 @@ Run deployment for dev:
 ```bash
 pnpm i
 pnpm dev
-
 ```
 
 Insert secrets:
