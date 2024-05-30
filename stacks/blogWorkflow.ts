@@ -84,9 +84,9 @@ export function blogWorkflow({ stack }: StackContext) {
     resultSelector: {
       'result.$': '$.Payload',
     },
-    // resultPath: '$.$saveDocument',
-    resultPath: JsonPath.DISCARD,
-    // outputPath: '$.Payload',
+    resultPath: '$.$saveDocument',
+    // resultPath: JsonPath.DISCARD,
+    outputPath: '$.url',
     taskTimeout: Timeout.duration(saveDocumentTimeout),
   })
 

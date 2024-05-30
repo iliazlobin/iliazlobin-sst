@@ -60,13 +60,13 @@ nmap -Pn -sT -p 9222 192.168.1.27
 ```sh
 curl -X POST https://tqnqj3hg8b.execute-api.us-east-1.amazonaws.com/blog/process
 curl -X POST \
-  -H "Authorization: Bearer OPEa5z/LH6Gti8PKVcSNSeK4iRlTRZn3njQXydoBMB4=" \
+  -H "Authorization: Bearer _____" \
   https://tqnqj3hg8b.execute-api.us-east-1.amazonaws.com/blog/process \
 
 # prod
 curl -X POST \
   -d "@packages/functions/blog/files/failing_aws_apify_payload.json" \
-  -H "Authorization: Bearer OPEa5z/LH6Gti8PKVcSNSeK4iRlTRZn3njQXydoBMB4=" \
+  -H "Authorization: Bearer _____" \
   https://cdmujzau4j.execute-api.us-east-1.amazonaws.com/blog/process \
 
 ```

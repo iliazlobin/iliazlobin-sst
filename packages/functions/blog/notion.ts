@@ -48,19 +48,22 @@ export async function upsertDocumentIntoDatabase({
   if (!blog) {
     throw new Error(`Blog name is undefined for item: ${item.url}`)
   }
+  const normBlog = blog.replace(/,/g, '')
 
   const takeawaysStr = summary.takeaways.join('\n')
   const categoriesDict = item.categories
-    ? item.categories.map((category: string) => ({ name: category }))
+    ? item.categories.map((category: string) => ({
+        name: category.replace(/,/g, ''),
+      }))
     : []
   const tagsDict = item.tags
-    ? item.tags.map((tag: string) => ({ name: tag }))
+    ? item.tags.map((tag: string) => ({ name: tag.replace(/,/g, '') }))
     : []
   const technologiesDict = summary.technologies.map((technology: string) => ({
-    name: technology,
+    name: technology.replace(/,/g, ''),
   }))
   const stakeholdersDict = summary.stakeholders.map((stakeholder: string) => ({
-    name: stakeholder,
+    name: stakeholder.replace(/,/g, ''),
   }))
   const authors: string[] = []
   if (item.author) {
@@ -75,7 +78,7 @@ export async function upsertDocumentIntoDatabase({
     }
   }
   const authorsStr = authors.join('\n')
-  const isoDate = moment(item.date).format('YYYY-MM-DDTHH:mm:ssZ')
+  const isoDate = moment(item.date).format('YYYY-MM-DD')
   console.log(
     `[DEBUG] formated: url: ${item.url}, item.date: ${item.date}, isoDate: ${isoDate}, authors: ${authors}`,
   )
@@ -89,7 +92,7 @@ export async function upsertDocumentIntoDatabase({
       Date: { date: { start: isoDate } },
       Summary: { rich_text: [{ text: { content: summary.summary } }] },
       Takeaways: { rich_text: [{ text: { content: takeawaysStr } }] },
-      Blog: { select: { name: blog } },
+      Blog: { select: { name: normBlog } },
       Technologies: { multi_select: technologiesDict },
       Stakeholders: { multi_select: stakeholdersDict },
       Authors: { rich_text: [{ text: { content: authorsStr } }] },
