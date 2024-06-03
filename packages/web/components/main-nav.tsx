@@ -42,6 +42,24 @@ export function MainNav() {
         >
           Tags
         </Link>
+        <Link
+          href="/presentations"
+          className={cn(
+            'transition-colors hover:text-foreground/80',
+            pathname === '/blog' ? 'text-foreground' : 'text-foreground/60',
+          )}
+        >
+          Presentations
+        </Link>
+        <Link
+          href="/about"
+          className={cn(
+            'transition-colors hover:text-foreground/80',
+            pathname === '/blog' ? 'text-foreground' : 'text-foreground/60',
+          )}
+        >
+          About
+        </Link>
       </nav>
     </div>
   )

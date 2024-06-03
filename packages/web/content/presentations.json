@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Vision Language Models Overview",
+    "blogPost": "",
+    "summary": "Recent advancements in vision language models, highlighting the integration of vision capabilities into top LLM models by major AI vendors like OpenAI, Anthropic, and Google, and delves into the principles of multimodal transformers, facilitating efficient and scalable solutions for vision tasks in both images and videos.",
+    "date": "2024-06-08",
+    "googleSlidesUrl": "https://docs.google.com/presentation/d/e/2PACX-1vTRV-wy_UXbhOA9HaGFqSTaPkQf-j09VWlGYOIqGeSTMW-Dt4G36RzGEwG5PMM75-ukJep2RVfx10ub/embed?start=false&loop=false&delayms=3000",
+    "youTubeUrl": ""
+  },
+  {
+    "title": "DSPy (Declarative Self-Improving Language Programs) New Machine Learning Paradigm: No Prompt Engineering Required",
+    "blogPost": "",
+    "summary": "A novel Machine Learning approach that sidesteps prompt engineering, offering enhanced performance for Large Language Models (LLMs) with reduced data and hardware requirements, demonstrated through financial data retrieval and progressive program optimization, highlighting the framework's seamless scalability through continuous composition.",
+    "date": "2024-05-24",
+    "googleSlidesUrl": "https://docs.google.com/presentation/d/e/2PACX-1vTB8vVpXiKji62ZN158Yka36LZo_a35YNV9UV1fb5KCcEfF9TpplkF3_X2wi58D14PoJU7VVBiLwkEB/embed?start=false&loop=false&delayms=3000",
+    "youtubeUrl": "https://www.youtube.com/embed/NXI2l0wJNBY?si=kZbGS1lHFroGO9vW"
+  },
+  {
+    "title": "The Evolution of Fine-Tuning",
+    "blogPost": "",
+    "summary": "Evolution of fine-tuning in transformers, highlighting the streamlined process in newer LLMs like Llama, albeit with reduced control, and offers a comprehensive walkthrough on deep fine-tuning for smaller, cost-effective models, focusing on a Grammar task, while also addressing theoretical concepts, optimization techniques, and architectural considerations.",
+    "date": "2024-05-11",
+    "googleSlidesUrl": "https://docs.google.com/presentation/d/e/2PACX-1vQdrTL5CT8eT20Cm3PTeabi5FtJrQIYNgwB4K9cH6hWzPkAUJnC8MarCIYr4BRLQVfn_YB2DW0oU_w0/embed?start=false&loop=false&delayms=3000",
+    "youtubeUrl": "https://www.youtube.com/embed/k8XlLoGFIh0?si=Lib9o49wUr6D5gCM"
+  },
+  {
+    "title": "Which Transformer is Better Suited for Grammar Task",
+    "blogPost": "",
+    "summary": "A journey of delving into machine learning, particularly focusing on understanding model tuning, architecture, debugging tokenizer, and data analysis with pandas and matplotlib. Through this process, they emphasize the importance of motivation and goal-setting, showcasing their exploration of various language models for an English grammar task and concluding that smaller models like T5, despite slight performance trade-offs, excel in speed, making them ideal for tasks like grammar correction.",
+    "date": "2024-04-23",
+    "googleSlidesUrl": "https://docs.google.com/presentation/d/e/2PACX-1vRGj2DNXQluRaSg9OfuPFAMKO8b5x0p4I27Jg6eohQd9zpMGm7527NT458DbgG4e5Pxhdz7c7Y1yz9V/embed?start=false&loop=false&delayms=3000",
+    "youtubeUrl": "https://www.youtube.com/embed/rY0f1GRK0h8?si=ozjo2UY2mrf311Ma"
+  },
+  {
+    "title": "Personal NextJS Web Site on AWS Lambda@Edge",
+    "blogPost": "http://localhost:3010/blog/page/personal-nextjs-web-site-on-aws-lambdaedge",
+    "summary": "A detailed walkthrough of creating a personal website using a modern Jamstack approach with NextJS and SST for deployment on AWS cloud at the Edge, emphasizing the smooth experience and control achieved through this technology stack, while recommending SST for those interested in leveraging AWS services and startups credits.",
+    "date": "2024-04-01",
+    "googleSlidesUrl": "https://docs.google.com/presentation/d/e/2PACX-1vQ2gnHwVYyH8AWmBblUZ5aXAEmdDj1LZ9NDxhPu7t7Yc7rVrQtrvo6nPizAEBkertRfh29MCISwARXD/embed?start=false&loop=false&delayms=3000",
+    "youtubeUrl": "https://www.youtube.com/embed/171fy2U77iU?si=0I8UZWXQxv4GgZA7"
+  },
+  {
+    "title": "Twitter Recommendation Algorithm Explained",
+    "blogPost": "",
+    "summary": "A comprehensive analysis of the Twitter Recommendation Algorithm unveiled in March 2023, providing insights for users aiming to enhance their experience on the platform. They explore four scientific papers underpinning crucial aspects of Twitter's CS/ML systems, detailing system design, technical documentation, and significant source code snippets pivotal in fine-tuning the algorithm.",
+    "date": "2024-02-11",
+    "googleSlidesUrl": "https://docs.google.com/presentation/d/e/2PACX-1vQ4bvAGbpqYks81Yop91MuLoCzo9eieqMmIk5lzDHJIugIBtwKj3z8kKl6SXGc6HmoROvjDeSOrSPs-/embed?start=false&loop=false&delayms=3000",
+    "youtubeUrl": "https://www.youtube.com/embed/F-bvRXIQemg?si=PH8ZqkLsWY2jAwKN"
+  }
+]
