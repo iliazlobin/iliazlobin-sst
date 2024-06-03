@@ -20,7 +20,7 @@ export function middleware(request: NextRequest) {
   // }`
 
   if (url.basePath === '' || url.basePath === '/') {
-    return NextResponse.redirect(new URL(`/blog`, request.url))
+    return NextResponse.redirect(new URL(`/presentations`, request.url))
   }
 
   return NextResponse.next()

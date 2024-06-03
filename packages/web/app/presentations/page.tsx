@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import presentations from '@iliazlobin/web/content/presentations.json'
 import '@iliazlobin/web/styles/mdx.css'
 
@@ -35,6 +37,14 @@ export default async function PresentationsPage() {
                     })}
                   </time>
                 </div>
+                {blogPost && (
+                  <Link
+                    href={blogPost}
+                    className="text-blue-500 hover:underline text-base font-medium leading-6"
+                  >
+                    Blog post
+                  </Link>
+                )}
                 <p className="leading-7 [&:not(:first-child)]:mt-6">
                   {summary}
                 </p>
@@ -42,7 +52,7 @@ export default async function PresentationsPage() {
                   <iframe
                     src={googleSlidesUrl}
                     frameborder="0"
-                    className="w-full aspect-video"
+                    className="w-full aspect-video space-y-2"
                     allowfullscreen="true"
                     mozallowfullscreen="true"
                     webkitallowfullscreen="true"
@@ -50,7 +60,7 @@ export default async function PresentationsPage() {
                 )}
                 {youtubeUrl && (
                   <iframe
-                    className="w-full aspect-video"
+                    className="w-full aspect-video space-y-2"
                     src={youtubeUrl}
                     title="YouTube video player"
                     frameborder="0"
