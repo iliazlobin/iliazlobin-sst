@@ -4,8 +4,8 @@ import {
   PutItemCommand,
   ScanCommand,
 } from '@aws-sdk/client-dynamodb'
+import { Page, Post } from '@iliazlobin/core/notion/types'
 
-import { Page, Post } from '../types'
 import { Bucket } from 'sst/node/bucket'
 import { Table } from 'sst/node/table'
 

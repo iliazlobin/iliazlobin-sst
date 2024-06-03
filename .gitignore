@@ -11,6 +11,7 @@
 *.pem
 *.tsbuildinfo
 coverage
+iliazlobin-sts.md
 next-env.d.ts
 node_modules
 npm-debug.log*

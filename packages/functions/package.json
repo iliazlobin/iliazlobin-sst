@@ -7,20 +7,20 @@
     "typecheck": "tsc -noEmit"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.540.0",
+    "@aws-sdk/client-dynamodb": "^3.588.0",
     "@iliazlobin/functions": "workspace:*",
-    "@langchain/core": "^0.1.52",
+    "@langchain/core": "^0.1.63",
     "@langchain/openai": "^0.0.25",
-    "@notionhq/client": "^2.2.14",
-    "apify": "^3.1.16",
-    "axios": "^1.6.8",
-    "langchain": "^0.1.30",
-    "zod": "^3.22.4"
+    "@notionhq/client": "^2.2.15",
+    "apify": "^3.2.3",
+    "axios": "^1.7.2",
+    "langchain": "^0.1.37",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@types/aws-lambda": "^8.10.136",
-    "@types/node": "^20.11.30",
-    "sst": "^2.41.4",
-    "vitest": "^1.4.0"
+    "@types/aws-lambda": "^8.10.138",
+    "@types/node": "^20.14.0",
+    "sst": "^2.43.0",
+    "vitest": "^1.6.0"
   }
 }
