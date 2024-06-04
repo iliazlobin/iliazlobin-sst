@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@notionhq/client": "^2.2.15",
+    "@iliazlobin/core": "workspace:*",
     "axios": "^1.7.2",
     "image-size": "^1.1.1",
     "notion-to-md": "^3.1.1",

@@ -10,6 +10,7 @@ import { Bucket } from 'sst/node/bucket'
 import { Table } from 'sst/node/table'
 
 const client = new DynamoDBClient({})
+
 const tableName = Table.NotionPages.tableName
 const bucketName = Bucket.NotionBucket.bucketName
 

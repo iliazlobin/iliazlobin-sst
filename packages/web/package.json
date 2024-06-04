@@ -6,7 +6,8 @@
     "build": "sst bind 'next build'",
     "dev": "sst bind 'next dev -p 3010'",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@aws-sdk/client-sso-oidc": "^3.588.0",

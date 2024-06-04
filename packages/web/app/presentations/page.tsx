@@ -51,11 +51,8 @@ export default async function PresentationsPage() {
                 {googleSlidesUrl && (
                   <iframe
                     src={googleSlidesUrl}
-                    frameborder="0"
                     className="w-full aspect-video space-y-2"
-                    allowfullscreen="true"
-                    mozallowfullscreen="true"
-                    webkitallowfullscreen="true"
+                    allowFullScreen={true}
                   ></iframe>
                 )}
                 {youtubeUrl && (
@@ -63,10 +60,9 @@ export default async function PresentationsPage() {
                     className="w-full aspect-video space-y-2"
                     src={youtubeUrl}
                     title="YouTube video player"
-                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
                   ></iframe>
                 )}
               </div>

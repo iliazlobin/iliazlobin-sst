@@ -1,4 +1,7 @@
-import { getActorInfo, retrieveItemsWithoutText } from '@iliazlobin/functions/blog/apify'
+import {
+  getActorInfo,
+  retrieveItemsWithoutText,
+} from '@iliazlobin/functions/blog/apify'
 import { Item } from '@iliazlobin/functions/blog/types'
 
 interface Event {
@@ -25,8 +28,8 @@ export async function handler(event: Event, context: Context): Promise<Item[]> {
 
   const datasetId = event.resource?.defaultDatasetId
   const exitCode = event.resource?.exitCode
-  console.log(`[DEBUG] datasetId: ${datasetId}`);
-  console.log(`[DEBUG] exitCode: ${exitCode}`);
+  console.log(`[DEBUG] datasetId: ${datasetId}`)
+  console.log(`[DEBUG] exitCode: ${exitCode}`)
 
   if (datasetId === undefined || exitCode !== 0) {
     return []

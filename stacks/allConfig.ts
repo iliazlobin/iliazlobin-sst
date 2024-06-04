@@ -20,7 +20,10 @@ export function allConfig({ stack }: StackContext) {
   })
 
   // authentication
-  const apifyBlogProcessToken = new Config.Secret(stack, 'apifyBlogProcessToken')
+  const apifyBlogProcessToken = new Config.Secret(
+    stack,
+    'apifyBlogProcessToken',
+  )
 
   // apify
   const apifyToken = new Config.Secret(stack, 'apifyToken')

@@ -1,7 +1,10 @@
+/// <reference path="../../../../.sst/types/index.ts" />
 import Image from 'next/image'
 
 import presentations from '@iliazlobin/web/content/presentations.json'
 import '@iliazlobin/web/styles/mdx.css'
+
+// import { Config } from 'sst/node/config'
 
 export default async function PresentationsPage() {
   for (const p of presentations) {

@@ -26,4 +26,6 @@ export type Summary = {
   stakeholders: string[]
 }
 
-export type Actor = {}
+export type Actor = {
+  name: string
+}

@@ -1,6 +1,5 @@
 import { findDocumentByUrl } from '@iliazlobin/functions/blog/notion'
 
-
 export interface Event {
   url: string
 }

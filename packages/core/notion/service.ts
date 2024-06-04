@@ -1,6 +1,6 @@
-import { getPage, listPages } from './storage/dynamodb'
-import { downloadFromS3 } from './storage/s3'
-import { PageImage, Post } from './types'
+import { getPage, listPages } from '@iliazlobin/core/notion/storage/dynamodb'
+import { downloadFromS3 } from '@iliazlobin/core/notion/storage/s3'
+import { PageImage, Post } from '@iliazlobin/core/notion/types'
 
 export async function retrievePost({
   pageId,

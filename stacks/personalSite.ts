@@ -1,5 +1,6 @@
 import { allConfig } from './allConfig'
 import { logger } from './logger'
+import { personalSiteData } from './personalSiteData'
 import {
   CacheCookieBehavior,
   CacheHeaderBehavior,
@@ -10,7 +11,7 @@ import { ManagedPolicy } from 'aws-cdk-lib/aws-iam'
 import { LayerVersion } from 'aws-cdk-lib/aws-lambda'
 import { IBucket } from 'aws-cdk-lib/aws-s3'
 import { Duration as CdkDuration } from 'aws-cdk-lib/core'
-import { Bucket, NextjsSite, StackContext, use } from 'sst/constructs'
+import { Bucket, Config, NextjsSite, StackContext, use } from 'sst/constructs'
 import { Duration, Function } from 'sst/constructs'
 import { SsrFunction, SsrFunctionProps } from 'sst/constructs/SsrFunction'
 import { Plan } from 'sst/constructs/SsrSite'
@@ -31,7 +32,15 @@ export function personalSite({ stack }: StackContext) {
   //   validation: acm.CertificateValidation.fromDns(zone)
   // })
 
+  const STRIPE_KEY = new Config.Secret(stack, 'STRIPE_KEY')
+
+  const myparam = new Config.Parameter(stack, 'myparam', {
+    value: 'myparamvalue',
+  })
+
   const { siteDomain, staticDomain } = use(allConfig)
+  const { notionPagesTable, notionBucket } = use(personalSiteData)
+
   const lambdaInsightsLayerName =
     'arn:aws:lambda:us-east-1:580247275435:layer:LambdaInsightsExtension-Arm64:16'
   const lambdaInsightsLayer = LayerVersion.fromLayerVersionArn(
@@ -43,8 +52,9 @@ export function personalSite({ stack }: StackContext) {
   const cloudFrontLogsBucket = new Bucket(stack, 'CloudFrontLogsBucket', {})
 
   const site = new NextjsSite(stack, 'site', {
-    // bind: [notionTable],
+    bind: [notionPagesTable, notionBucket, myparam],
     path: 'packages/web',
+    warm: 2,
     // edge: true,
     customDomain: {
       domainName: siteDomain.value,

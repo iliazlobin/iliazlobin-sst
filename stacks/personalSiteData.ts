@@ -43,7 +43,7 @@ export function personalSiteData({ stack }: StackContext) {
   })
 
   return {
-    notionTable: notionPagesTable,
+    notionPagesTable,
     notionBucket,
   }
 }

@@ -1,0 +1,1382 @@
+diff --git a/home/izlobin/ws/iliazlobin-sts/node_modules/sst b/home/izlobin/ws/iliazlobin-sts/node_modules/sst
+new file mode 120000
+index 0000000000000000000000000000000000000000..34435b57dcbb2559194c566e5523d12e2faf2f35
+--- /dev/null
++++ b/home/izlobin/ws/iliazlobin-sts/node_modules/sst
+@@ -0,0 +1 @@
++.pnpm/sst@2.43.0_@aws-sdk+client-sso-oidc@3.588.0_@types+react@18.3.3/node_modules/sst
+\ No newline at end of file
+diff --git a/LICENSE b/LICENSE
+deleted file mode 100644
+index cd39173ad18167349b2fde45e9b4dc2f445d19e5..0000000000000000000000000000000000000000
+diff --git a/README.md b/README.md
+deleted file mode 100644
+index 27e6248065affa2778de7b641e2e383cc696d451..0000000000000000000000000000000000000000
+diff --git a/bootstrap.d.ts b/bootstrap.d.ts
+deleted file mode 100644
+index a0b83cbfa3f9b5b0b3901723c559825673348761..0000000000000000000000000000000000000000
+diff --git a/bootstrap.js b/bootstrap.js
+deleted file mode 100644
+index 7c092e53a1154e7f63959ffae99b832775e34495..0000000000000000000000000000000000000000
+diff --git a/bus.d.ts b/bus.d.ts
+deleted file mode 100644
+index 86cca3e5c69abb74c53b15161457c6271ff96b4e..0000000000000000000000000000000000000000
+diff --git a/bus.js b/bus.js
+deleted file mode 100644
+index 906d0ef8796476721aa9d18e115c8477ef9f459d..0000000000000000000000000000000000000000
+diff --git a/cache.d.ts b/cache.d.ts
+deleted file mode 100644
+index 67f86556fd250fc3eeebe815685bc3bc45f1d2fe..0000000000000000000000000000000000000000
+diff --git a/cache.js b/cache.js
+deleted file mode 100644
+index 1e735ffe8ce98718f2b68d33a7a321209d6eaceb..0000000000000000000000000000000000000000
+diff --git a/cdk/deploy-stack.d.ts b/cdk/deploy-stack.d.ts
+deleted file mode 100644
+index f845c541e6bcf931ffa19621dddfa18542166c76..0000000000000000000000000000000000000000
+diff --git a/cdk/deploy-stack.js b/cdk/deploy-stack.js
+deleted file mode 100644
+index 85349794a3169e016bf3db9b6a09671da0167518..0000000000000000000000000000000000000000
+diff --git a/cdk/deployments-wrapper.d.ts b/cdk/deployments-wrapper.d.ts
+deleted file mode 100644
+index f87e88272582b5061373060c37ff22d047127138..0000000000000000000000000000000000000000
+diff --git a/cdk/deployments-wrapper.js b/cdk/deployments-wrapper.js
+deleted file mode 100644
+index 269a3dba5932b658e533b1e654c1f7dbdd5356b7..0000000000000000000000000000000000000000
+diff --git a/cdk/deployments.d.ts b/cdk/deployments.d.ts
+deleted file mode 100644
+index f711ef378eb2b08b0d2130a755546fd84796205b..0000000000000000000000000000000000000000
+diff --git a/cdk/deployments.js b/cdk/deployments.js
+deleted file mode 100644
+index 3828023df923d3ba27c8c99260ee556d27ed94df..0000000000000000000000000000000000000000
+diff --git a/cdk/util.d.ts b/cdk/util.d.ts
+deleted file mode 100644
+index aba75f094ee64281896ff52abd8881f1180ef646..0000000000000000000000000000000000000000
+diff --git a/cdk/util.js b/cdk/util.js
+deleted file mode 100644
+index a9a2e2f81075b68246fcd57b25fd822347e33c78..0000000000000000000000000000000000000000
+diff --git a/cli/ci-info.d.ts b/cli/ci-info.d.ts
+deleted file mode 100644
+index d486410cb5f44e22fb8740a7b610b35752a600a7..0000000000000000000000000000000000000000
+diff --git a/cli/ci-info.js b/cli/ci-info.js
+deleted file mode 100644
+index e594c2eb6c6ae761a379c79227841e0461164f90..0000000000000000000000000000000000000000
+diff --git a/cli/colors.d.ts b/cli/colors.d.ts
+deleted file mode 100644
+index 1efc951d6c46c4250352f58ee58b7a45effa792e..0000000000000000000000000000000000000000
+diff --git a/cli/colors.js b/cli/colors.js
+deleted file mode 100644
+index 5f893620a21c942148c6587faf3f8a482ec4f92d..0000000000000000000000000000000000000000
+diff --git a/cli/commands/bind.d.ts b/cli/commands/bind.d.ts
+deleted file mode 100644
+index ac57a7a9223844fad1acdd4acf8c2b7a5202334f..0000000000000000000000000000000000000000
+diff --git a/cli/commands/bind.js b/cli/commands/bind.js
+deleted file mode 100644
+index e8ec76d9187c4ab97492aa74f429cd7c6f8cbaec..0000000000000000000000000000000000000000
+diff --git a/cli/commands/bootstrap.d.ts b/cli/commands/bootstrap.d.ts
+deleted file mode 100644
+index 670e2349506db9543d985bc7b928573615a7f4de..0000000000000000000000000000000000000000
+diff --git a/cli/commands/bootstrap.js b/cli/commands/bootstrap.js
+deleted file mode 100644
+index eebf7a1d7e9ee210e3ac4f26f3ebbf7d97920276..0000000000000000000000000000000000000000
+diff --git a/cli/commands/build.d.ts b/cli/commands/build.d.ts
+deleted file mode 100644
+index c0ff81fb2a950686c1bc27b9e224608e53ea8023..0000000000000000000000000000000000000000
+diff --git a/cli/commands/build.js b/cli/commands/build.js
+deleted file mode 100644
+index 214a4267c035c374698dfb975b7e92f2b968dcb8..0000000000000000000000000000000000000000
+diff --git a/cli/commands/console.d.ts b/cli/commands/console.d.ts
+deleted file mode 100644
+index e9b91f4b427a3c9d5f3dd6f539541785468f8584..0000000000000000000000000000000000000000
+diff --git a/cli/commands/console.js b/cli/commands/console.js
+deleted file mode 100644
+index 34064d8ace73eed27216d96b55c004e858760bdd..0000000000000000000000000000000000000000
+diff --git a/cli/commands/deploy.d.ts b/cli/commands/deploy.d.ts
+deleted file mode 100644
+index 2ad3d0b484b4ba6993f0a91faeb4a2a4421007a3..0000000000000000000000000000000000000000
+diff --git a/cli/commands/deploy.js b/cli/commands/deploy.js
+deleted file mode 100644
+index 3193772652336f74476ec3ef2baf2c599ea80849..0000000000000000000000000000000000000000
+diff --git a/cli/commands/dev.d.ts b/cli/commands/dev.d.ts
+deleted file mode 100644
+index 3dd186ad4fb8130394f6a3a85aba68e9f43e3b60..0000000000000000000000000000000000000000
+diff --git a/cli/commands/dev.js b/cli/commands/dev.js
+deleted file mode 100644
+index 86ba259c7374e8578dc4df192dd1db42f29edcdf..0000000000000000000000000000000000000000
+diff --git a/cli/commands/diff.d.ts b/cli/commands/diff.d.ts
+deleted file mode 100644
+index 9170a39ce2e0c274c7d6293776b308cf5b7077f5..0000000000000000000000000000000000000000
+diff --git a/cli/commands/diff.js b/cli/commands/diff.js
+deleted file mode 100644
+index 49ffde09f2861065ccf32367bdd72ff3d16c03c9..0000000000000000000000000000000000000000
+diff --git a/cli/commands/plugins/kysely.d.ts b/cli/commands/plugins/kysely.d.ts
+deleted file mode 100644
+index e744de3d06af2c780e4a11039c3383d10b39a3a6..0000000000000000000000000000000000000000
+diff --git a/cli/commands/plugins/kysely.js b/cli/commands/plugins/kysely.js
+deleted file mode 100644
+index d36384fdd1e85523cf55742f46498872af490642..0000000000000000000000000000000000000000
+diff --git a/cli/commands/plugins/pothos.d.ts b/cli/commands/plugins/pothos.d.ts
+deleted file mode 100644
+index 11400bc70c733d17e3308ca9223ef945e1d5fde0..0000000000000000000000000000000000000000
+diff --git a/cli/commands/plugins/pothos.js b/cli/commands/plugins/pothos.js
+deleted file mode 100644
+index 267f518d4d00156ac08c335289162904fbd56881..0000000000000000000000000000000000000000
+diff --git a/cli/commands/plugins/warmer.d.ts b/cli/commands/plugins/warmer.d.ts
+deleted file mode 100644
+index 230effd4a9e25df66aab6d27131471b841256ea8..0000000000000000000000000000000000000000
+diff --git a/cli/commands/plugins/warmer.js b/cli/commands/plugins/warmer.js
+deleted file mode 100644
+index 263fa0d188ead214e9450f631f49153954db7fd9..0000000000000000000000000000000000000000
+diff --git a/cli/commands/remove.d.ts b/cli/commands/remove.d.ts
+deleted file mode 100644
+index cf15cdc61ff542c21608af5a90e26b4391c6ebb9..0000000000000000000000000000000000000000
+diff --git a/cli/commands/remove.js b/cli/commands/remove.js
+deleted file mode 100644
+index 47b8b0a846c3d514a13555838cf24219d0d473d0..0000000000000000000000000000000000000000
+diff --git a/cli/commands/secrets/get.d.ts b/cli/commands/secrets/get.d.ts
+deleted file mode 100644
+index 6757062e76de72b5ae21ccb7f7d247c45d95d4c9..0000000000000000000000000000000000000000
+diff --git a/cli/commands/secrets/get.js b/cli/commands/secrets/get.js
+deleted file mode 100644
+index 6353ca47f2c6ccb30d00ee8276c9ef50ef345b1d..0000000000000000000000000000000000000000
+diff --git a/cli/commands/secrets/list.d.ts b/cli/commands/secrets/list.d.ts
+deleted file mode 100644
+index bb67c858f4756c2267f35dce904ab16aed486bac..0000000000000000000000000000000000000000
+diff --git a/cli/commands/secrets/list.js b/cli/commands/secrets/list.js
+deleted file mode 100644
+index 135dc1976f327a6a2205ebbbdca02151e3a6a64b..0000000000000000000000000000000000000000
+diff --git a/cli/commands/secrets/load.d.ts b/cli/commands/secrets/load.d.ts
+deleted file mode 100644
+index 25442256304fbe2fe1583c1de19a6f0bcf3cc6bb..0000000000000000000000000000000000000000
+diff --git a/cli/commands/secrets/load.js b/cli/commands/secrets/load.js
+deleted file mode 100644
+index 9ae4ea741022ddb1bdc759d301ab0ca02a2badd2..0000000000000000000000000000000000000000
+diff --git a/cli/commands/secrets/remove.d.ts b/cli/commands/secrets/remove.d.ts
+deleted file mode 100644
+index 463915b6a8e04ac207bcb03aa69f5c07e93d81f3..0000000000000000000000000000000000000000
+diff --git a/cli/commands/secrets/remove.js b/cli/commands/secrets/remove.js
+deleted file mode 100644
+index 1fa391bc5de19142aee279b30ff6588839c7f6ec..0000000000000000000000000000000000000000
+diff --git a/cli/commands/secrets/secrets.d.ts b/cli/commands/secrets/secrets.d.ts
+deleted file mode 100644
+index 796f770a69b2c77f6b3857e29960f897936782ab..0000000000000000000000000000000000000000
+diff --git a/cli/commands/secrets/secrets.js b/cli/commands/secrets/secrets.js
+deleted file mode 100644
+index a3e7d4db3c8f80609a2d30b832b5a4d775a1a3d2..0000000000000000000000000000000000000000
+diff --git a/cli/commands/secrets/set.d.ts b/cli/commands/secrets/set.d.ts
+deleted file mode 100644
+index aa4e2249954d4312854c29682086238bea47e96b..0000000000000000000000000000000000000000
+diff --git a/cli/commands/secrets/set.js b/cli/commands/secrets/set.js
+deleted file mode 100644
+index 7c5efc4a65fce885fe4dc5f232cd2b334316f4d4..0000000000000000000000000000000000000000
+diff --git a/cli/commands/telemetry.d.ts b/cli/commands/telemetry.d.ts
+deleted file mode 100644
+index c2256f562df2256581bc494b49f40c051477bbd1..0000000000000000000000000000000000000000
+diff --git a/cli/commands/telemetry.js b/cli/commands/telemetry.js
+deleted file mode 100644
+index b40e695a5901f8315a16876922ec2e5ebfa9c1f7..0000000000000000000000000000000000000000
+diff --git a/cli/commands/transform.d.ts b/cli/commands/transform.d.ts
+deleted file mode 100644
+index 2ea5e00f89fc9a56295b60ae336448ef20e81694..0000000000000000000000000000000000000000
+diff --git a/cli/commands/transform.js b/cli/commands/transform.js
+deleted file mode 100644
+index 17d74543f0b0f2a6f03068375271d0370d3d54de..0000000000000000000000000000000000000000
+diff --git a/cli/commands/types.d.ts b/cli/commands/types.d.ts
+deleted file mode 100644
+index e24478b52b664ee301c41028d0c810dd4652841f..0000000000000000000000000000000000000000
+diff --git a/cli/commands/types.js b/cli/commands/types.js
+deleted file mode 100644
+index 80bc567d710c63bb2b44921e3077935c93f54ea4..0000000000000000000000000000000000000000
+diff --git a/cli/commands/update.d.ts b/cli/commands/update.d.ts
+deleted file mode 100644
+index c2449c458971e3869808568becb1cb1e280f4f6d..0000000000000000000000000000000000000000
+diff --git a/cli/commands/update.js b/cli/commands/update.js
+deleted file mode 100644
+index 3259dd17f49c604cdb90ef2ccd5ee451099868da..0000000000000000000000000000000000000000
+diff --git a/cli/commands/version.d.ts b/cli/commands/version.d.ts
+deleted file mode 100644
+index 914e7b2d2caf0030e99a32ca3af69c3c355c83ea..0000000000000000000000000000000000000000
+diff --git a/cli/commands/version.js b/cli/commands/version.js
+deleted file mode 100644
+index 6bcf5d7191c2b8f70e6f7f29fa05606a24f8cb28..0000000000000000000000000000000000000000
+diff --git a/cli/local/router.d.ts b/cli/local/router.d.ts
+deleted file mode 100644
+index 1164dd7c4859c163777f50b2144e6daa8075d5d3..0000000000000000000000000000000000000000
+diff --git a/cli/local/router.js b/cli/local/router.js
+deleted file mode 100644
+index 043d270ff0187482217e9050d82183f0bd584044..0000000000000000000000000000000000000000
+diff --git a/cli/local/server.d.ts b/cli/local/server.d.ts
+deleted file mode 100644
+index 8abb75ce9b3ee239175f7b8cad04c17b36148ca6..0000000000000000000000000000000000000000
+diff --git a/cli/local/server.js b/cli/local/server.js
+deleted file mode 100644
+index de40b309ca193eddb981eaac248ff221e0053cd5..0000000000000000000000000000000000000000
+diff --git a/cli/program.d.ts b/cli/program.d.ts
+deleted file mode 100644
+index c9d76cdc79d399537e8917589b37064e44f09c1c..0000000000000000000000000000000000000000
+diff --git a/cli/program.js b/cli/program.js
+deleted file mode 100644
+index a0a0e3225265694b1a81d4001183ae0b52351f57..0000000000000000000000000000000000000000
+diff --git a/cli/spinner.d.ts b/cli/spinner.d.ts
+deleted file mode 100644
+index 4cdaf11ff835d1aed70a93b6dc0fe04aabbe3119..0000000000000000000000000000000000000000
+diff --git a/cli/spinner.js b/cli/spinner.js
+deleted file mode 100644
+index 4ed2d2fe5b12fe65692019e510c4287cca160379..0000000000000000000000000000000000000000
+diff --git a/cli/sst.d.ts b/cli/sst.d.ts
+deleted file mode 100644
+index b7988016daa5bf0b3d4fcdccaba52780a9983d9d..0000000000000000000000000000000000000000
+diff --git a/cli/sst.js b/cli/sst.js
+deleted file mode 100755
+index dc63593735ee83cc8f0642f7e806903b7e7e6ddd..0000000000000000000000000000000000000000
+diff --git a/cli/telemetry/environment.d.ts b/cli/telemetry/environment.d.ts
+deleted file mode 100644
+index 6ab888d82ae099c2f368cda0b35a1ed9c70f7c6f..0000000000000000000000000000000000000000
+diff --git a/cli/telemetry/environment.js b/cli/telemetry/environment.js
+deleted file mode 100644
+index 98354ce7a357e6033d281c5e61c51add87f37cb0..0000000000000000000000000000000000000000
+diff --git a/cli/telemetry/post-payload.d.ts b/cli/telemetry/post-payload.d.ts
+deleted file mode 100644
+index d77c942073e0786ef9b05b956f7813b322c80b38..0000000000000000000000000000000000000000
+diff --git a/cli/telemetry/post-payload.js b/cli/telemetry/post-payload.js
+deleted file mode 100644
+index 3abf63d389c7d1bc5d6d3de93868b1615b47ca47..0000000000000000000000000000000000000000
+diff --git a/cli/telemetry/project-id.d.ts b/cli/telemetry/project-id.d.ts
+deleted file mode 100644
+index 7de43071f33ca3afb33c671a37da17a799a6c3b5..0000000000000000000000000000000000000000
+diff --git a/cli/telemetry/project-id.js b/cli/telemetry/project-id.js
+deleted file mode 100644
+index 6741580e54eef4bf3f150631b79c2a8898c72ad7..0000000000000000000000000000000000000000
+diff --git a/cli/telemetry/telemetry.d.ts b/cli/telemetry/telemetry.d.ts
+deleted file mode 100644
+index d44f85eaf0b477f728d5a5a8135527ebb43403b1..0000000000000000000000000000000000000000
+diff --git a/cli/telemetry/telemetry.js b/cli/telemetry/telemetry.js
+deleted file mode 100644
+index 5c753a8ccb56eab6f219fbccb3b4877832aaaf66..0000000000000000000000000000000000000000
+diff --git a/cli/terminal.d.ts b/cli/terminal.d.ts
+deleted file mode 100644
+index 51de14db5561855804e166decf70124c2753e671..0000000000000000000000000000000000000000
+diff --git a/cli/terminal.js b/cli/terminal.js
+deleted file mode 100644
+index 4e199573b17351c7d3c19af23d5aa3e9c8a8668e..0000000000000000000000000000000000000000
+diff --git a/cli/ui/deploy.d.ts b/cli/ui/deploy.d.ts
+deleted file mode 100644
+index 685d8aed9d4b2a81e20ff1a4e3ae4c34263e1e6f..0000000000000000000000000000000000000000
+diff --git a/cli/ui/deploy.js b/cli/ui/deploy.js
+deleted file mode 100644
+index 8d61534697d58836e9f196cba353cb587c9825a0..0000000000000000000000000000000000000000
+diff --git a/cli/ui/functions.d.ts b/cli/ui/functions.d.ts
+deleted file mode 100644
+index 0d88f9a26d849fcdec7a4fa86c87dfc5bd2f2891..0000000000000000000000000000000000000000
+diff --git a/cli/ui/functions.js b/cli/ui/functions.js
+deleted file mode 100644
+index 86fb1e8b63823defb82462930c2522c09bb94d0b..0000000000000000000000000000000000000000
+diff --git a/cli/ui/header.d.ts b/cli/ui/header.d.ts
+deleted file mode 100644
+index 60642e37c90ed41defdf87ac6acf1e614cc5577d..0000000000000000000000000000000000000000
+diff --git a/cli/ui/header.js b/cli/ui/header.js
+deleted file mode 100644
+index f3b6763965d42512978cb4d1fb15c6c5efedb55f..0000000000000000000000000000000000000000
+diff --git a/cli/ui/stack.d.ts b/cli/ui/stack.d.ts
+deleted file mode 100644
+index db8722ee59e4baa13c22f03f0c121e63cd651002..0000000000000000000000000000000000000000
+diff --git a/cli/ui/stack.js b/cli/ui/stack.js
+deleted file mode 100644
+index b3d3199acaf1704f6805d9859c32722835f3224d..0000000000000000000000000000000000000000
+diff --git a/config.d.ts b/config.d.ts
+deleted file mode 100644
+index 77a50e956d2817c7c6ea80c02d8a91b5cab74eff..0000000000000000000000000000000000000000
+diff --git a/config.js b/config.js
+deleted file mode 100644
+index 91c90457f99ec491242b7dbb2dbf39aa91462ac7..0000000000000000000000000000000000000000
+diff --git a/constructs/Api.d.ts b/constructs/Api.d.ts
+deleted file mode 100644
+index 762b349648ac4966ce7224c7b0e6dc9584e9eda7..0000000000000000000000000000000000000000
+diff --git a/constructs/Api.js b/constructs/Api.js
+deleted file mode 100644
+index af94ebbc0fddf12174eb261c8ae14ab07e833e38..0000000000000000000000000000000000000000
+diff --git a/constructs/ApiGatewayV1Api.d.ts b/constructs/ApiGatewayV1Api.d.ts
+deleted file mode 100644
+index 1f8258edde1ef5959eb31ea12000613213e1a32f..0000000000000000000000000000000000000000
+diff --git a/constructs/ApiGatewayV1Api.js b/constructs/ApiGatewayV1Api.js
+deleted file mode 100644
+index dfc5a8c95a9aa971e75661f1fd8340a53c0ce2f9..0000000000000000000000000000000000000000
+diff --git a/constructs/App.d.ts b/constructs/App.d.ts
+deleted file mode 100644
+index a810e4c67c99c488d503803f732d18396be0ec89..0000000000000000000000000000000000000000
+diff --git a/constructs/App.js b/constructs/App.js
+deleted file mode 100644
+index 01253cca493dde80cacff79cf7a79b1a79a58e54..0000000000000000000000000000000000000000
+diff --git a/constructs/AppSyncApi.d.ts b/constructs/AppSyncApi.d.ts
+deleted file mode 100644
+index c23a8b250b0a1320bceb419e4667e670cd1a4bd2..0000000000000000000000000000000000000000
+diff --git a/constructs/AppSyncApi.js b/constructs/AppSyncApi.js
+deleted file mode 100644
+index fa9dc33b51b93faa8c1efc0526f4399ae836c49b..0000000000000000000000000000000000000000
+diff --git a/constructs/AstroSite.d.ts b/constructs/AstroSite.d.ts
+deleted file mode 100644
+index 67c54a28ae48dc26eaddca7598137323b041971c..0000000000000000000000000000000000000000
+diff --git a/constructs/AstroSite.js b/constructs/AstroSite.js
+deleted file mode 100644
+index 5ada477a02e3f46b7dc1a504e202ee05dba96c10..0000000000000000000000000000000000000000
+diff --git a/constructs/AstroSite.tsdoc.d.ts b/constructs/AstroSite.tsdoc.d.ts
+deleted file mode 100644
+index 9b21dba50989b47f88077d1ad9e39a9062bd51ce..0000000000000000000000000000000000000000
+diff --git a/constructs/AstroSite.tsdoc.js b/constructs/AstroSite.tsdoc.js
+deleted file mode 100644
+index 9b21dba50989b47f88077d1ad9e39a9062bd51ce..0000000000000000000000000000000000000000
+diff --git a/constructs/Auth.d.ts b/constructs/Auth.d.ts
+deleted file mode 100644
+index e62d523e1a54266cedf455e889e8296e2cebe243..0000000000000000000000000000000000000000
+diff --git a/constructs/Auth.js b/constructs/Auth.js
+deleted file mode 100644
+index eb05b9823fd079bbc95cb15c53410408261dacda..0000000000000000000000000000000000000000
+diff --git a/constructs/BaseSite.d.ts b/constructs/BaseSite.d.ts
+deleted file mode 100644
+index 9f4fdfca09d79ee40fd5159a209153cf4cf31706..0000000000000000000000000000000000000000
+diff --git a/constructs/BaseSite.js b/constructs/BaseSite.js
+deleted file mode 100644
+index 0aef0fc3b8931df55e4722c1dc27a7254dc4dad0..0000000000000000000000000000000000000000
+diff --git a/constructs/Bucket.d.ts b/constructs/Bucket.d.ts
+deleted file mode 100644
+index a1c608c04ea18b8fce10788c04797c1b5b64f2a4..0000000000000000000000000000000000000000
+diff --git a/constructs/Bucket.js b/constructs/Bucket.js
+deleted file mode 100644
+index 54e65ff284945b3b3fb77e29c45bed06ab8a2a62..0000000000000000000000000000000000000000
+diff --git a/constructs/Cognito.d.ts b/constructs/Cognito.d.ts
+deleted file mode 100644
+index 1c24ce34f22e2141c8ebb20066cca5f53eb000d7..0000000000000000000000000000000000000000
+diff --git a/constructs/Cognito.js b/constructs/Cognito.js
+deleted file mode 100644
+index 7d59fc2b7a9b432b0cf5e9e127d89814b0f4a0e5..0000000000000000000000000000000000000000
+diff --git a/constructs/Config.d.ts b/constructs/Config.d.ts
+deleted file mode 100644
+index b292f4092b994a7e3c6d297f80b4a957312a5eba..0000000000000000000000000000000000000000
+diff --git a/constructs/Config.js b/constructs/Config.js
+deleted file mode 100644
+index b292f4092b994a7e3c6d297f80b4a957312a5eba..0000000000000000000000000000000000000000
+diff --git a/constructs/Construct.d.ts b/constructs/Construct.d.ts
+deleted file mode 100644
+index 10e5d0a1698e4951f68c062122fee95d3bcf9efa..0000000000000000000000000000000000000000
+diff --git a/constructs/Construct.js b/constructs/Construct.js
+deleted file mode 100644
+index acff26f9c28651d23965d74de06b0fa6d7dafa44..0000000000000000000000000000000000000000
+diff --git a/constructs/Cron.d.ts b/constructs/Cron.d.ts
+deleted file mode 100644
+index 6a0963083709819dd1923edd30df23788863b6a6..0000000000000000000000000000000000000000
+diff --git a/constructs/Cron.js b/constructs/Cron.js
+deleted file mode 100644
+index b06733c18a77cb77cf9c2ff326bddf88401d11d6..0000000000000000000000000000000000000000
+diff --git a/constructs/Distribution.d.ts b/constructs/Distribution.d.ts
+deleted file mode 100644
+index 740574414f64093a21367db7889af148d23e25a7..0000000000000000000000000000000000000000
+diff --git a/constructs/Distribution.js b/constructs/Distribution.js
+deleted file mode 100644
+index b7b95289a3489ba809f6ed898b623f53553671bf..0000000000000000000000000000000000000000
+diff --git a/constructs/EdgeFunction.d.ts b/constructs/EdgeFunction.d.ts
+deleted file mode 100644
+index dd35b3219e72cff5d601acac76a27f836089b9bf..0000000000000000000000000000000000000000
+diff --git a/constructs/EdgeFunction.js b/constructs/EdgeFunction.js
+deleted file mode 100644
+index 915f705cb51ce639dea60e5b982d21f84be13b77..0000000000000000000000000000000000000000
+diff --git a/constructs/EventBus.d.ts b/constructs/EventBus.d.ts
+deleted file mode 100644
+index 1ec5b1a9a0cc67ab3b3baecfb355c48b836598a3..0000000000000000000000000000000000000000
+diff --git a/constructs/EventBus.js b/constructs/EventBus.js
+deleted file mode 100644
+index 81a9cdf2c66d6f70b0201c025fc179c84434dfa8..0000000000000000000000000000000000000000
+diff --git a/constructs/Function.d.ts b/constructs/Function.d.ts
+deleted file mode 100644
+index c4dc841797db71bb06a76141107b01ab564266aa..0000000000000000000000000000000000000000
+diff --git a/constructs/Function.js b/constructs/Function.js
+deleted file mode 100644
+index 78d82da436f90175e6aa5d3e3a674a07a1b07c85..0000000000000000000000000000000000000000
+diff --git a/constructs/FunctionalStack.d.ts b/constructs/FunctionalStack.d.ts
+deleted file mode 100644
+index 784330627d4983948486339325267605bdea27c4..0000000000000000000000000000000000000000
+diff --git a/constructs/FunctionalStack.js b/constructs/FunctionalStack.js
+deleted file mode 100644
+index 913346c7e6bc2a53c7746ff7137b31c4936c4d91..0000000000000000000000000000000000000000
+diff --git a/constructs/Job.d.ts b/constructs/Job.d.ts
+deleted file mode 100644
+index 4f9bc0cb389d875b0af3fcfa3c185a6fffd0ebc6..0000000000000000000000000000000000000000
+diff --git a/constructs/Job.js b/constructs/Job.js
+deleted file mode 100644
+index 03c703d1ae7fedad5caf0e92fc4b0c1ca8e0a7f0..0000000000000000000000000000000000000000
+diff --git a/constructs/KinesisStream.d.ts b/constructs/KinesisStream.d.ts
+deleted file mode 100644
+index e5ca5d2b102ad53bb08c091a5567b719c765594b..0000000000000000000000000000000000000000
+diff --git a/constructs/KinesisStream.js b/constructs/KinesisStream.js
+deleted file mode 100644
+index 1bcfb7ab620f1138b0a6c4bfac3efd90c4a9092d..0000000000000000000000000000000000000000
+diff --git a/constructs/Metadata.d.ts b/constructs/Metadata.d.ts
+deleted file mode 100644
+index 3571649642e25ea834f7598f04437c503eb32e5e..0000000000000000000000000000000000000000
+diff --git a/constructs/Metadata.js b/constructs/Metadata.js
+deleted file mode 100644
+index cb0ff5c3b541f646105198ee23ac0fc3d805023e..0000000000000000000000000000000000000000
+diff --git a/constructs/NextjsSite.d.ts b/constructs/NextjsSite.d.ts
+deleted file mode 100644
+index 7cf579b82ae7101a768ca08d288730c024b4103b..0000000000000000000000000000000000000000
+diff --git a/constructs/NextjsSite.js b/constructs/NextjsSite.js
+deleted file mode 100644
+index cc89cf9dc791d6fa6cae3a7b2d41b6574b6699b5..0000000000000000000000000000000000000000
+diff --git a/constructs/Parameter.d.ts b/constructs/Parameter.d.ts
+deleted file mode 100644
+index 0c5221d1676284ce8bc4494ee9dddda76a84ddb0..0000000000000000000000000000000000000000
+diff --git a/constructs/Parameter.js b/constructs/Parameter.js
+deleted file mode 100644
+index b17394d993b167a1c5ba9d6e3844f15225b72e5d..0000000000000000000000000000000000000000
+diff --git a/constructs/Queue.d.ts b/constructs/Queue.d.ts
+deleted file mode 100644
+index 6582121bfcf68e0f39c00a053bc4213b12ad48de..0000000000000000000000000000000000000000
+diff --git a/constructs/Queue.js b/constructs/Queue.js
+deleted file mode 100644
+index ff66f355e7fc0818ca6b0c205591ad3c019f9225..0000000000000000000000000000000000000000
+diff --git a/constructs/RDS.d.ts b/constructs/RDS.d.ts
+deleted file mode 100644
+index 8a23b51d67a892f8536a8616bea374bdb032a9fe..0000000000000000000000000000000000000000
+diff --git a/constructs/RDS.js b/constructs/RDS.js
+deleted file mode 100644
+index 5ec1a8032e0e0a99ef65f8e65fa7b77145aa56d4..0000000000000000000000000000000000000000
+diff --git a/constructs/RemixSite.d.ts b/constructs/RemixSite.d.ts
+deleted file mode 100644
+index 22c6933830d3ad49aa2a3c219891382ea0300e30..0000000000000000000000000000000000000000
+diff --git a/constructs/RemixSite.js b/constructs/RemixSite.js
+deleted file mode 100644
+index e664b4c7769c129d092257f430e4a319b51825c0..0000000000000000000000000000000000000000
+diff --git a/constructs/RemixSite.tsdoc.d.ts b/constructs/RemixSite.tsdoc.d.ts
+deleted file mode 100644
+index e26e3f97d52fd32705d24e3a3cca276ca5e36385..0000000000000000000000000000000000000000
+diff --git a/constructs/RemixSite.tsdoc.js b/constructs/RemixSite.tsdoc.js
+deleted file mode 100644
+index e26e3f97d52fd32705d24e3a3cca276ca5e36385..0000000000000000000000000000000000000000
+diff --git a/constructs/Script.d.ts b/constructs/Script.d.ts
+deleted file mode 100644
+index 9debb8eda9123c027e3208bccd6b9f2170f96dfa..0000000000000000000000000000000000000000
+diff --git a/constructs/Script.js b/constructs/Script.js
+deleted file mode 100644
+index 72e6bdd03668228fc6ba4bd5c44dc103092e8d4c..0000000000000000000000000000000000000000
+diff --git a/constructs/Secret.d.ts b/constructs/Secret.d.ts
+deleted file mode 100644
+index 4ab11130ccc344afd6cb7fc59ee8522a66d7a996..0000000000000000000000000000000000000000
+diff --git a/constructs/Secret.js b/constructs/Secret.js
+deleted file mode 100644
+index 1560b3cd60ec8151e77a40edc84ea9635f473dc4..0000000000000000000000000000000000000000
+diff --git a/constructs/Service.d.ts b/constructs/Service.d.ts
+deleted file mode 100644
+index 25384e3e4b0a638df1d04847e418b0ed5737f4a9..0000000000000000000000000000000000000000
+diff --git a/constructs/Service.js b/constructs/Service.js
+deleted file mode 100644
+index dd7a9aa966a89f239e30cd9e99c9388ce6a9a40e..0000000000000000000000000000000000000000
+diff --git a/constructs/SolidStartSite.d.ts b/constructs/SolidStartSite.d.ts
+deleted file mode 100644
+index ec91844fce23b7a1ab59c0881d80b54c5dce3f4a..0000000000000000000000000000000000000000
+diff --git a/constructs/SolidStartSite.js b/constructs/SolidStartSite.js
+deleted file mode 100644
+index 79989962a46365f0b7c9eaa51d80a7af27443dd7..0000000000000000000000000000000000000000
+diff --git a/constructs/SolidStartSite.tsdoc.d.ts b/constructs/SolidStartSite.tsdoc.d.ts
+deleted file mode 100644
+index 3926a1c202efbbeb082a4e9c840de947c656490b..0000000000000000000000000000000000000000
+diff --git a/constructs/SolidStartSite.tsdoc.js b/constructs/SolidStartSite.tsdoc.js
+deleted file mode 100644
+index 3926a1c202efbbeb082a4e9c840de947c656490b..0000000000000000000000000000000000000000
+diff --git a/constructs/SsrFunction.d.ts b/constructs/SsrFunction.d.ts
+deleted file mode 100644
+index 027436873cb6a5b6e741563c474afcac411f15d3..0000000000000000000000000000000000000000
+diff --git a/constructs/SsrFunction.js b/constructs/SsrFunction.js
+deleted file mode 100644
+index d45edc5daba96b6cd69041c27a997f1848977257..0000000000000000000000000000000000000000
+diff --git a/constructs/SsrSite.d.ts b/constructs/SsrSite.d.ts
+deleted file mode 100644
+index 4e875467f9e93179ec72ff555ed6937a78d1fc8d..0000000000000000000000000000000000000000
+diff --git a/constructs/SsrSite.js b/constructs/SsrSite.js
+deleted file mode 100644
+index 7ae5174fdeecf0ee0048946ee8b671960510eb70..0000000000000000000000000000000000000000
+diff --git a/constructs/Stack.d.ts b/constructs/Stack.d.ts
+deleted file mode 100644
+index 733f459ea0b81c968bedbab0aad24e2c82b8038d..0000000000000000000000000000000000000000
+diff --git a/constructs/Stack.js b/constructs/Stack.js
+deleted file mode 100644
+index 161559e0ca6819ea47a65594032329050cfc0caa..0000000000000000000000000000000000000000
+diff --git a/constructs/StaticSite.d.ts b/constructs/StaticSite.d.ts
+deleted file mode 100644
+index 0ec659b09491971399a680701ac80b8696070587..0000000000000000000000000000000000000000
+diff --git a/constructs/StaticSite.js b/constructs/StaticSite.js
+deleted file mode 100644
+index 9c7ce535c8fa4bd053cb2fee27224d05fe5ed880..0000000000000000000000000000000000000000
+diff --git a/constructs/SvelteKitSite.d.ts b/constructs/SvelteKitSite.d.ts
+deleted file mode 100644
+index c5d674e0fba45cd7eff2432c9106ff9115348fc2..0000000000000000000000000000000000000000
+diff --git a/constructs/SvelteKitSite.js b/constructs/SvelteKitSite.js
+deleted file mode 100644
+index 7e2bc0af9f4d22e7057d536ef6f4f2c0c463cd41..0000000000000000000000000000000000000000
+diff --git a/constructs/SvelteKitSite.tsdoc.d.ts b/constructs/SvelteKitSite.tsdoc.d.ts
+deleted file mode 100644
+index d0e5e1abc25f801614c99f2dec6283c1c749f31f..0000000000000000000000000000000000000000
+diff --git a/constructs/SvelteKitSite.tsdoc.js b/constructs/SvelteKitSite.tsdoc.js
+deleted file mode 100644
+index d0e5e1abc25f801614c99f2dec6283c1c749f31f..0000000000000000000000000000000000000000
+diff --git a/constructs/Table.d.ts b/constructs/Table.d.ts
+deleted file mode 100644
+index 71b09c2a3e061554ffd0dc65999b5364c254d085..0000000000000000000000000000000000000000
+diff --git a/constructs/Table.js b/constructs/Table.js
+deleted file mode 100644
+index 886b357717e41cba7181d74aca9c64b35714c5bd..0000000000000000000000000000000000000000
+diff --git a/constructs/Topic.d.ts b/constructs/Topic.d.ts
+deleted file mode 100644
+index 9e218cad09d061b2645539b764308b5b28713ddc..0000000000000000000000000000000000000000
+diff --git a/constructs/Topic.js b/constructs/Topic.js
+deleted file mode 100644
+index 830db15de88a8a52d50fc48a879e6940b588734c..0000000000000000000000000000000000000000
+diff --git a/constructs/WebSocketApi.d.ts b/constructs/WebSocketApi.d.ts
+deleted file mode 100644
+index e0f1a9f887452b2c67dc0d822b131b9381a5663f..0000000000000000000000000000000000000000
+diff --git a/constructs/WebSocketApi.js b/constructs/WebSocketApi.js
+deleted file mode 100644
+index b3ad70d503c1b0ac19b71517f669ea75c4eb0d0d..0000000000000000000000000000000000000000
+diff --git a/constructs/cdk/HttpAwsIntegration.d.ts b/constructs/cdk/HttpAwsIntegration.d.ts
+deleted file mode 100644
+index 0f0243e5b4510b629467f2cec34fdb4bc917925e..0000000000000000000000000000000000000000
+diff --git a/constructs/cdk/HttpAwsIntegration.js b/constructs/cdk/HttpAwsIntegration.js
+deleted file mode 100644
+index b1eb4a9eb82ef2fa4b9b3e17cc5a9e433913812b..0000000000000000000000000000000000000000
+diff --git a/constructs/cdk/certificate-base.d.ts b/constructs/cdk/certificate-base.d.ts
+deleted file mode 100644
+index 89a3124e53a53f73366058060a3148b045d286c0..0000000000000000000000000000000000000000
+diff --git a/constructs/cdk/certificate-base.js b/constructs/cdk/certificate-base.js
+deleted file mode 100644
+index ab7aa7bd38f54948cd29f5ab0fda738a8714d1eb..0000000000000000000000000000000000000000
+diff --git a/constructs/cdk/dns-validated-certificate.d.ts b/constructs/cdk/dns-validated-certificate.d.ts
+deleted file mode 100644
+index 9dc58bfa3f6afc7d0bd5fb351ccaea6d4a32679a..0000000000000000000000000000000000000000
+diff --git a/constructs/cdk/dns-validated-certificate.js b/constructs/cdk/dns-validated-certificate.js
+deleted file mode 100644
+index 7a2974de24a75ffdcb3d2272c1751d120e2ca18f..0000000000000000000000000000000000000000
+diff --git a/constructs/cdk/website-redirect.d.ts b/constructs/cdk/website-redirect.d.ts
+deleted file mode 100644
+index e2b11cb1769bef169bd73f1a5893e0ef719dd75c..0000000000000000000000000000000000000000
+diff --git a/constructs/cdk/website-redirect.js b/constructs/cdk/website-redirect.js
+deleted file mode 100644
+index a4ab2125b1d0875bc0f6f037619f437b4fd6219d..0000000000000000000000000000000000000000
+diff --git a/constructs/context.d.ts b/constructs/context.d.ts
+deleted file mode 100644
+index 13117732671a43e7bc6c4ef35125824a7b78588b..0000000000000000000000000000000000000000
+diff --git a/constructs/context.js b/constructs/context.js
+deleted file mode 100644
+index cce581f38dfa05acc5f8b67f46c093a7db0894a7..0000000000000000000000000000000000000000
+diff --git a/constructs/deferred_task.d.ts b/constructs/deferred_task.d.ts
+deleted file mode 100644
+index fe0aabbb0a5e4220fb98e7c6b24e724b5259046c..0000000000000000000000000000000000000000
+diff --git a/constructs/deferred_task.js b/constructs/deferred_task.js
+deleted file mode 100644
+index fd5f54e1d3eb46730763453c60845112cb372a95..0000000000000000000000000000000000000000
+diff --git a/constructs/deprecated/NextjsSite.d.ts b/constructs/deprecated/NextjsSite.d.ts
+deleted file mode 100644
+index d3bf054cddd6b6731e6c4ea337f89655854f994e..0000000000000000000000000000000000000000
+diff --git a/constructs/deprecated/NextjsSite.js b/constructs/deprecated/NextjsSite.js
+deleted file mode 100644
+index f6d78de8dc65a780088646227f38c219d24dba1b..0000000000000000000000000000000000000000
+diff --git a/constructs/deprecated/cross-region-helper.d.ts b/constructs/deprecated/cross-region-helper.d.ts
+deleted file mode 100644
+index cdd3172278896e6e11b8bab72196c4bd2a83fc8c..0000000000000000000000000000000000000000
+diff --git a/constructs/deprecated/cross-region-helper.js b/constructs/deprecated/cross-region-helper.js
+deleted file mode 100644
+index 609ed556ff4807fe418b3d2bdc70de9907eb70dd..0000000000000000000000000000000000000000
+diff --git a/constructs/deprecated/index.d.ts b/constructs/deprecated/index.d.ts
+deleted file mode 100644
+index 4221f87cd4f9c12a747477fc8fc3434ffb2befe6..0000000000000000000000000000000000000000
+diff --git a/constructs/deprecated/index.js b/constructs/deprecated/index.js
+deleted file mode 100644
+index 4221f87cd4f9c12a747477fc8fc3434ffb2befe6..0000000000000000000000000000000000000000
+diff --git a/constructs/future/Auth.d.ts b/constructs/future/Auth.d.ts
+deleted file mode 100644
+index 579c91ce600228a25b9e5aad4a94f6b0a9d460ef..0000000000000000000000000000000000000000
+diff --git a/constructs/future/Auth.js b/constructs/future/Auth.js
+deleted file mode 100644
+index bfb066a366d9fea860e9a83f0ade7dbbbc18c46c..0000000000000000000000000000000000000000
+diff --git a/constructs/future/index.d.ts b/constructs/future/index.d.ts
+deleted file mode 100644
+index 3b70ef862771cc7748f8c886205833ce669ef94a..0000000000000000000000000000000000000000
+diff --git a/constructs/future/index.js b/constructs/future/index.js
+deleted file mode 100644
+index 3b70ef862771cc7748f8c886205833ce669ef94a..0000000000000000000000000000000000000000
+diff --git a/constructs/index.d.ts b/constructs/index.d.ts
+deleted file mode 100644
+index fc4a47f61b678e41885284164be183fc6271bb90..0000000000000000000000000000000000000000
+diff --git a/constructs/index.js b/constructs/index.js
+deleted file mode 100644
+index c25058cf32bad913e241f502f7fd4782ad1018d5..0000000000000000000000000000000000000000
+diff --git a/constructs/static-file-list.d.ts b/constructs/static-file-list.d.ts
+deleted file mode 100644
+index cb0ff5c3b541f646105198ee23ac0fc3d805023e..0000000000000000000000000000000000000000
+diff --git a/constructs/static-file-list.js b/constructs/static-file-list.js
+deleted file mode 100644
+index ac2362c3b326f6dc5c7a864689418f1ecf507bd0..0000000000000000000000000000000000000000
+diff --git a/constructs/util/apiGatewayV1AccessLog.d.ts b/constructs/util/apiGatewayV1AccessLog.d.ts
+deleted file mode 100644
+index b3f257bfaed3d746784fbe5d7784b4ce6fc4b167..0000000000000000000000000000000000000000
+diff --git a/constructs/util/apiGatewayV1AccessLog.js b/constructs/util/apiGatewayV1AccessLog.js
+deleted file mode 100644
+index 5e8416c5d9fc6c2bdd4a6912578ac1c5aabc7e1e..0000000000000000000000000000000000000000
+diff --git a/constructs/util/apiGatewayV2AccessLog.d.ts b/constructs/util/apiGatewayV2AccessLog.d.ts
+deleted file mode 100644
+index c34735fe0a56940256c0f1f05384c4be57b33f05..0000000000000000000000000000000000000000
+diff --git a/constructs/util/apiGatewayV2AccessLog.js b/constructs/util/apiGatewayV2AccessLog.js
+deleted file mode 100644
+index 4c3687dd2cd2f2d304e5dde9d387f0ec2110f697..0000000000000000000000000000000000000000
+diff --git a/constructs/util/apiGatewayV2Cors.d.ts b/constructs/util/apiGatewayV2Cors.d.ts
+deleted file mode 100644
+index e47efabec2eb829c48ec531fc2bce7b3fb7a5c4d..0000000000000000000000000000000000000000
+diff --git a/constructs/util/apiGatewayV2Cors.js b/constructs/util/apiGatewayV2Cors.js
+deleted file mode 100644
+index c345552b41d4f147f711d2af555cfe76569b9067..0000000000000000000000000000000000000000
+diff --git a/constructs/util/apiGatewayV2Domain.d.ts b/constructs/util/apiGatewayV2Domain.d.ts
+deleted file mode 100644
+index 7783770933e2b43f780ad0e6cc6904dba8c8cb51..0000000000000000000000000000000000000000
+diff --git a/constructs/util/apiGatewayV2Domain.js b/constructs/util/apiGatewayV2Domain.js
+deleted file mode 100644
+index c808122f038b3966e8291846e62ac551d5bd9ab3..0000000000000000000000000000000000000000
+diff --git a/constructs/util/appSyncApiDomain.d.ts b/constructs/util/appSyncApiDomain.d.ts
+deleted file mode 100644
+index 600c1f1c57e53a8fddc1998d840f6fe43f6343dc..0000000000000000000000000000000000000000
+diff --git a/constructs/util/appSyncApiDomain.js b/constructs/util/appSyncApiDomain.js
+deleted file mode 100644
+index c8689fe2ba3a4489fe334e7dd187b22970f80eb2..0000000000000000000000000000000000000000
+diff --git a/constructs/util/astroRouteCompressor.d.ts b/constructs/util/astroRouteCompressor.d.ts
+deleted file mode 100644
+index 23357ca4dafcb1c3449628746df350351fe47b34..0000000000000000000000000000000000000000
+diff --git a/constructs/util/astroRouteCompressor.js b/constructs/util/astroRouteCompressor.js
+deleted file mode 100644
+index e2f97cc5514982e46b81aeb5cee9b407eeb6f4aa..0000000000000000000000000000000000000000
+diff --git a/constructs/util/binding.d.ts b/constructs/util/binding.d.ts
+deleted file mode 100644
+index a8e159fbab0d738be1ce70e2f2d58dd945005039..0000000000000000000000000000000000000000
+diff --git a/constructs/util/binding.js b/constructs/util/binding.js
+deleted file mode 100644
+index 2d7ee853d89e96a7070344599089ac50df5bf8d1..0000000000000000000000000000000000000000
+diff --git a/constructs/util/builder.d.ts b/constructs/util/builder.d.ts
+deleted file mode 100644
+index 64babaa88990d5d96ced0fcf1dedc6728c8498e0..0000000000000000000000000000000000000000
+diff --git a/constructs/util/builder.js b/constructs/util/builder.js
+deleted file mode 100644
+index 489cb9e28617ae8f81a0e02574b584f35d6cc277..0000000000000000000000000000000000000000
+diff --git a/constructs/util/duration.d.ts b/constructs/util/duration.d.ts
+deleted file mode 100644
+index 2f889e9f04a37a0c82e6a6d08e12f8228ef31217..0000000000000000000000000000000000000000
+diff --git a/constructs/util/duration.js b/constructs/util/duration.js
+deleted file mode 100644
+index a91fb4002479dfcffaf7434a88ae4de94299a780..0000000000000000000000000000000000000000
+diff --git a/constructs/util/functionUrlCors.d.ts b/constructs/util/functionUrlCors.d.ts
+deleted file mode 100644
+index 014ca4b384398ce91739714fb9d5a4e0ba25fc2c..0000000000000000000000000000000000000000
+diff --git a/constructs/util/functionUrlCors.js b/constructs/util/functionUrlCors.js
+deleted file mode 100644
+index 146a31817d055212688681ed155ab3d9773176c9..0000000000000000000000000000000000000000
+diff --git a/constructs/util/permission.d.ts b/constructs/util/permission.d.ts
+deleted file mode 100644
+index 9795b409a54385e4c56a2abf1715bb7eba7c79b7..0000000000000000000000000000000000000000
+diff --git a/constructs/util/permission.js b/constructs/util/permission.js
+deleted file mode 100644
+index 53e6f27cded54b2799169bbd8bed38bde76b8954..0000000000000000000000000000000000000000
+diff --git a/constructs/util/size.d.ts b/constructs/util/size.d.ts
+deleted file mode 100644
+index 73bfa8510044dca8839b0afd73e33fe41670ce3f..0000000000000000000000000000000000000000
+diff --git a/constructs/util/size.js b/constructs/util/size.js
+deleted file mode 100644
+index 359fc3ec264907081acbdc2bd156984ab81dda79..0000000000000000000000000000000000000000
+diff --git a/constructs/util/warning.d.ts b/constructs/util/warning.d.ts
+deleted file mode 100644
+index 1d267dd2ba1e62133c9b03a69107ed678d5d3278..0000000000000000000000000000000000000000
+diff --git a/constructs/util/warning.js b/constructs/util/warning.js
+deleted file mode 100644
+index 5f48bb8a6ad2effb593eb81e7a250c6a31200c80..0000000000000000000000000000000000000000
+diff --git a/context/context.d.ts b/context/context.d.ts
+deleted file mode 100644
+index 0342a669ae81fb33984df8d378ac86f9e88f73a0..0000000000000000000000000000000000000000
+diff --git a/context/context.js b/context/context.js
+deleted file mode 100644
+index 3b9ffeb39b19ed7bec2e26c31ecfaf3a83684a42..0000000000000000000000000000000000000000
+diff --git a/context/context2.d.ts b/context/context2.d.ts
+deleted file mode 100644
+index e0892f3d4a067425dc52f3a18d1d905be9ccfc0b..0000000000000000000000000000000000000000
+diff --git a/context/context2.js b/context/context2.js
+deleted file mode 100644
+index 270898bb2ba25d6d507dc5bc678b8195dbc028c8..0000000000000000000000000000000000000000
+diff --git a/context/handler.d.ts b/context/handler.d.ts
+deleted file mode 100644
+index 35bc6e74186458e286c45b74271ff002508969a0..0000000000000000000000000000000000000000
+diff --git a/context/handler.js b/context/handler.js
+deleted file mode 100644
+index ccd7f7e14d6bed24048c96335173b3cb5ff73a26..0000000000000000000000000000000000000000
+diff --git a/context/index.d.ts b/context/index.d.ts
+deleted file mode 100644
+index 5f1e2734bb492259bc087e0240bbba219f59ae93..0000000000000000000000000000000000000000
+diff --git a/context/index.js b/context/index.js
+deleted file mode 100644
+index 5f1e2734bb492259bc087e0240bbba219f59ae93..0000000000000000000000000000000000000000
+diff --git a/credentials.d.ts b/credentials.d.ts
+deleted file mode 100644
+index c5f53f72d4a5095d43ca6fb74d924401350e6dda..0000000000000000000000000000000000000000
+diff --git a/credentials.js b/credentials.js
+deleted file mode 100644
+index a3094c65e45223f70b551f3cc9ac9ae2c009382a..0000000000000000000000000000000000000000
+diff --git a/error.d.ts b/error.d.ts
+deleted file mode 100644
+index 90e8f7fc39795a4be43a435958e0c7d29757c7af..0000000000000000000000000000000000000000
+diff --git a/error.js b/error.js
+deleted file mode 100644
+index 816d5528ea8481722b0970cf9ce90c7bf9e37b45..0000000000000000000000000000000000000000
+diff --git a/index.d.ts b/index.d.ts
+deleted file mode 100644
+index 6c9e2f6e0c24e3ba5c6a9c5be71076835994dedf..0000000000000000000000000000000000000000
+diff --git a/index.js b/index.js
+deleted file mode 100644
+index cb0ff5c3b541f646105198ee23ac0fc3d805023e..0000000000000000000000000000000000000000
+diff --git a/iot.d.ts b/iot.d.ts
+deleted file mode 100644
+index 20345aabf03669a4e8855045386f6ab9e58894ab..0000000000000000000000000000000000000000
+diff --git a/iot.js b/iot.js
+deleted file mode 100644
+index 8fe9fa87134247b4c250fba13e5a8b54d385d4ff..0000000000000000000000000000000000000000
+diff --git a/logger.d.ts b/logger.d.ts
+deleted file mode 100644
+index 69940ece557014736eaf51e86e0fcd402a3067f6..0000000000000000000000000000000000000000
+diff --git a/logger.js b/logger.js
+deleted file mode 100644
+index caf2da1e5e78930eea39f7254efedb190c018eae..0000000000000000000000000000000000000000
+diff --git a/node/actor/index.d.ts b/node/actor/index.d.ts
+deleted file mode 100644
+index f3055a501b71df947c932c1e630b1f9c6430a5a2..0000000000000000000000000000000000000000
+diff --git a/node/actor/index.js b/node/actor/index.js
+deleted file mode 100644
+index a8f7e4a778ad7e986f50ae54b4f7ef494737099f..0000000000000000000000000000000000000000
+diff --git a/node/api/index.d.ts b/node/api/index.d.ts
+deleted file mode 100644
+index c5c7877672b61c5a8d1594dd21a79a4004b24734..0000000000000000000000000000000000000000
+diff --git a/node/api/index.js b/node/api/index.js
+deleted file mode 100644
+index 92e057af03809576a68f2a48f9295649d5b9a92d..0000000000000000000000000000000000000000
+diff --git a/node/auth/adapter/adapter.d.ts b/node/auth/adapter/adapter.d.ts
+deleted file mode 100644
+index a1784d305ea18dc10c2a02636f4c976ac122346b..0000000000000000000000000000000000000000
+diff --git a/node/auth/adapter/adapter.js b/node/auth/adapter/adapter.js
+deleted file mode 100644
+index 9c9aaeaac0303096bacc6aa9982c4ed31dc3fdb6..0000000000000000000000000000000000000000
+diff --git a/node/auth/adapter/facebook.d.ts b/node/auth/adapter/facebook.d.ts
+deleted file mode 100644
+index e20786c1d09a706b03d1f187e7288155f5e6574f..0000000000000000000000000000000000000000
+diff --git a/node/auth/adapter/facebook.js b/node/auth/adapter/facebook.js
+deleted file mode 100644
+index dcb754f83df89e1678303609a1e8d79ca0bb2a8f..0000000000000000000000000000000000000000
+diff --git a/node/auth/adapter/github.d.ts b/node/auth/adapter/github.d.ts
+deleted file mode 100644
+index b41e43ddd80c1d07416432c38be334b660c3eba9..0000000000000000000000000000000000000000
+diff --git a/node/auth/adapter/github.js b/node/auth/adapter/github.js
+deleted file mode 100644
+index 71c6923ad86a6bfd5bdb359fa1dedfa635c50631..0000000000000000000000000000000000000000
+diff --git a/node/auth/adapter/google.d.ts b/node/auth/adapter/google.d.ts
+deleted file mode 100644
+index d1d3f2ce24d1b3dd6ba39bbcf4cb6b79e78d8502..0000000000000000000000000000000000000000
+diff --git a/node/auth/adapter/google.js b/node/auth/adapter/google.js
+deleted file mode 100644
+index 333001d76172a2b5f3d9856f6654e4b8c39519b3..0000000000000000000000000000000000000000
+diff --git a/node/auth/adapter/link.d.ts b/node/auth/adapter/link.d.ts
+deleted file mode 100644
+index e63b1b3759d38325f040b8fe61ea9d4f96cd5eab..0000000000000000000000000000000000000000
+diff --git a/node/auth/adapter/link.js b/node/auth/adapter/link.js
+deleted file mode 100644
+index d878755cad152f295adff76e50aafda1f51c7137..0000000000000000000000000000000000000000
+diff --git a/node/auth/adapter/oauth.d.ts b/node/auth/adapter/oauth.d.ts
+deleted file mode 100644
+index eee83883802daa5e79c925299fa70ff28f6f6074..0000000000000000000000000000000000000000
+diff --git a/node/auth/adapter/oauth.js b/node/auth/adapter/oauth.js
+deleted file mode 100644
+index 1392da16a32edb2e0ca61780d430bad0446cb889..0000000000000000000000000000000000000000
+diff --git a/node/auth/adapter/oidc.d.ts b/node/auth/adapter/oidc.d.ts
+deleted file mode 100644
+index e11b0d94b218989935583ce35da7e2b355284587..0000000000000000000000000000000000000000
+diff --git a/node/auth/adapter/oidc.js b/node/auth/adapter/oidc.js
+deleted file mode 100644
+index 0b1685db5fbb86fb21e854af22ce4b65069d7b8b..0000000000000000000000000000000000000000
+diff --git a/node/auth/adapter/twitch.d.ts b/node/auth/adapter/twitch.d.ts
+deleted file mode 100644
+index 86c22238e4b58900fa197b691558494bccb78a54..0000000000000000000000000000000000000000
+diff --git a/node/auth/adapter/twitch.js b/node/auth/adapter/twitch.js
+deleted file mode 100644
+index 00b5a9eb1093a20c3abfbfe3cac926c6f399d572..0000000000000000000000000000000000000000
+diff --git a/node/auth/auth.d.ts b/node/auth/auth.d.ts
+deleted file mode 100644
+index 3fa495a3d95696e9e5b50311aceaa009ba081e5c..0000000000000000000000000000000000000000
+diff --git a/node/auth/auth.js b/node/auth/auth.js
+deleted file mode 100644
+index bf42fbb1036eaa6ee2b61ce70538e520b8ff8fb0..0000000000000000000000000000000000000000
+diff --git a/node/auth/index.d.ts b/node/auth/index.d.ts
+deleted file mode 100644
+index 315fbf1b1488fc590eb12c78e23e94d1e754b5d5..0000000000000000000000000000000000000000
+diff --git a/node/auth/index.js b/node/auth/index.js
+deleted file mode 100644
+index 205e62e87a18f16ae979995e63455073e6791dbb..0000000000000000000000000000000000000000
+diff --git a/node/auth/session.d.ts b/node/auth/session.d.ts
+deleted file mode 100644
+index e7e7dca7061a6c45cfe56e95b1c27228319bd384..0000000000000000000000000000000000000000
+diff --git a/node/auth/session.js b/node/auth/session.js
+deleted file mode 100644
+index e543ae2aae4b3412f2e5ba6b929094132932328e..0000000000000000000000000000000000000000
+diff --git a/node/bucket/index.d.ts b/node/bucket/index.d.ts
+deleted file mode 100644
+index 50c3184303d0f820cbd480261e0f41ae0780babf..0000000000000000000000000000000000000000
+diff --git a/node/bucket/index.js b/node/bucket/index.js
+deleted file mode 100644
+index 845bc3766c7836cfd41553fe986eaedf2514eebc..0000000000000000000000000000000000000000
+diff --git a/node/config/index.d.ts b/node/config/index.d.ts
+deleted file mode 100644
+index f85442041b79eb1ac9e71f422ed4cc4b785d8d8d..0000000000000000000000000000000000000000
+diff --git a/node/config/index.js b/node/config/index.js
+deleted file mode 100644
+index 47ab5476f2e07d467cea43507f7aa40b3d4a97fe..0000000000000000000000000000000000000000
+diff --git a/node/event-bus/index.d.ts b/node/event-bus/index.d.ts
+deleted file mode 100644
+index 877015df974ee347039307478043a2dfb8aacc9f..0000000000000000000000000000000000000000
+diff --git a/node/event-bus/index.js b/node/event-bus/index.js
+deleted file mode 100644
+index 2c504ad6c67d7aa4c11fc5fe0a447627001c4bd9..0000000000000000000000000000000000000000
+diff --git a/node/function/index.d.ts b/node/function/index.d.ts
+deleted file mode 100644
+index 57b28549c6d6cbf3d46bf480cc98ac5c70a367ed..0000000000000000000000000000000000000000
+diff --git a/node/function/index.js b/node/function/index.js
+deleted file mode 100644
+index f3da14f8783ea0bce7470ca34f4aea0aa3f96fde..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/adapter.d.ts b/node/future/auth/adapter/adapter.d.ts
+deleted file mode 100644
+index 5da712d9f46c3c964fb1c5389cfbcaed192e47ff..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/adapter.js b/node/future/auth/adapter/adapter.js
+deleted file mode 100644
+index 3891b2dc8d823980255d9ede54521bf07467ade3..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/apple.d.ts b/node/future/auth/adapter/apple.d.ts
+deleted file mode 100644
+index 4997cbd391f5b0f0bde10a335f4b34c74a77132a..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/apple.js b/node/future/auth/adapter/apple.js
+deleted file mode 100644
+index ce16b22921b66243ea771b625fc39605f84c1c44..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/code.d.ts b/node/future/auth/adapter/code.d.ts
+deleted file mode 100644
+index acdc25488e7ba07d39758627b175373d0309cea8..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/code.js b/node/future/auth/adapter/code.js
+deleted file mode 100644
+index d1a0f35276a815d7aec5e4a42d843844d595641f..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/facebook.d.ts b/node/future/auth/adapter/facebook.d.ts
+deleted file mode 100644
+index 6ea0ed5aa18bf7e79da6859f0cd6223644338395..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/facebook.js b/node/future/auth/adapter/facebook.js
+deleted file mode 100644
+index 83abdf2530d478c4fa084a4144a44c65a1e9e821..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/github.d.ts b/node/future/auth/adapter/github.d.ts
+deleted file mode 100644
+index c83111b191da2a354ef0ea47b45c22a5f289964f..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/github.js b/node/future/auth/adapter/github.js
+deleted file mode 100644
+index 789e3672036766b11b7568046060df4ac0a0427b..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/google.d.ts b/node/future/auth/adapter/google.d.ts
+deleted file mode 100644
+index fb612d987dfa45acc7235fa6b900fb92299eefeb..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/google.js b/node/future/auth/adapter/google.js
+deleted file mode 100644
+index 31a52716217ce4acb45d3f014620197075e6b42a..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/link.d.ts b/node/future/auth/adapter/link.d.ts
+deleted file mode 100644
+index 7d7ae2d812773ad6cbe2843402907c7bc2eaf621..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/link.js b/node/future/auth/adapter/link.js
+deleted file mode 100644
+index 963ac5b208a9213f793b6d6b73d161a67249be64..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/microsoft.d.ts b/node/future/auth/adapter/microsoft.d.ts
+deleted file mode 100644
+index 3d90d2c1d8feb9f77f3d2c9daaffb2b8f2d27278..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/microsoft.js b/node/future/auth/adapter/microsoft.js
+deleted file mode 100644
+index 7652d36ff99408d0c60a06dd9557c099cf73fd9a..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/oauth.d.ts b/node/future/auth/adapter/oauth.d.ts
+deleted file mode 100644
+index 0e43e851d5332a379834d1aad547412db5fc054f..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/oauth.js b/node/future/auth/adapter/oauth.js
+deleted file mode 100644
+index dc77684b2a7326fd9c0f3b7db330ca672983a80b..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/oidc.d.ts b/node/future/auth/adapter/oidc.d.ts
+deleted file mode 100644
+index 34670e49cfaa88a01de7cf8bae24fbcf60ccc978..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/oidc.js b/node/future/auth/adapter/oidc.js
+deleted file mode 100644
+index 25247b808940c746ccc7d313183a4e34fa01b4a2..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/spotify.d.ts b/node/future/auth/adapter/spotify.d.ts
+deleted file mode 100644
+index 7323e6624ea55ca4165c791b8b61c9470e2334b9..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/adapter/spotify.js b/node/future/auth/adapter/spotify.js
+deleted file mode 100644
+index a8b88f5b988acb943bdddea0ec7b03ef1f2afbae..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/encryption.d.ts b/node/future/auth/encryption.d.ts
+deleted file mode 100644
+index 34176c3f22ae61990d460f74df1f0cf49645b87c..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/encryption.js b/node/future/auth/encryption.js
+deleted file mode 100644
+index 2da59a68859daac842ee7489f4e352de7fee0aec..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/handler.d.ts b/node/future/auth/handler.d.ts
+deleted file mode 100644
+index 2e3994054c81e76eb11af27ceee2de2a4377d991..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/handler.js b/node/future/auth/handler.js
+deleted file mode 100644
+index 81448a0194a9fac80673ee3857a883490e90a83e..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/index.d.ts b/node/future/auth/index.d.ts
+deleted file mode 100644
+index 07a43cd7a1968ebd5734c77240f70d5929d153a1..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/index.js b/node/future/auth/index.js
+deleted file mode 100644
+index 5a6560746ea107117a108c77a57d198a9ba5e4a5..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/session.d.ts b/node/future/auth/session.d.ts
+deleted file mode 100644
+index a08767804c6d9726b96182388991f5ea3219aab4..0000000000000000000000000000000000000000
+diff --git a/node/future/auth/session.js b/node/future/auth/session.js
+deleted file mode 100644
+index 6492a5041c11274359ff90ff9bc2f9c72f74e4e8..0000000000000000000000000000000000000000
+diff --git a/node/graphql/index.d.ts b/node/graphql/index.d.ts
+deleted file mode 100644
+index 8f659aed584bc8fdcd10ebb98c8fe4e3e3a46cbc..0000000000000000000000000000000000000000
+diff --git a/node/graphql/index.js b/node/graphql/index.js
+deleted file mode 100644
+index 44092c8f44190a5e5f2f2797a1c09db9bd46fd48..0000000000000000000000000000000000000000
+diff --git a/node/job/index.d.ts b/node/job/index.d.ts
+deleted file mode 100644
+index 94c9fa6a608ce0a5f38630b4f04202ef1bb34ee7..0000000000000000000000000000000000000000
+diff --git a/node/job/index.js b/node/job/index.js
+deleted file mode 100644
+index 77b222c4a4c27de4b22dc868e221c248c1bdc921..0000000000000000000000000000000000000000
+diff --git a/node/kinesis-stream/index.d.ts b/node/kinesis-stream/index.d.ts
+deleted file mode 100644
+index c94479fb4994d96859f907a516d76a8493738c0d..0000000000000000000000000000000000000000
+diff --git a/node/kinesis-stream/index.js b/node/kinesis-stream/index.js
+deleted file mode 100644
+index 1ab9f790061aecbc045c8b3ab216097ce3035a90..0000000000000000000000000000000000000000
+diff --git a/node/queue/index.d.ts b/node/queue/index.d.ts
+deleted file mode 100644
+index d96eea834b9df124bc530c3af6ddfc242d4d9d63..0000000000000000000000000000000000000000
+diff --git a/node/queue/index.js b/node/queue/index.js
+deleted file mode 100644
+index 0d8fa412bcdc09ed64d6e8d8c059230ffb7533ed..0000000000000000000000000000000000000000
+diff --git a/node/rds/index.d.ts b/node/rds/index.d.ts
+deleted file mode 100644
+index 3b407f219e741e8956e8545d6be225af6e149aa0..0000000000000000000000000000000000000000
+diff --git a/node/rds/index.js b/node/rds/index.js
+deleted file mode 100644
+index 6575dc252eb65a572699005c6f8505027924474d..0000000000000000000000000000000000000000
+diff --git a/node/service/index.d.ts b/node/service/index.d.ts
+deleted file mode 100644
+index 62bd68a2eafc0d2d542c4110c2c3d7bbc16ced8b..0000000000000000000000000000000000000000
+diff --git a/node/service/index.js b/node/service/index.js
+deleted file mode 100644
+index 9d65c969ac8951d20c751c3f0711ecfc8ff9e443..0000000000000000000000000000000000000000
+diff --git a/node/site/index.d.ts b/node/site/index.d.ts
+deleted file mode 100644
+index 67307451b423ee7412af5e28161c9c0ff61b6f93..0000000000000000000000000000000000000000
+diff --git a/node/site/index.js b/node/site/index.js
+deleted file mode 100644
+index 73a82f80cd10f0af13a2b00e161e9da84a25412e..0000000000000000000000000000000000000000
+diff --git a/node/table/index.d.ts b/node/table/index.d.ts
+deleted file mode 100644
+index 7954ce4671d581f4ec5ef49b6e854b70c3dbbbdd..0000000000000000000000000000000000000000
+diff --git a/node/table/index.js b/node/table/index.js
+deleted file mode 100644
+index 308f0026a320e761cb2d750a0c96a6cd2b1af75a..0000000000000000000000000000000000000000
+diff --git a/node/topic/index.d.ts b/node/topic/index.d.ts
+deleted file mode 100644
+index 3b92168ea8e8119851894c64d4ed4d95f8303f9e..0000000000000000000000000000000000000000
+diff --git a/node/topic/index.js b/node/topic/index.js
+deleted file mode 100644
+index d9148e5b512d60a5ada0e2a888ac1f6e8504a586..0000000000000000000000000000000000000000
+diff --git a/node/util/index.d.ts b/node/util/index.d.ts
+deleted file mode 100644
+index 0bd292ecd233b5eafceb327b85e9f2e47a4ead24..0000000000000000000000000000000000000000
+diff --git a/node/util/index.js b/node/util/index.js
+deleted file mode 100644
+index ef3e9d4462972394a9a655ae86215f3d70c3f481..0000000000000000000000000000000000000000
+diff --git a/node/util/loader.d.ts b/node/util/loader.d.ts
+deleted file mode 100644
+index 8c483b80493aab71452661d148adf835ec001f5c..0000000000000000000000000000000000000000
+diff --git a/node/util/loader.js b/node/util/loader.js
+deleted file mode 100644
+index 024c6ca199c3312e52f492f8d15fb8873f594f30..0000000000000000000000000000000000000000
+diff --git a/node/websocket-api/index.d.ts b/node/websocket-api/index.d.ts
+deleted file mode 100644
+index fb490aad756e7153a6a28d6bb4472919568c78f4..0000000000000000000000000000000000000000
+diff --git a/node/websocket-api/index.js b/node/websocket-api/index.js
+deleted file mode 100644
+index d29f1b17131f72ef407a7b5fd9381411854553d5..0000000000000000000000000000000000000000
+diff --git a/package.json b/package.json
+deleted file mode 100644
+index 0d4bf77938c85f809e911983e6be47af55614d00..0000000000000000000000000000000000000000
+diff --git a/pothos.d.ts b/pothos.d.ts
+deleted file mode 100644
+index c2c4a8ba0d24ba9f88ab1cf3a2ed2d2f3044c82f..0000000000000000000000000000000000000000
+diff --git a/pothos.js b/pothos.js
+deleted file mode 100644
+index 4a63f2c3a35b4dd985f254a5c5da0a7851f7eebe..0000000000000000000000000000000000000000
+diff --git a/project.d.ts b/project.d.ts
+deleted file mode 100644
+index ae22af236f66d43930c5cf87a8a535f5a92826b2..0000000000000000000000000000000000000000
+diff --git a/project.js b/project.js
+deleted file mode 100644
+index bbad0e21a6155d5e635721a62b7c320bebcc4e58..0000000000000000000000000000000000000000
+diff --git a/runtime/handlers/container.d.ts b/runtime/handlers/container.d.ts
+deleted file mode 100644
+index b60c810c3d500daa8075f2f9d412df7a4e78259e..0000000000000000000000000000000000000000
+diff --git a/runtime/handlers/container.js b/runtime/handlers/container.js
+deleted file mode 100644
+index 6fca6b4411497455c7f5291c27324da56924b42b..0000000000000000000000000000000000000000
+diff --git a/runtime/handlers/dotnet.d.ts b/runtime/handlers/dotnet.d.ts
+deleted file mode 100644
+index 5be093878c3210b06bb53047a6181b947d5166cb..0000000000000000000000000000000000000000
+diff --git a/runtime/handlers/dotnet.js b/runtime/handlers/dotnet.js
+deleted file mode 100644
+index 1c8a67b4a8d5c375581242d41dfcd5ff6ec21b7f..0000000000000000000000000000000000000000
+diff --git a/runtime/handlers/go.d.ts b/runtime/handlers/go.d.ts
+deleted file mode 100644
+index 4c086303f590867fb42443d134ecea5a3ca1b8ae..0000000000000000000000000000000000000000
+diff --git a/runtime/handlers/go.js b/runtime/handlers/go.js
+deleted file mode 100644
+index 5b2453c5d9ecdd23d41ec4e96b2e5ac8466cf233..0000000000000000000000000000000000000000
+diff --git a/runtime/handlers/java.d.ts b/runtime/handlers/java.d.ts
+deleted file mode 100644
+index 53449333ea45e4afee9ca3cb796abc0860e49933..0000000000000000000000000000000000000000
+diff --git a/runtime/handlers/java.js b/runtime/handlers/java.js
+deleted file mode 100644
+index 003178488e249b8942db6b2f1b19bf7554606318..0000000000000000000000000000000000000000
+diff --git a/runtime/handlers/node.d.ts b/runtime/handlers/node.d.ts
+deleted file mode 100644
+index c6543b688d23e74a4d2db37102d110fc10735b32..0000000000000000000000000000000000000000
+diff --git a/runtime/handlers/node.js b/runtime/handlers/node.js
+deleted file mode 100644
+index 573b1c6cbeaea59627c38d4f1b667103f191791e..0000000000000000000000000000000000000000
+diff --git a/runtime/handlers/python.d.ts b/runtime/handlers/python.d.ts
+deleted file mode 100644
+index d53aff1122b99cb3230c3025ad3bec35e3bb429c..0000000000000000000000000000000000000000
+diff --git a/runtime/handlers/python.js b/runtime/handlers/python.js
+deleted file mode 100644
+index 6bde07db3d06db1576cf214354133b0b0a9933e8..0000000000000000000000000000000000000000
+diff --git a/runtime/handlers/pythonBundling.d.ts b/runtime/handlers/pythonBundling.d.ts
+deleted file mode 100644
+index 12f81676e6162aef49831ec7ee77fd4812418c5b..0000000000000000000000000000000000000000
+diff --git a/runtime/handlers/pythonBundling.js b/runtime/handlers/pythonBundling.js
+deleted file mode 100644
+index cd05262f1b4d3d6bd26a705b5e524edec66c8c22..0000000000000000000000000000000000000000
+diff --git a/runtime/handlers/rust.d.ts b/runtime/handlers/rust.d.ts
+deleted file mode 100644
+index fcbe6f6e53cf385cf133e92d48b69233e8241522..0000000000000000000000000000000000000000
+diff --git a/runtime/handlers/rust.js b/runtime/handlers/rust.js
+deleted file mode 100644
+index 5dcc27e1b5a7bd7cd29e03c9ab859429df77fc54..0000000000000000000000000000000000000000
+diff --git a/runtime/handlers.d.ts b/runtime/handlers.d.ts
+deleted file mode 100644
+index 4c501ff9a6d4811af2c19df83eab1fa4a6758b2e..0000000000000000000000000000000000000000
+diff --git a/runtime/handlers.js b/runtime/handlers.js
+deleted file mode 100644
+index 497a45c26b805b7aff99c67f2fa7809efce901ab..0000000000000000000000000000000000000000
+diff --git a/runtime/iot.d.ts b/runtime/iot.d.ts
+deleted file mode 100644
+index b20af732dc924e39a2839eab3b081a2e5dc41fb2..0000000000000000000000000000000000000000
+diff --git a/runtime/iot.js b/runtime/iot.js
+deleted file mode 100644
+index 1f36a9fb761ffb0c1ae13d6cc70709ddf9ae374f..0000000000000000000000000000000000000000
+diff --git a/runtime/runtime.d.ts b/runtime/runtime.d.ts
+deleted file mode 100644
+index e2c6ff5f6bf5e3b2177d02cc7afbc21f1efad732..0000000000000000000000000000000000000000
+diff --git a/runtime/runtime.js b/runtime/runtime.js
+deleted file mode 100644
+index e2e456ba17d1b808674f3e4f6970a9e861ef488b..0000000000000000000000000000000000000000
+diff --git a/runtime/server.d.ts b/runtime/server.d.ts
+deleted file mode 100644
+index e5436782d634ede3e3b4880b5b6b756a3ba5f95b..0000000000000000000000000000000000000000
+diff --git a/runtime/server.js b/runtime/server.js
+deleted file mode 100644
+index a71cc5462daeaaf0035d4c52c9c0f103a0c885f3..0000000000000000000000000000000000000000
+diff --git a/runtime/workers.d.ts b/runtime/workers.d.ts
+deleted file mode 100644
+index b8fece9555f572145ab9d32a789149623cf9c22f..0000000000000000000000000000000000000000
+diff --git a/runtime/workers.js b/runtime/workers.js
+deleted file mode 100644
+index a8076781af71ff3b73fced6dc0bdf80b91e86cc6..0000000000000000000000000000000000000000
+diff --git a/stacks/app-metadata.d.ts b/stacks/app-metadata.d.ts
+deleted file mode 100644
+index e24f19a01934f5ce00597cd665440b8864480e62..0000000000000000000000000000000000000000
+diff --git a/stacks/app-metadata.js b/stacks/app-metadata.js
+deleted file mode 100644
+index c4afc4a725bdb1bf2e9dcb2cdcc58d0188ba138e..0000000000000000000000000000000000000000
+diff --git a/stacks/assembly.d.ts b/stacks/assembly.d.ts
+deleted file mode 100644
+index 1865742a428e8b2d7a01a9e3a64ff72cd067cabd..0000000000000000000000000000000000000000
+diff --git a/stacks/assembly.js b/stacks/assembly.js
+deleted file mode 100644
+index b1ee37279f01c87bbcabe796adbcb093e0cdad95..0000000000000000000000000000000000000000
+diff --git a/stacks/build.d.ts b/stacks/build.d.ts
+deleted file mode 100644
+index dd400fea0b0ea8e70f1494f3dc5fb388a0c9e712..0000000000000000000000000000000000000000
+diff --git a/stacks/build.js b/stacks/build.js
+deleted file mode 100644
+index 557c3dea23ed2bac1b0203b71c5e44fa678be518..0000000000000000000000000000000000000000
+diff --git a/stacks/deploy.d.ts b/stacks/deploy.d.ts
+deleted file mode 100644
+index 35273dcf80dc1856d07f9a9770943b7585fc8cbb..0000000000000000000000000000000000000000
+diff --git a/stacks/deploy.js b/stacks/deploy.js
+deleted file mode 100644
+index 57b4ef4eb5ddab6f18cbd8bd958560d97072d340..0000000000000000000000000000000000000000
+diff --git a/stacks/diff.d.ts b/stacks/diff.d.ts
+deleted file mode 100644
+index a2ba5ca874c54e417f7ed19a34946552f08927f1..0000000000000000000000000000000000000000
+diff --git a/stacks/diff.js b/stacks/diff.js
+deleted file mode 100644
+index 337d29c0011a0cb2578389e893009c27616dc466..0000000000000000000000000000000000000000
+diff --git a/stacks/index.d.ts b/stacks/index.d.ts
+deleted file mode 100644
+index 45e7da9a66cd6d72541f858ace80299000242a60..0000000000000000000000000000000000000000
+diff --git a/stacks/index.js b/stacks/index.js
+deleted file mode 100644
+index 45e7da9a66cd6d72541f858ace80299000242a60..0000000000000000000000000000000000000000
+diff --git a/stacks/metadata.d.ts b/stacks/metadata.d.ts
+deleted file mode 100644
+index b725f09d53b6b8b3f25c29d0e65a89710c527dd2..0000000000000000000000000000000000000000
+diff --git a/stacks/metadata.js b/stacks/metadata.js
+deleted file mode 100644
+index de4634ea2713d5f4f0d18fbf9bdcd999a139a1ad..0000000000000000000000000000000000000000
+diff --git a/stacks/monitor.d.ts b/stacks/monitor.d.ts
+deleted file mode 100644
+index 4eca2aa2fe33df0ccbfc4ee50cae83934d205949..0000000000000000000000000000000000000000
+diff --git a/stacks/monitor.js b/stacks/monitor.js
+deleted file mode 100644
+index 029e4caa080f8276d7b80a038831a7117712f951..0000000000000000000000000000000000000000
+diff --git a/stacks/remove.d.ts b/stacks/remove.d.ts
+deleted file mode 100644
+index 2a790c91ea216465a4cd003cf6cbd77cb6ed60a3..0000000000000000000000000000000000000000
+diff --git a/stacks/remove.js b/stacks/remove.js
+deleted file mode 100644
+index 7c8835e71e2cd521b9c0b3ba85696bd121dd0f64..0000000000000000000000000000000000000000
+diff --git a/stacks/synth.d.ts b/stacks/synth.d.ts
+deleted file mode 100644
+index 7fe5ec3516887c475db54e2f495577880ee1cbb0..0000000000000000000000000000000000000000
+diff --git a/stacks/synth.js b/stacks/synth.js
+deleted file mode 100644
+index 1df7f230a86ed9016587218db58146fd984a5639..0000000000000000000000000000000000000000
+diff --git a/support/base-site-archiver.mjs b/support/base-site-archiver.mjs
+deleted file mode 100644
+index 7b0921ed810da628442f9e6054909312ab7b25f7..0000000000000000000000000000000000000000
+diff --git a/support/bootstrap-metadata-function/index.mjs b/support/bootstrap-metadata-function/index.mjs
+deleted file mode 100644
+index dd1f7ad77fa44be20d51034008c0f88c7da1351a..0000000000000000000000000000000000000000
+diff --git a/support/bridge/Dockerfile b/support/bridge/Dockerfile
+deleted file mode 100644
+index 09e0f42f383a7006c3dd7fe23ca5d1816a47f085..0000000000000000000000000000000000000000
+diff --git a/support/bridge/live-lambda.mjs b/support/bridge/live-lambda.mjs
+deleted file mode 100644
+index aa5724ffed10f9f888f9e773fc4b32599a91126f..0000000000000000000000000000000000000000
+diff --git a/support/certificate-requestor/index.mjs b/support/certificate-requestor/index.mjs
+deleted file mode 100644
+index 256e33be91c2b086bb107b8ceffa180453a88bc6..0000000000000000000000000000000000000000
+diff --git a/support/custom-resources/index.mjs b/support/custom-resources/index.mjs
+deleted file mode 100644
+index 7971a1d788d388e3e2feedb470043c4ca60f83ee..0000000000000000000000000000000000000000
+diff --git a/support/dotnet31-bootstrap/Program.cs b/support/dotnet31-bootstrap/Program.cs
+deleted file mode 100644
+index 5ab845aa797c93c78fb4432c9c98684c09deb656..0000000000000000000000000000000000000000
+diff --git a/support/dotnet31-bootstrap/dotnet-bootstrap.csproj b/support/dotnet31-bootstrap/dotnet-bootstrap.csproj
+deleted file mode 100644
+index b496951b019e176b7f59dfaaec2a0022e95a06a3..0000000000000000000000000000000000000000
+diff --git a/support/dotnet31-bootstrap/release/Amazon.Lambda.Core.dll b/support/dotnet31-bootstrap/release/Amazon.Lambda.Core.dll
+deleted file mode 100644
+index 5e4e6d0f8305c4f32bfd00b5c42cfbe9100cb7e4..0000000000000000000000000000000000000000
+diff --git a/support/dotnet31-bootstrap/release/Amazon.Lambda.RuntimeSupport.dll b/support/dotnet31-bootstrap/release/Amazon.Lambda.RuntimeSupport.dll
+deleted file mode 100644
+index 602a18044da84410c762bc916ce709f4938e273d..0000000000000000000000000000000000000000
+diff --git a/support/dotnet31-bootstrap/release/System.Runtime.CompilerServices.Unsafe.dll b/support/dotnet31-bootstrap/release/System.Runtime.CompilerServices.Unsafe.dll
+deleted file mode 100644
+index 103462b3e96cc329cc30c28a9a0a312bf503821d..0000000000000000000000000000000000000000
+diff --git a/support/dotnet31-bootstrap/release/System.Text.Encodings.Web.dll b/support/dotnet31-bootstrap/release/System.Text.Encodings.Web.dll
+deleted file mode 100644
+index 1778f67e997380563756948827e0af84eaee9836..0000000000000000000000000000000000000000
+diff --git a/support/dotnet31-bootstrap/release/System.Text.Json.dll b/support/dotnet31-bootstrap/release/System.Text.Json.dll
+deleted file mode 100644
+index d7d9987b4a131c25483d47debc8122e1cc017291..0000000000000000000000000000000000000000
+diff --git a/support/dotnet31-bootstrap/release/dotnet-bootstrap b/support/dotnet31-bootstrap/release/dotnet-bootstrap
+deleted file mode 100644
+index cd487b7d992d2433ea38065e897a42e915e82a48..0000000000000000000000000000000000000000
+diff --git a/support/dotnet31-bootstrap/release/dotnet-bootstrap.deps.json b/support/dotnet31-bootstrap/release/dotnet-bootstrap.deps.json
+deleted file mode 100644
+index 4f7660b364dae4c5814f64a4fef6464d22085f7f..0000000000000000000000000000000000000000
+diff --git a/support/dotnet31-bootstrap/release/dotnet-bootstrap.dll b/support/dotnet31-bootstrap/release/dotnet-bootstrap.dll
+deleted file mode 100644
+index cc0801845e44e5211fc10ce8493f8d3fe65838e7..0000000000000000000000000000000000000000
+diff --git a/support/dotnet31-bootstrap/release/dotnet-bootstrap.pdb b/support/dotnet31-bootstrap/release/dotnet-bootstrap.pdb
+deleted file mode 100644
+index 1a41a2fb2d02d9429353b3c87ec763da68b96fcc..0000000000000000000000000000000000000000
+diff --git a/support/dotnet31-bootstrap/release/dotnet-bootstrap.runtimeconfig.json b/support/dotnet31-bootstrap/release/dotnet-bootstrap.runtimeconfig.json
+deleted file mode 100644
+index ec942fede66ec38c994236099552257463c9d6b0..0000000000000000000000000000000000000000
+diff --git a/support/dotnet6-bootstrap/Program.cs b/support/dotnet6-bootstrap/Program.cs
+deleted file mode 100644
+index 5ab845aa797c93c78fb4432c9c98684c09deb656..0000000000000000000000000000000000000000
+diff --git a/support/dotnet6-bootstrap/dotnet-bootstrap.csproj b/support/dotnet6-bootstrap/dotnet-bootstrap.csproj
+deleted file mode 100644
+index 8b00dacf453677f28129c6c05a02c94cd5955f2c..0000000000000000000000000000000000000000
+diff --git a/support/dotnet6-bootstrap/release/Amazon.Lambda.Core.dll b/support/dotnet6-bootstrap/release/Amazon.Lambda.Core.dll
+deleted file mode 100644
+index 5fa607dd2132f99032756ce44809cefbc434604c..0000000000000000000000000000000000000000
+diff --git a/support/dotnet6-bootstrap/release/Amazon.Lambda.RuntimeSupport.dll b/support/dotnet6-bootstrap/release/Amazon.Lambda.RuntimeSupport.dll
+deleted file mode 100644
+index a4e1c00beaad63d4a042153b0554e7d5dba1529a..0000000000000000000000000000000000000000
+diff --git a/support/dotnet6-bootstrap/release/dotnet-bootstrap b/support/dotnet6-bootstrap/release/dotnet-bootstrap
+deleted file mode 100644
+index deebf789f488b0071148f4e8e39ddd08ed272c89..0000000000000000000000000000000000000000
+diff --git a/support/dotnet6-bootstrap/release/dotnet-bootstrap.deps.json b/support/dotnet6-bootstrap/release/dotnet-bootstrap.deps.json
+deleted file mode 100644
+index b645a62a437e31d926f2753de6a5bd9dc7a0685b..0000000000000000000000000000000000000000
+diff --git a/support/dotnet6-bootstrap/release/dotnet-bootstrap.dll b/support/dotnet6-bootstrap/release/dotnet-bootstrap.dll
+deleted file mode 100644
+index efcfeccb40f225c84a4b197703f64312c0b97d61..0000000000000000000000000000000000000000
+diff --git a/support/dotnet6-bootstrap/release/dotnet-bootstrap.pdb b/support/dotnet6-bootstrap/release/dotnet-bootstrap.pdb
+deleted file mode 100644
+index bec4eddd3319c988f25011040b1f0a686f33083b..0000000000000000000000000000000000000000
+diff --git a/support/dotnet6-bootstrap/release/dotnet-bootstrap.runtimeconfig.json b/support/dotnet6-bootstrap/release/dotnet-bootstrap.runtimeconfig.json
+deleted file mode 100644
+index 78e047cdc1fb83bd9038c83e94254b29dcb99fab..0000000000000000000000000000000000000000
+diff --git a/support/edge-function/edge-lambda-version.mjs b/support/edge-function/edge-lambda-version.mjs
+deleted file mode 100644
+index 583aac8842fde58d4d5eed1a5640e89c90d89e4d..0000000000000000000000000000000000000000
+diff --git a/support/edge-function/edge-lambda.mjs b/support/edge-function/edge-lambda.mjs
+deleted file mode 100644
+index d9ef266bf4ddc58947e31ead4ea3abcae3a43cf5..0000000000000000000000000000000000000000
+diff --git a/support/edge-function/s3-bucket.mjs b/support/edge-function/s3-bucket.mjs
+deleted file mode 100644
+index 08c458974cb0e66ae0e233ba67119baa9a977aae..0000000000000000000000000000000000000000
+diff --git a/support/event-bus-retrier/index.mjs b/support/event-bus-retrier/index.mjs
+deleted file mode 100644
+index 6c671024d3dfbecb27495c09119141a759aff102..0000000000000000000000000000000000000000
+diff --git a/support/java-runtime/install.sh b/support/java-runtime/install.sh
+deleted file mode 100644
+index c74859567e5cbe7be9f1bdd09cf8acb6b962cc43..0000000000000000000000000000000000000000
+diff --git a/support/java-runtime/pom.xml b/support/java-runtime/pom.xml
+deleted file mode 100644
+index 6cbd129f8d8bab4221b71876679eb8cd1254e1fb..0000000000000000000000000000000000000000
+diff --git a/support/java-runtime/release/aws-lambda-java-core-1.2.0.jar b/support/java-runtime/release/aws-lambda-java-core-1.2.0.jar
+deleted file mode 100644
+index 2f7af344ffa43ac5b3415692e33ffb1bf62cdf79..0000000000000000000000000000000000000000
+diff --git a/support/java-runtime/release/aws-lambda-java-runtime-interface-client-1.1.0.jar b/support/java-runtime/release/aws-lambda-java-runtime-interface-client-1.1.0.jar
+deleted file mode 100644
+index be0adf88ff61feebcc02aa0c3bde15382b3cbff4..0000000000000000000000000000000000000000
+diff --git a/support/java-runtime/release/aws-lambda-java-serialization-1.0.0.jar b/support/java-runtime/release/aws-lambda-java-serialization-1.0.0.jar
+deleted file mode 100644
+index 4fcc1de662f4dfed700b9d38e204861c1eb9d2c6..0000000000000000000000000000000000000000
+diff --git a/support/job-manager/index.mjs b/support/job-manager/index.mjs
+deleted file mode 100644
+index 8c5875608d96f8835e10217d42e73b2e1c3d57ff..0000000000000000000000000000000000000000
+diff --git a/support/nixpacks/Dockerfile b/support/nixpacks/Dockerfile
+deleted file mode 100644
+index a78ee464b10768ac0c1464041095fed0556ccdff..0000000000000000000000000000000000000000
+diff --git a/support/nodejs-runtime/index.mjs b/support/nodejs-runtime/index.mjs
+deleted file mode 100644
+index f06cf54042e9e858df787802773e5217963d4ee8..0000000000000000000000000000000000000000
+diff --git a/support/python-runtime/Dockerfile b/support/python-runtime/Dockerfile
+deleted file mode 100644
+index 057512cf4a35c45420eabe19e093dde72c900c38..0000000000000000000000000000000000000000
+diff --git a/support/python-runtime/Dockerfile.custom b/support/python-runtime/Dockerfile.custom
+deleted file mode 100644
+index aa23ba8a3214296e08a97b02bc6d69eba3100aec..0000000000000000000000000000000000000000
+diff --git a/support/python-runtime/Dockerfile.dependencies b/support/python-runtime/Dockerfile.dependencies
+deleted file mode 100644
+index 9828a7ac8d4e240926af366c015edeac4af2e775..0000000000000000000000000000000000000000
+diff --git a/support/python-runtime/runtime.py b/support/python-runtime/runtime.py
+deleted file mode 100644
+index 769fea818fdd0f1ced764c9c99943a0e085c1685..0000000000000000000000000000000000000000
+diff --git a/support/rds-migrator/index.mjs b/support/rds-migrator/index.mjs
+deleted file mode 100644
+index bf1bdf2276b8c1623f257c5ea1c43bdb34db1d5a..0000000000000000000000000000000000000000
+diff --git a/support/remix-site-function/edge-server.js b/support/remix-site-function/edge-server.js
+deleted file mode 100644
+index 2f107cbdc6918bfd003203f51b664825782f6d5a..0000000000000000000000000000000000000000
+diff --git a/support/remix-site-function/polyfill.js b/support/remix-site-function/polyfill.js
+deleted file mode 100644
+index 844773e32fd6fb22913bb6605eb5f6743fa3aeb5..0000000000000000000000000000000000000000
+diff --git a/support/remix-site-function/regional-server.js b/support/remix-site-function/regional-server.js
+deleted file mode 100644
+index 5d3d1a0a477246abd8827924e753ca6962554f9d..0000000000000000000000000000000000000000
+diff --git a/support/script-function/index.mjs b/support/script-function/index.mjs
+deleted file mode 100644
+index ecc455850162987ded4e0e9433409b9e274aa867..0000000000000000000000000000000000000000
+diff --git a/support/service-dev-function/index.js b/support/service-dev-function/index.js
+deleted file mode 100644
+index ce0c87f62dc8a6967623f6259a03f59515f75030..0000000000000000000000000000000000000000
+diff --git a/support/signing-function/index.mjs b/support/signing-function/index.mjs
+deleted file mode 100644
+index 983c059e42db943864b7abeb008a3171bb29ccbe..0000000000000000000000000000000000000000
+diff --git a/support/sls-nextjs-site-build-helper/build.cjs b/support/sls-nextjs-site-build-helper/build.cjs
+deleted file mode 100644
+index f60ccea5a1d8bde6315107f80a388c827c645bc2..0000000000000000000000000000000000000000
+diff --git a/support/sls-nextjs-site-build-helper/index-wrapper.js b/support/sls-nextjs-site-build-helper/index-wrapper.js
+deleted file mode 100644
+index 02a6894106222968965ed6d694163da214802dae..0000000000000000000000000000000000000000
+diff --git a/support/sls-nextjs-site-function-code-replacer/lambda-code-updater.py b/support/sls-nextjs-site-function-code-replacer/lambda-code-updater.py
+deleted file mode 100644
+index b17c848aecdc433796f68d6653a098a8a82d65f0..0000000000000000000000000000000000000000
+diff --git a/support/sls-nextjs-site-stub/index.html b/support/sls-nextjs-site-stub/index.html
+deleted file mode 100644
+index b57f06c52363c085cc037dfdc9ae5833ecb43585..0000000000000000000000000000000000000000
+diff --git a/support/ssr-site-function-archiver.mjs b/support/ssr-site-function-archiver.mjs
+deleted file mode 100644
+index c936abfca6f34beb838d149184e64455feab7cda..0000000000000000000000000000000000000000
+diff --git a/support/ssr-site-function-stub/index.js b/support/ssr-site-function-stub/index.js
+deleted file mode 100644
+index 61f3a8a5b059b9dbfd69bde63edbaa93345a3aaa..0000000000000000000000000000000000000000
+diff --git a/support/ssr-warmer/index.mjs b/support/ssr-warmer/index.mjs
+deleted file mode 100644
+index 8824a0a33f92c7b7ba3427d3b3f948ba90d1fffd..0000000000000000000000000000000000000000
+diff --git a/util/error.d.ts b/util/error.d.ts
+deleted file mode 100644
+index a4f73a08f463f575369257140c038f89194183b8..0000000000000000000000000000000000000000
+diff --git a/util/error.js b/util/error.js
+deleted file mode 100644
+index ae2383282909a2143e5ab03ce3e60450fd97babe..0000000000000000000000000000000000000000
+diff --git a/util/fs.d.ts b/util/fs.d.ts
+deleted file mode 100644
+index 9f3445ab867924c8c0516b8c7c3a03d8fb6ead40..0000000000000000000000000000000000000000
+diff --git a/util/fs.js b/util/fs.js
+deleted file mode 100644
+index 8dfc287588751f78dc9623b4c4aeea7151a49750..0000000000000000000000000000000000000000
+diff --git a/util/lazy.d.ts b/util/lazy.d.ts
+deleted file mode 100644
+index d44152478d1d9c4d2bf71ff203fd188700b0fb26..0000000000000000000000000000000000000000
+diff --git a/util/lazy.js b/util/lazy.js
+deleted file mode 100644
+index 3e80f4b3410474dfc2f2bc1316439362150d13e3..0000000000000000000000000000000000000000
+diff --git a/util/module.d.ts b/util/module.d.ts
+deleted file mode 100644
+index c0cdd96ffd6e0abf6a205edd57e38a8f40b712f7..0000000000000000000000000000000000000000
+diff --git a/util/module.js b/util/module.js
+deleted file mode 100644
+index e232f593f5de4b3be837f3cade18c533244ec83c..0000000000000000000000000000000000000000
+diff --git a/util/process.d.ts b/util/process.d.ts
+deleted file mode 100644
+index 98969719bacad94223d253f7eb6f3ff1d5a247ec..0000000000000000000000000000000000000000
+diff --git a/util/process.js b/util/process.js
+deleted file mode 100644
+index 0a9805f229f4f254e0b62743b7f6791e148e5cf5..0000000000000000000000000000000000000000
+diff --git a/util/semaphore.d.ts b/util/semaphore.d.ts
+deleted file mode 100644
+index 024e64c5c9e0ecaf512c4208f9672e1bb716c6fb..0000000000000000000000000000000000000000
+diff --git a/util/semaphore.js b/util/semaphore.js
+deleted file mode 100644
+index 5d525c5edbbec208752d250be52f96769a1ee976..0000000000000000000000000000000000000000
+diff --git a/util/wsl.d.ts b/util/wsl.d.ts
+deleted file mode 100644
+index 6f556b7c7a5860f92e53ca122c587d1f7132bc66..0000000000000000000000000000000000000000
+diff --git a/util/wsl.js b/util/wsl.js
+deleted file mode 100644
+index 768d948457af854f2b73ddb07e76a320d9209c40..0000000000000000000000000000000000000000
+diff --git a/watcher.d.ts b/watcher.d.ts
+deleted file mode 100644
+index 4d139eedb6b5b46ee8574120dbed9777ef12989c..0000000000000000000000000000000000000000
+diff --git a/watcher.js b/watcher.js
+deleted file mode 100644
+index 280e7b6ad485f129d450e92b586d5999fc939023..0000000000000000000000000000000000000000

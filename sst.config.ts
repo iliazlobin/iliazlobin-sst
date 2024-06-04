@@ -3,7 +3,6 @@ import { authorizer } from './stacks/authorizer'
 import { blogWorkflow } from './stacks/blogWorkflow'
 import { personalSite } from './stacks/personalSite'
 import { personalSiteData } from './stacks/personalSiteData'
-import { publicHttpApi } from './stacks/publicHttpApi'
 import { SSTConfig } from 'sst'
 
 export default {
@@ -34,11 +33,11 @@ export default {
 
     // app.stack(TestStack)
 
-    // app.stack(personalSiteData)
-    // app.stack(personalSite)
+    app.stack(personalSiteData)
+    app.stack(personalSite)
 
     app.stack(authorizer)
     app.stack(blogWorkflow)
-    app.stack(publicHttpApi)
+    // app.stack(publicHttpApi)
   },
 } satisfies SSTConfig
