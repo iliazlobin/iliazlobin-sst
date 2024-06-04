@@ -20,9 +20,7 @@
   },
   "include": [
     "next-env.d.ts",
-    "sst-env.d.ts",
-    "my-env.d.ts",
-    "**/*.tss",
+    "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
     "test/example.mjs"

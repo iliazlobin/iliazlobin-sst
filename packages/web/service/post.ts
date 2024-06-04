@@ -1,12 +1,7 @@
-// import { listPosts, retrievePost } from '@iliazlobin/core/notion/service'
+import { listPosts, retrievePost } from '@iliazlobin/core/notion/service'
 import { Post } from '@iliazlobin/core/notion/types'
 
-// import { slug } from 'github-slugger'
-// import { Bucket } from 'sst/node/bucket'
-// import { Table } from 'sst/node/table'
-// const client = new DynamoDBClient({})
-// const tableName = Table.NotionPages.tableName
-
+import { slug } from 'github-slugger'
 
 export type WebPost = Post & {
   slug: string
@@ -14,45 +9,8 @@ export type WebPost = Post & {
   tags: string[]
 }
 
-export async function getWebPosts(): Promise<WebPost[]> {
-  return []
-}
-
-export async function retrieveWebPost({
-  slug,
-}: {
-  slug: string
-}): Promise<WebPost> {
-  return {
-    id: '',
-    title: '',
-    createdTime: '',
-    lastEditedTime: '',
-    slug: '',
-    summary: '',
-    tags: [],
-    contentMd: '',
-  }
-}
-
 // export async function getWebPosts(): Promise<WebPost[]> {
-//   const posts = await listPosts()
-//   console.debug(`[DEBUG] getWebPosts: length of posts: ${posts.length}`)
-//   const webPosts = posts.map(post => ({
-//     ...post,
-//     slug: slug(post.title),
-//     summary: '',
-//     tags: [],
-//     contentMd: '',
-//     images: [],
-//   }))
-
-//   webPosts.sort(
-//     (a, b) =>
-//       new Date(b.createdTime).getTime() - new Date(a.createdTime).getTime(),
-//   )
-
-//   return webPosts
+//   return []
 // }
 
 // export async function retrieveWebPost({
@@ -60,25 +18,62 @@ export async function retrieveWebPost({
 // }: {
 //   slug: string
 // }): Promise<WebPost> {
-//   const posts = await getWebPosts()
-//   // console.debug(
-//   //   `[DEBUG] retrieveWebPost: length of posts: ${posts.length}, slug: ${slug}`,
-//   // )
-//   // posts.forEach(post => {
-//   //   console.debug(`[DEBUG] post.slug: ${post.slug}, slug: ${slug}`)
-//   //   if (post.slug === slug) {
-//   //     console.debug(`[DEBUG] post.title: ${post.title}`)
-//   //   }
-//   // })
-//   const webPost = posts.find(post => post.slug === slug)
-//   if (!webPost) {
-//     throw new Error('Post not found')
-//   }
-
-//   const post = await retrievePost({ pageId: webPost.id })
 //   return {
-//     ...webPost,
-//     contentMd: post.contentMd,
-//     images: post.images,
+//     id: '',
+//     title: '',
+//     createdTime: '',
+//     lastEditedTime: '',
+//     slug: '',
+//     summary: '',
+//     tags: [],
+//     contentMd: '',
 //   }
 // }
+
+export async function getWebPosts(): Promise<WebPost[]> {
+  const posts = await listPosts()
+  console.debug(`[DEBUG] getWebPosts: length of posts: ${posts.length}`)
+  const webPosts = posts.map(post => ({
+    ...post,
+    slug: slug(post.title),
+    summary: '',
+    tags: [],
+    contentMd: '',
+    images: [],
+  }))
+
+  webPosts.sort(
+    (a, b) =>
+      new Date(b.createdTime).getTime() - new Date(a.createdTime).getTime(),
+  )
+
+  return webPosts
+}
+
+export async function retrieveWebPost({
+  slug,
+}: {
+  slug: string
+}): Promise<WebPost> {
+  const posts = await getWebPosts()
+  // console.debug(
+  //   `[DEBUG] retrieveWebPost: length of posts: ${posts.length}, slug: ${slug}`,
+  // )
+  // posts.forEach(post => {
+  //   console.debug(`[DEBUG] post.slug: ${post.slug}, slug: ${slug}`)
+  //   if (post.slug === slug) {
+  //     console.debug(`[DEBUG] post.title: ${post.title}`)
+  //   }
+  // })
+  const webPost = posts.find(post => post.slug === slug)
+  if (!webPost) {
+    throw new Error('Post not found')
+  }
+
+  const post = await retrievePost({ pageId: webPost.id })
+  return {
+    ...webPost,
+    contentMd: post.contentMd,
+    images: post.images,
+  }
+}

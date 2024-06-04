@@ -1,4 +1,3 @@
-/// <reference path="../../../../.sst/types/index.ts" />
 import Image from 'next/image'
 
 import presentations from '@iliazlobin/web/content/presentations.json'
