@@ -33,8 +33,8 @@ export default {
 
     // app.stack(TestStack)
 
-    app.stack(personalSiteData)
-    app.stack(personalSite)
+    // app.stack(personalSiteData)
+    // app.stack(personalSite)
 
     app.stack(authorizer)
     app.stack(blogWorkflow)
