@@ -7,6 +7,7 @@
 .pnp
 .pnp.js
 .sst
+.sst.config.*.mjs
 .yarn/install-state.gz
 *.pem
 *.tsbuildinfo
