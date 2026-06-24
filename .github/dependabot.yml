@@ -1,0 +1,29 @@
+# Dependabot configuration
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+#
+# This is a pnpm workspace monorepo. The `npm` package-ecosystem covers
+# pnpm/npm/yarn lockfiles. A single root entry with the recursive workspace
+# layout keeps the whole monorepo's dependency graph monitored.
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    # Group low-risk minor/patch updates into a single PR to reduce noise,
+    # while leaving each major update as its own PR for careful review.
+    groups:
+      minor-and-patch:
+        applies-to: version-updates
+        update-types:
+          - "minor"
+          - "patch"
+      security-minor-and-patch:
+        applies-to: security-updates
+        update-types:
+          - "minor"
+          - "patch"
+    commit-message:
+      prefix: "deps"
+      include: "scope"

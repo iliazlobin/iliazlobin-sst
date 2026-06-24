@@ -19,4 +19,7 @@ npm-debug.log*
 out/
 yarn-debug.log*
 yarn-error.log*
+# pnpm patch files MUST be committed (the lockfile references them by path);
+# ignore everything under patches/ EXCEPT the *.patch files themselves.
 patches/**/*
+!patches/*.patch

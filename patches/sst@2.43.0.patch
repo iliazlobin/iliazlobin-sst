@@ -1,0 +1,24 @@
+diff --git a/constructs/index.d.ts b/constructs/index.d.ts
+index fc4a47f61b678e41885284164be183fc6271bb90..190a543219b23c6bd3e14255ed685d5ebe58a6a5 100644
+--- a/constructs/index.d.ts
++++ b/constructs/index.d.ts
+@@ -11,6 +11,7 @@ export * from "./Stack.js";
+ export * from "./Table.js";
+ export * from "./Topic.js";
+ export * from "./Bucket.js";
++export * from "./Distribution.js";
+ export * from "./Script.js";
+ export * from "./Service.js";
+ export * from "./EventBus.js";
+diff --git a/constructs/index.js b/constructs/index.js
+index c25058cf32bad913e241f502f7fd4782ad1018d5..2b2fe2763d3537cfcdeba882c6ed3cf21e108939 100644
+--- a/constructs/index.js
++++ b/constructs/index.js
+@@ -11,6 +11,7 @@ export * from "./Stack.js";
+ export * from "./Table.js";
+ export * from "./Topic.js";
+ export * from "./Bucket.js";
++export * from "./Distribution.js";
+ export * from "./Script.js";
+ export * from "./Service.js";
+ export * from "./EventBus.js";
