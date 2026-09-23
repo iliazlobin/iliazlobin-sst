@@ -19,16 +19,16 @@
     "types": "sst types"
   },
   "dependencies": {
-    "moment": "^2.30.1",
+    "moment": "^2.31.0",
     "zod-to-json-schema": "^3.22.5"
   },
   "devDependencies": {
     "@tsconfig/node18": "^18.2.4",
     "@types/node": "^20.12.2",
     "@typescript-eslint/eslint-plugin": "^7.4.0",
-    "aws-cdk-lib": "2.132.1",
+    "aws-cdk-lib": "2.270.0",
     "colors": "^1.4.0",
-    "constructs": "10.3.0",
+    "constructs": "10.8.1",
     "dotenv": "^16.4.5",
     "sst": "^2.41.5",
     "typescript": "^5.4.3"
